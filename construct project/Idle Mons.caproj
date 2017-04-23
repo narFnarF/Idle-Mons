@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Idle Pokémon</name>
+    <name>Idle Mons</name>
     <description>like pokemon, but idle</description>
     <version>v1</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
-    <app-id>ca.narF.idlemon</app-id>
+    <app-id>ca.narF.idlemons</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
