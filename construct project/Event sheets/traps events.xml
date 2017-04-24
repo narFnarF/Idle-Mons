@@ -13,7 +13,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="minimumMinutes" sid="625836116514235" static="0" type="number">4</variable>
                 <variable constant="0" name="deltaTime" sid="857004679723869" static="0" type="number">0</variable>
                 <event-block sid="278529939378744">
                     <conditions />
@@ -24,69 +23,141 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Ignore absence of less than 10 sec</comment>
                 <event-block sid="331503936648156">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="187078355772580" type="System">
                             <param id="0" name="Variable">deltaTime</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="236251295420179" type="System">
-                            <param id="0" name="First value">deltaTime/60</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">minimumMinutes</param>
+                            <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="452318784279782" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;moins de &quot;&amp; minimumMinutes &amp;&quot; minutes&quot;</param>
+                        <action id="0" name="Call function" sid="922472815563280" type="Function">
+                            <param id="0" name="Name">&quot;traps .simulateTime&quot;</param>
+                            <param id="1" name="Parameter {n}">deltaTime</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="962365128277830">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="768358382878844" type="System">
-                                    <param id="0" name="Object">3trap</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="631395891585609" type="3trap">
-                                    <param id="0" name="Instance variable">minutesRemaining</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="761751795837087" type="3trap">
-                                    <param id="0" name="Instance variable">minutesRemaining</param>
-                                    <param id="1" name="Value">deltaTime/60</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-                <event-block sid="796035864721826">
+            </sub-events>
+        </event-block>
+        <event-block sid="921284008469349">
+            <conditions>
+                <condition id="0" name="On function" sid="752542714840261" type="Function">
+                    <param id="0" name="Name">&quot;traps .simulateTime&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="1" name="timebloc" sid="625836116514235" static="0" type="number">4</variable>
+                <variable constant="0" name="restant" sid="384687047515406" static="0" type="number">0</variable>
+                <event-block sid="194235794000556">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="127105190769506" type="System">
+                            <param id="0" name="Variable">restant</param>
+                            <param id="1" name="Value">Function.Param(0) / 60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="105680083456008">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="490459065068867" type="System">
-                            <param id="0" name="First value">deltaTime/60</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">minimumMinutes</param>
-                        </condition>
-                        <condition disabled="1" id="-11" name="For Each" sid="984868086122800" type="System">
-                            <param id="0" name="Object">3trap</param>
-                        </condition>
-                        <condition disabled="1" id="-23" name="While" sid="570354208435943" type="System" />
-                        <condition disabled="1" id="-7" name="Compare instance variable" sid="762398177763263" type="3trap">
-                            <param id="0" name="Instance variable">minutesRemaining</param>
-                            <param id="1" name="Comparison">5</param>
+                        <condition id="-23" name="While" sid="431170692293679" type="System" />
+                        <condition id="-14" name="Compare variable" sid="970890296713422" type="System">
+                            <param id="0" name="Variable">restant</param>
+                            <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="119382716965732" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;plus de &quot;&amp; minimumMinutes &amp;&quot; minutes&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <comment>1 block of time</comment>
+                        <event-block sid="368434544033467">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="904825440162794" type="System">
+                                    <param id="0" name="Variable">restant</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TIMEBLOC</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="856094115511851">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="851329983815427" type="System">
+                                            <param id="0" name="Object">3trap</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>there&apos;s a mon</comment>
+                                        <event-block sid="876157881656161">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="492012577566673" type="3trap">
+                                                    <param id="0" name="Instance variable">visitorId</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="483501588285701" type="3trap">
+                                                    <param id="0" name="Instance variable">minutesRemaining</param>
+                                                    <param id="1" name="Value">TIMEBLOC</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <comment>mon is gone</comment>
+                                                <event-block sid="827542540895803">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="681129055259841" type="3trap">
+                                                            <param id="0" name="Instance variable">minutesRemaining</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="866173730105609" type="3trap">
+                                                            <param id="0" name="Instance variable">visitorId</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="332623101207398" type="3trap">
+                                                            <param id="0" name="Instance variable">minutesRemaining</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>Trap is empty</comment>
+                                        <event-block sid="995983242889859">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="950957511835279" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>check if new mon</comment>
+                                                <event-block sid="260362210339063">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="779204993158516">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>less than 1 block of time</comment>
+                        <event-block sid="977740402666214">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="463158224290592" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
