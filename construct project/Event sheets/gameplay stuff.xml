@@ -3143,6 +3143,10 @@
                                             <param id="0" name="Name">&quot;notification&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;cheat activated&quot;</param>
                                         </action>
+                                        <action id="14" name="Log" sid="563547039713895" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;cheat activated&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="2353823751493864">
@@ -3157,6 +3161,10 @@
                                         <action id="0" name="Call function" sid="2731962059826497" type="Function">
                                             <param id="0" name="Name">&quot;notification&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;cheat deactivated&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="527458076596333" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;cheat deactivated&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3180,6 +3188,10 @@
                                     <param id="0" name="Name">&quot;notification&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;cheat deactivated&quot;</param>
                                 </action>
+                                <action id="14" name="Log" sid="620398471860932" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;cheat deactivated&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -3197,6 +3209,28 @@
                     <sub-events>
                         <event-group description="" sid="5240921310774981" title="time skips">
                             <sub-events>
+                                <comment>30 sec</comment>
+                                <event-block sid="408568151210625">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="696106385819957" type="Keyboard">
+                                            <param id="0" name="Key">86 (V)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="329717017227715" type="timeKeeper">
+                                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                                            <param id="1" name="Value">1000 * 30</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="697500700486463" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;debug: 30 seconds passed&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="777707216418759" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;cheat: 30 seconds&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <comment>15 minutes</comment>
                                 <event-block sid="9565896708669784">
                                     <conditions>
@@ -3212,6 +3246,10 @@
                                         <action id="0" name="Call function" sid="4678751035994771" type="Function">
                                             <param id="0" name="Name">&quot;notification&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;debug: 15 minutes passed&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="716250040498347" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;cheat: 15 minutes&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3231,6 +3269,10 @@
                                             <param id="0" name="Name">&quot;notification&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;debug: 1 hour passed&quot;</param>
                                         </action>
+                                        <action id="14" name="Log" sid="815502701594092" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;cheat: 1 hour&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <comment>6 heures</comment>
@@ -3248,6 +3290,10 @@
                                         <action id="0" name="Call function" sid="3474954669847364" type="Function">
                                             <param id="0" name="Name">&quot;notification&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;debug: 6 hours passed&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="355732623534245" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;cheat: 6 hours&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3267,231 +3313,60 @@
                                             <param id="0" name="Name">&quot;notification&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;debug: 24 hours passed&quot;</param>
                                         </action>
+                                        <action id="14" name="Log" sid="282716669387934" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;cheat: 24 hours&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-block sid="557685072215698">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="3704217256528622" type="Keyboard">
-                                    <param id="0" name="Key">49 (1)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="5011214317580004" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">1000</param>
-                                </action>
-                                <action id="0" name="Call function" sid="7628263753625174" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 1000 salads&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5574790077687577">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="2164939528319908" type="Keyboard">
-                                    <param id="0" name="Key">50 (2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="961588235365985" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">10000</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6772831669742584" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 10 000 salads&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9627662895136622">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="5620059868273281" type="Keyboard">
-                                    <param id="0" name="Key">81 (Q)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-10" name="Add to" sid="8939851018959264" type="System">
-                                    <param id="0" name="Variable">eggs</param>
-                                    <param id="1" name="Value">1000</param>
-                                </action>
-                                <action id="0" name="Call function" sid="5847947475852701" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;tofu&quot;{###}5</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6486740256561329" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 tofu&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="646716529375489">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="789024940462099" type="Keyboard">
-                                    <param id="0" name="Key">87 (W)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="1946579498035535" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 tofu steak&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9608158545745486" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}5</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="589298622342486">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="432740751556784" type="Keyboard">
-                                    <param id="0" name="Key">68 (D)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="55" name="Clear" sid="220731256148928" type="sillyMessagesJSON">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8706205130019801">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
-                                    <param id="0" name="Key">69 (E)</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="1052198456783295" type="Keyboard">
-                                    <param id="0" name="Key">80 (P)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="5831153994775529" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;veggie burger&quot;{###}5</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9000305280376246" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 Veggie burger&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2345859537936046">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="3491712395398315" type="Keyboard">
-                                    <param id="0" name="Key">72 (H)</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="1632224238506772" type="Keyboard">
-                                    <param id="0" name="Key">67 (C)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="6118507433782404" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;honey&quot;{###}100</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9762745976171534" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 100 honey&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="199859905082622">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
-                                    <param id="0" name="Key">82 (R)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="2673550343140702">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
-                                    <param id="0" name="Key">84 (T)</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="5151371775581306" type="Keyboard">
-                                    <param id="0" name="Key">80 (P)</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="3880978841046738" type="Keyboard">
-                                    <param id="0" name="Key">67 (C)</param>
-                                </condition>
-                                <condition disabled="1" id="-12" name="Repeat" sid="9012364909495616" type="System">
-                                    <param id="0" name="Count">50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="4640776345347283" type="System">
-                                    <param id="0" name="Object to create">cabbage</param>
-                                    <param id="1" name="Layer">&quot;game&quot;</param>
-                                    <param id="2" name="X">Mouse.X</param>
-                                    <param id="3" name="Y">Mouse.Y</param>
-                                </action>
-                                <action behavior="Physics" disabled="1" id="5" name="Apply impulse at angle" sid="3755200330580629" type="cabbage">
-                                    <param id="0" name="Impulse">100</param>
-                                    <param id="1" name="Angle">-90</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3793089828323068">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="6501843756353979" type="Keyboard">
-                                    <param id="0" name="Key">83 (S)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-36" name="Save" sid="6983143950774245" type="System">
-                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6785683011550147" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug: Saving in progress...&quot;{###}&quot;nobr&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6463982381402419">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="8022188620548019" type="Keyboard">
-                                    <param id="0" name="Key">85 (U)</param>
-                                </condition>
-                                <condition id="-11" name="For Each" sid="3967600516976875" type="System">
-                                    <param id="0" name="Object">arrows</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="8204234266941267" type="arrows">
-                                    <param id="0" name="Instance variable">name</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="3002385760687771" type="saver">
-                                    <param id="0" name="Key">arrows.name</param>
-                                    <param id="1" name="Value">&quot;unlocked&quot;</param>
-                                </action>
-                                <action id="14" name="Log" sid="4576121022386111" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;unlocked arrows&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>cause artificial lag</comment>
-                        <event-block sid="6028651977409516">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="9271448759265128" type="Keyboard">
-                                    <param id="0" name="Key">76 (L)</param>
-                                </condition>
-                                <condition id="-12" name="Repeat" sid="7512795243336389" type="System">
-                                    <param id="0" name="Count">50000</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="3319088382374947" type="timeKeeper">
-                                    <param id="0" name="X">sin(cos(tan(cos(sin(cos(tan(random(0,100))))))))-10000</param>
-                                </action>
-                            </actions>
-                        </event-block>
+                        <event-group description="" sid="515716072910263" title="system">
+                            <sub-events>
+                                <event-block sid="199859905082622">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
+                                            <param id="0" name="Key">82 (R)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3793089828323068">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="6501843756353979" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-36" name="Save" sid="6983143950774245" type="System">
+                                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6785683011550147" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;debug: Saving in progress...&quot;{###}&quot;nobr&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>cause artificial lag</comment>
+                                <event-block sid="6028651977409516">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="9271448759265128" type="Keyboard">
+                                            <param id="0" name="Key">76 (L)</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="7512795243336389" type="System">
+                                            <param id="0" name="Count">50000</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="3319088382374947" type="timeKeeper">
+                                            <param id="0" name="X">sin(cos(tan(cos(sin(cos(tan(random(0,100))))))))-10000</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-block>
             </sub-events>
