@@ -1,7 +1,4 @@
-It's raining cabbages
+Idle Mons
 =====================
 
-Silly game about falling cabbages and the bees that catch them.
-
-Play it here: http://bit.ly/its-raining-cabbages
-
+Work in progress about pokémons, neko atsume and idle games.
