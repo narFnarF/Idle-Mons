@@ -1,14 +1,19 @@
 {
   "mons": [
     {
-      "name": "pikachu",
+      "name": "Pikachu",
       "duration": 15,
       "gift": 10
     },
     {
-      "name": "togepi",
+      "name": "Togepi",
       "duration": 15,
-      "gift": 15
+      "gift": 1
+    },
+    {
+      "name": "Squirtle",
+      "duration": 1,
+      "gift": 100
     }
   ]
 }
