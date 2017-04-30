@@ -57,6 +57,7 @@
                     <instance-variables>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
+                        <bait>0</bait>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -111,6 +112,7 @@
                     <instance-variables>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
+                        <bait>0</bait>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -137,6 +139,7 @@
                     <instance-variables>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
+                        <bait>0</bait>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

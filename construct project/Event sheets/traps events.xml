@@ -49,13 +49,13 @@
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="1" name="timebloc" sid="625836116514235" static="0" type="number">4</variable>
-                <variable constant="0" name="restant" sid="384687047515406" static="0" type="number">0</variable>
+                <variable constant="1" name="TIME_BLOCK_DURATION" sid="625836116514235" static="0" type="number">4</variable>
+                <variable comment="time left" constant="0" name="tl" sid="384687047515406" static="0" type="number">0</variable>
                 <event-block sid="194235794000556">
                     <conditions />
                     <actions>
                         <action id="-9" name="Set value" sid="127105190769506" type="System">
-                            <param id="0" name="Variable">restant</param>
+                            <param id="0" name="Variable">tl</param>
                             <param id="1" name="Value">Function.Param(0) / 60</param>
                         </action>
                     </actions>
@@ -64,7 +64,7 @@
                     <conditions>
                         <condition id="-23" name="While" sid="431170692293679" type="System" />
                         <condition id="-14" name="Compare variable" sid="970890296713422" type="System">
-                            <param id="0" name="Variable">restant</param>
+                            <param id="0" name="Variable">tl</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -75,9 +75,9 @@
                         <event-block sid="368434544033467">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="904825440162794" type="System">
-                                    <param id="0" name="Variable">restant</param>
+                                    <param id="0" name="Variable">tl</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">TIMEBLOC</param>
+                                    <param id="2" name="Value">TIME_BLOCK_DURATION</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -90,7 +90,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <comment>there&apos;s a mon</comment>
+                                        <comment>if there&apos;s a mon</comment>
                                         <event-block sid="876157881656161">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="492012577566673" type="3trap">
@@ -102,11 +102,12 @@
                                             <actions>
                                                 <action id="-12" name="Subtract from" sid="483501588285701" type="3trap">
                                                     <param id="0" name="Instance variable">minutesRemaining</param>
-                                                    <param id="1" name="Value">TIMEBLOC</param>
+                                                    <param id="1" name="Value">TIME_BLOCK_DURATION</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <comment>mon is gone</comment>
+                                                <comment>mon is leaving</comment>
+                                                <comment>TODO: add the leaving mon+gift to the log</comment>
                                                 <event-block sid="827542540895803">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="681129055259841" type="3trap">
@@ -116,6 +117,10 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="14" name="Log" sid="606537948298584" type="Browser">
+                                                            <param id="0" name="Type">1</param>
+                                                            <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; left and gave &quot; &amp; Function.Call(&quot;mons .gift&quot;, 3trap.visitorId)</param>
+                                                        </action>
                                                         <action id="-10" name="Set value" sid="866173730105609" type="3trap">
                                                             <param id="0" name="Instance variable">visitorId</param>
                                                             <param id="1" name="Value">-1</param>
@@ -123,6 +128,17 @@
                                                         <action id="-10" name="Set value" sid="332623101207398" type="3trap">
                                                             <param id="0" name="Instance variable">minutesRemaining</param>
                                                             <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="628786644588355">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="534963581207652" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="14" name="Log" sid="498875887545357" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; is staying.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -336,6 +352,42 @@
                             <actions>
                                 <action id="1" name="Set return value" sid="531312288963452" type="Function">
                                     <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;gift&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="831543791617884">
+                    <conditions>
+                        <condition id="0" name="On function" sid="573794856571839" type="Function">
+                            <param id="0" name="Name">&quot;mons .monCaptured&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Calculate if a new mon is captured.</comment>
+                        <comment>Returns the id of the mon captured, or -1 if no mon were captured.</comment>
+                        <event-block sid="668507621416032">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="120950431300435" type="System">
+                                    <param id="0" name="First value">random(5)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="814782047916874" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;mons .count&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="597898491845430">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="798498993501664" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="314618062184816" type="Function">
+                                    <param id="0" name="Value">-1</param>
                                 </action>
                             </actions>
                         </event-block>

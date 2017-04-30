@@ -1750,6 +1750,7 @@
                 <instance-variables>
                     <instance-variable name="visitorId" sid="467207101000778" type="number" />
                     <instance-variable name="minutesRemaining" sid="456081887022255" type="number" />
+                    <instance-variable name="bait" sid="345122885626363" type="number" />
                 </instance-variables>
                 <container>
                     <type>3trap</type>
