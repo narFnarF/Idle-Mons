@@ -1775,6 +1775,9 @@
                     <type>3trapsTxt</type>
                 </container>
             </object-type>
+            <object-type global="1" name="3captureLog" sid="739139951118881">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />

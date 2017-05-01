@@ -176,6 +176,10 @@
                                                     <param id="0" name="Type">1</param>
                                                     <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; left and gave &quot; &amp; Function.Call(&quot;mons .gift&quot;, 3trap.visitorId)</param>
                                                 </action>
+                                                <action id="0" name="Call function" sid="538787920604462" type="Function">
+                                                    <param id="0" name="Name">&quot;mons .addToLog&quot;</param>
+                                                    <param id="1" name="Parameter {n}">3trap.visitorId{###}Function.Call(&quot;mons .gift&quot;, 3trap.visitorId)</param>
+                                                </action>
                                                 <action id="-10" name="Set value" sid="866173730105609" type="3trap">
                                                     <param id="0" name="Instance variable">visitorId</param>
                                                     <param id="1" name="Value">-1</param>
@@ -547,6 +551,46 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="272295611573002">
+                    <conditions>
+                        <condition id="0" name="On function" sid="871642291389406" type="Function">
+                            <param id="0" name="Name">&quot;mons .addToLog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="id" sid="634661851205561" static="0" type="number">0</variable>
+                        <variable constant="0" name="gift" sid="868690269699964" static="0" type="number">0</variable>
+                        <event-block sid="792136681793593">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="778245313283040" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="658045070272759" type="System">
+                                    <param id="0" name="Variable">gift</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="897997266406561">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="Push" sid="343395511228731" type="3captureLog">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">id</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="822950420966543" type="3captureLog">
+                                    <param id="0" name="X">3captureLog.Width-1</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">gift</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
@@ -564,7 +608,7 @@
                         </action>
                         <action disabled="1" id="14" name="Log" sid="208905483803146" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;debug: &quot; &amp; Function.Call(&quot;mons .gift&quot;, 2)</param>
+                            <param id="1" name="Message">&quot;debug: &quot; &amp; Function.Call(&quot;mons .addToLog&quot;, random(4), 2)</param>
                         </action>
                         <action disabled="1" id="14" name="Log" sid="578464219814689" type="Browser">
                             <param id="0" name="Type">0</param>

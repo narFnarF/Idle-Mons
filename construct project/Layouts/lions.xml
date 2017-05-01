@@ -1944,6 +1944,13 @@
                 <date>-1</date>
             </instance-variables>
         </instance>
+        <instance type="3captureLog" uid="403">
+            <properties>
+                <width>0</width>
+                <height>2</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
