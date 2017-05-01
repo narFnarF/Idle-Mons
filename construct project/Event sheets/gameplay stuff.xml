@@ -893,7 +893,7 @@
         </event-group>
         <event-group description="" sid="1518877078274311" title="time tracking">
             <sub-events>
-                <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
+                <variable comment="in seconds" constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="totalTime" sid="2557565007336424" static="1" type="number">0</variable>
                 <event-block sid="6667438399068728">
                     <conditions>
