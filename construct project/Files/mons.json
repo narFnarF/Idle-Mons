@@ -14,6 +14,16 @@
       "name": "Squirtle",
       "duration": 1,
       "gift": 100
+    },
+    {
+      "name": "Miho",
+      "duration": 2,
+      "gift": 50
+    },
+    {
+      "name": "Slime",
+      "duration": 100,
+      "gift": 2
     }
   ]
 }
