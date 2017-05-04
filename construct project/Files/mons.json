@@ -1,29 +1,34 @@
 {
-  "mons": [
-    {
-      "name": "Pikachu",
-      "duration": 15,
-      "gift": 10
-    },
-    {
-      "name": "Togepi",
-      "duration": 15,
-      "gift": 1
-    },
-    {
-      "name": "Squirtle",
-      "duration": 1,
-      "gift": 100
-    },
-    {
-      "name": "Miho",
-      "duration": 2,
-      "gift": 50
-    },
-    {
-      "name": "Slime",
-      "duration": 100,
-      "gift": 2
-    }
-  ]
+    "mons": [
+        {
+            "name": "Pikachu",
+            "duration": 15,
+            "gift": 10,
+            "nb": 1
+        },
+        {
+            "name": "Togepi",
+            "duration": 15,
+            "gift": 1,
+            "nb": 2
+        },
+        {
+            "name": "Squirtle",
+            "duration": 1,
+            "gift": 100,
+            "nb": 3
+        },
+        {
+            "name": "Miho",
+            "duration": 2,
+            "gift": 50,
+            "nb": 4
+        },
+        {
+            "name": "Slime",
+            "duration": 100,
+            "gift": 2,
+            "nb": 5
+        }
+    ]
 }
