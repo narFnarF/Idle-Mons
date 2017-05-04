@@ -591,6 +591,90 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="691683130420115">
+                    <conditions>
+                        <condition id="0" name="On function" sid="101897455002414" type="Function">
+                            <param id="0" name="Name">&quot;dex .count&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="472213109235614" type="Function">
+                            <param id="0" name="Value">3dex.Size(0, &quot;pokedex&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="779215700955329">
+                    <conditions>
+                        <condition id="0" name="On function" sid="905309603963992" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="752963546902846">
+                            <conditions>
+                                <condition id="70" name="Is Empty" sid="442824718178616" type="3dex">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set New Object" sid="924766987092095" type="3dex">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </action>
+                                <action id="10" name="Set New Array" sid="604355993409428" type="3dex">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>If the pokedex doesn&apos;t include 1 entry for each mons in the official JSON</comment>
+                        <event-block sid="339063246811357">
+                            <conditions>
+                                <condition id="-23" name="While" sid="455933065349651" type="System" />
+                                <condition id="-8" name="Compare two values" sid="927750287603569" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;mons .count&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Function.Call(&quot;dex .count&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="753607435771907" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;ici&quot;</param>
+                                </action>
+                                <action id="200" name="Set Current Path" sid="112003319117293" type="3dex">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="723505409257497" type="3dex">
+                                    <param id="0" name="Reference point">1</param>
+                                    <param id="1" name="Key {n}">Function.Call(&quot;dex .count&quot;)</param>
+                                </action>
+                                <action id="200" name="Set Current Path" sid="262643335983945" type="3dex">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;pokedex&quot;{###}Function.Call(&quot;dex .count&quot;)-1</param>
+                                </action>
+                                <action id="30" name="Set Boolean" sid="345850003403642" type="3dex">
+                                    <param id="0" name="value">1</param>
+                                    <param id="1" name="Reference point">1</param>
+                                    <param id="2" name="Key {n}">&quot;visited&quot;</param>
+                                </action>
+                                <action id="30" name="Set Boolean" sid="838293996677270" type="3dex">
+                                    <param id="0" name="value">1</param>
+                                    <param id="1" name="Reference point">1</param>
+                                    <param id="2" name="Key {n}">&quot;seen&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="806709911375903" type="3dex">
+                                    <param id="0" name="Value">-1</param>
+                                    <param id="1" name="Reference point">1</param>
+                                    <param id="2" name="Key {n}">&quot;seen_timestamp&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
@@ -671,5 +755,23 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="571402838961887" title="Pokedex">
+            <sub-events>
+                <comment>Fill the pokedex</comment>
+                <event-block sid="323492783053990">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="548898391168714" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="624472023115446" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
