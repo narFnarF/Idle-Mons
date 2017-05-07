@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mons general events</name>
+    <events>
+        <event-group description="" sid="559641465357570" title="mons AJAX request">
+            <sub-events>
+                <comment>Request the json once per day (it also triggers on the first start, for a New Game)</comment>
+                <event-block sid="353587388221620">
+                    <conditions>
+                        <condition id="1" name="Is online" sid="358585779743503" type="Browser" />
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="778920771613644" type="3trapsJSON">
+                            <param id="0" name="Instance variable">date</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">date.Date</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="179850598389900" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                            <param id="1" name="File">mons.json</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="360854307410305" type="3trapsJSON">
+                            <param id="0" name="Instance variable">date</param>
+                            <param id="1" name="Value">Date.Date</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 15 sec</comment>
+                <event-block sid="106672379521351">
+                    <conditions>
+                        <condition id="70" name="Is Empty" sid="708085315007437" type="3trapsJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </condition>
+                        <condition id="1" name="Is online" sid="262633634586110" type="Browser" />
+                        <condition id="-6" name="Every X seconds" sid="483984020912747" type="System">
+                            <param id="0" name="Interval (seconds)">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="924001208575954" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Trying to get again the traps JSON&quot;</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="713218814779843" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                            <param id="1" name="File">mons.json</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="532419638753226">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="322087223870364" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="60" name="LoadJSON" sid="429544765197060" type="3trapsJSON">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="415176917777710" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="895380455501266">
+                    <conditions>
+                        <condition id="1" name="On error" sid="296132172079394" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="201952118280992" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;Tried to retrieve mons.json but couldn&apos;t. Probably because internet connection is missing. Will try again later.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411431548521860">
+                    <conditions>
+                        <condition id="200" name="On JSON Parse Error" sid="444676574145155" type="3trapsJSON" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="732927643711785" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;The mons.json is not formated properly.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="774611380578229" title="general functions (mons)">
+            <sub-events>
+                <event-block sid="315454221851938">
+                    <conditions>
+                        <condition id="0" name="On function" sid="235934790610036" type="Function">
+                            <param id="0" name="Name">&quot;mons .count&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="836291135775936" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function mons.count&quot;</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="325371965940684" type="Function">
+                            <param id="0" name="Value">3trapsJSON.Size(0, &quot;mons&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="779863278442747">
+                    <conditions>
+                        <condition id="0" name="On function" sid="499023167042027" type="Function">
+                            <param id="0" name="Name">&quot;mons .name&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="729023759744322" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function mons.name&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="id" sid="287982594440250" static="0" type="number">0</variable>
+                        <event-block sid="818852288899814">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="161675725810889" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="450514119913050">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="917095018715515" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;name&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="128775819446817">
+                    <conditions>
+                        <condition id="0" name="On function" sid="527917691628465" type="Function">
+                            <param id="0" name="Name">&quot;mons .duration&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="155720174116154" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function mons.duration&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="id" sid="995771008687952" static="0" type="number">0</variable>
+                        <event-block sid="642920890496521">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="858035320381720" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="919539272537151">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="758326794617948" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;duration&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="429947112066477">
+                    <conditions>
+                        <condition id="0" name="On function" sid="743336900586332" type="Function">
+                            <param id="0" name="Name">&quot;mons .gift&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="808122527527103" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function mons.gift&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="id" sid="805602171810369" static="0" type="number">0</variable>
+                        <event-block sid="522927953526963">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="865155223192797" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="200104175665877">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="622211621055718" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;gift&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="415097023932901" title="Pokedex (general)">
+            <sub-events>
+                <event-group description="" sid="228815008593004" title="pokedex functions">
+                    <sub-events>
+                        <event-block sid="495222925803399">
+                            <conditions>
+                                <condition id="0" name="On function" sid="976259719276890" type="Function">
+                                    <param id="0" name="Name">&quot;dex .count&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="475920387208752" type="Function">
+                                    <param id="0" name="Value">3dex.Size(0, &quot;pokedex&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="164818019050705">
+                            <conditions>
+                                <condition id="0" name="On function" sid="407773670200636" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="901809337178550" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;initializing pokedex JSON&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="238080037227527">
+                                    <conditions>
+                                        <condition id="70" name="Is Empty" sid="350505684677366" type="3dex">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set New Object" sid="817070009123537" type="3dex">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </action>
+                                        <action id="10" name="Set New Array" sid="385013787692208" type="3dex">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>If the pokedex doesn&apos;t include 1 entry for each mons in the official JSON</comment>
+                                <event-block sid="158675874995549">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="232611488193411" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="544820018221725" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;mons .count&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Function.Call(&quot;dex .count&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="14" name="Log" sid="680287299769844" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;ici&quot;</param>
+                                        </action>
+                                        <action id="200" name="Set Current Path" sid="834905280393351" type="3dex">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="953252923723561" type="3dex">
+                                            <param id="0" name="Reference point">1</param>
+                                            <param id="1" name="Key {n}">Function.Call(&quot;dex .count&quot;)</param>
+                                        </action>
+                                        <action id="200" name="Set Current Path" sid="416360937885199" type="3dex">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;{###}Function.Call(&quot;dex .count&quot;)-1</param>
+                                        </action>
+                                        <action id="30" name="Set Boolean" sid="151448462783070" type="3dex">
+                                            <param id="0" name="value">1</param>
+                                            <param id="1" name="Reference point">1</param>
+                                            <param id="2" name="Key {n}">&quot;visited&quot;</param>
+                                        </action>
+                                        <action id="30" name="Set Boolean" sid="683683491432509" type="3dex">
+                                            <param id="0" name="value">1</param>
+                                            <param id="1" name="Reference point">1</param>
+                                            <param id="2" name="Key {n}">&quot;met&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="437553851482611" type="3dex">
+                                            <param id="0" name="Value">-1</param>
+                                            <param id="1" name="Reference point">1</param>
+                                            <param id="2" name="Key {n}">&quot;met_timestamp&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="916738813716278">
+                            <conditions>
+                                <condition id="0" name="On function" sid="506124246588197" type="Function">
+                                    <param id="0" name="Name">&quot;dex .isVisited&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="nb" sid="112573378457938" static="0" type="number">-1</variable>
+                                <event-block sid="249594042116223">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="527440220535092" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="483589668127396">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="960149417067496" type="Function">
+                                            <param id="0" name="Value">3dex.Value(0, &quot;pokedex&quot;, nb, &quot;visited&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="453179672534192">
+                            <conditions>
+                                <condition id="0" name="On function" sid="901414334969329" type="Function">
+                                    <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="nb" sid="325338799522458" static="0" type="number">-1</variable>
+                                <event-block sid="984987799873895">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="738894126554080" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="165436828836306">
+                                    <conditions />
+                                    <actions>
+                                        <action id="30" name="Set Boolean" sid="583311725725276" type="3dex">
+                                            <param id="0" name="value">0</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;visited&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="651004907420966">
+                            <conditions>
+                                <condition id="0" name="On function" sid="396000821362889" type="Function">
+                                    <param id="0" name="Name">&quot;dex .isMet&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="nb" sid="585253644334651" static="0" type="number">-1</variable>
+                                <event-block sid="301645666054998">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="946702227506303" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="823606946479570">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="958832018720964" type="Function">
+                                            <param id="0" name="Value">3dex.Value(0, &quot;pokedex&quot;, nb, &quot;met&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="265898480028596">
+                            <conditions>
+                                <condition id="0" name="On function" sid="677042792578461" type="Function">
+                                    <param id="0" name="Name">&quot;dex .addMet&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="nb" sid="296057327567359" static="0" type="number">-1</variable>
+                                <event-block sid="270178683597717">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="415961330217641" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="513270229913817">
+                                    <conditions />
+                                    <actions>
+                                        <action id="30" name="Set Boolean" sid="577331903505829" type="3dex">
+                                            <param id="0" name="value">0</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="615918722592054" type="3dex">
+                                            <param id="0" name="Value">Date.UnixTimestamp</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met_timestamp&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Fill the pokedex</comment>
+                <event-block disabled="1" sid="727627862827434">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="252669568135702" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="420417621883413" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="745819940776691" title="debug (mons general)">
+            <sub-events>
+                <event-block sid="830324351519742">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="626982103027155" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="729570135923569">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="199670017431012" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="14" name="Log" sid="579306133422179" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;before: &quot; &amp; Function.Call(&quot;dex .isMet&quot;, 1)</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="651796085968194" type="Function">
+                                    <param id="0" name="Name">&quot;dex .addMet&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="982808968182699" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;before: &quot; &amp; Function.Call(&quot;dex .isMet&quot;, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

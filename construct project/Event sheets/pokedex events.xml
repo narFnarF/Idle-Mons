@@ -2,5 +2,55 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>pokedex events</name>
-    <events />
+    <events>
+        <include>mons general events</include>
+        <event-block sid="563498005400842">
+            <conditions>
+                <condition id="0" name="On function" sid="232953855405828" type="Function">
+                    <param id="0" name="Name">&quot;dex .updateLogTxt&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="478847018580023" type="3dexTxt">
+                    <param id="0" name="Text">&quot;Pokedex:&quot; &amp; newline</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="i" sid="548697681736292" static="0" type="number">0</variable>
+                <event-block sid="246271208597204">
+                    <conditions>
+                        <condition disabled="1" id="3" name="For each element" sid="276287622258729" type="3captureLog">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                        <condition id="100" name="For each property" sid="253734969696596" type="3dex">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="759255598267144" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Value">3dex.CurrentKey</param>
+                        </action>
+                        <action id="1" name="Append text" sid="986392081740200" type="3dexTxt">
+                            <param id="0" name="Text">i+1 &amp; &quot; &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; ??&quot; &amp; newline</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="285266031987884">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="492715135318137" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="277510062481264" type="Function">
+                    <param id="0" name="Name">&quot;dex .updateLogTxt&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
