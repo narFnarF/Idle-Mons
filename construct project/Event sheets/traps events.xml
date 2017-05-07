@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>traps events</name>
     <events>
+        <include>inventory events</include>
         <include>mons general events</include>
         <include>global events</include>
         <include>gameplay stuff</include>
@@ -219,7 +220,6 @@
                                             </actions>
                                             <sub-events>
                                                 <comment>mon is leaving</comment>
-                                                <comment>TODO: add the leaving mon+gift to the log</comment>
                                                 <event-block sid="827542540895803">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="681129055259841" type="3trap">
@@ -230,7 +230,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="14" name="Log" sid="606537948298584" type="Browser">
-                                                            <param id="0" name="Type">1</param>
+                                                            <param id="0" name="Type">0</param>
                                                             <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; left and gave &quot; &amp; Function.Call(&quot;mons .gift&quot;, 3trap.visitorId)</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="538787920604462" type="Function">
@@ -327,28 +327,7 @@
                                             <param id="0" name="Variable">tl</param>
                                             <param id="1" name="Value">thisBlock</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="509020828893869" type="System">
-                                            <param id="0" name="Variable">tl</param>
-                                            <param id="1" name="Value">max(0, tl-TIME_BLOCK_DURATION)</param>
-                                        </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block disabled="1" sid="330771456466659">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="364935047246194" type="System">
-                                                    <param id="0" name="Variable">tl</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="909477132284120" type="System">
-                                                    <param id="0" name="Variable">tl</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -412,6 +391,9 @@
                                     <actions>
                                         <action id="1" name="Append text" sid="772207875819413" type="3trapsTxt">
                                             <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
+                                        </action>
+                                        <action id="1" name="Append text" sid="384478765714674" type="3trapsTxt">
+                                            <param id="0" name="Text">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; 3trap.baitQuantity</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -547,7 +529,7 @@
         </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
             <sub-events>
-                <event-block disabled="1" sid="332699366555795">
+                <event-block sid="332699366555795">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
                             <param id="0" name="Interval (seconds)">5</param>
@@ -558,27 +540,7 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;before&quot;</param>
                         </action>
-                        <action disabled="1" id="14" name="Log" sid="208905483803146" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;debug: &quot; &amp; Function.Call(&quot;mons .addToLog&quot;, random(4), 2)</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="578464219814689" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">3trapsJSON.Value(0, &quot;toto&quot;, &quot;titi&quot;)</param>
-                        </action>
-                        <action id="14" name="Log" sid="998090685355026" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;removing a node&quot;</param>
-                        </action>
-                        <action id="50" name="Delete" sid="743987538434026" type="3trapsJSON">
-                            <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}">&quot;mons&quot;{###}0</param>
-                        </action>
-                        <action id="14" name="Log" sid="489380042055646" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;re-initialize the pokedex JSON&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="593521751542346" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="593521751542346" type="Function">
                             <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>

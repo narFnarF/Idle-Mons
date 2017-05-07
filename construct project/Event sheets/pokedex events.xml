@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>pokedex events</name>
     <events>
+        <include>inventory events</include>
         <include>gameplay stuff</include>
         <include>mons general events</include>
         <event-block sid="861377419577383">

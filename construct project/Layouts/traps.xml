@@ -57,7 +57,8 @@
                     <instance-variables>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
-                        <bait>0</bait>
+                        <baitQuantity>0</baitQuantity>
+                        <baitType></baitType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -115,7 +116,8 @@
                     <instance-variables>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
-                        <bait>0</bait>
+                        <baitQuantity>0</baitQuantity>
+                        <baitType></baitType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -145,7 +147,8 @@
                     <instance-variables>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
-                        <bait>0</bait>
+                        <baitQuantity>0</baitQuantity>
+                        <baitType></baitType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
