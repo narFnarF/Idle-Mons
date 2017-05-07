@@ -5,6 +5,22 @@
     <events>
         <include>gameplay stuff</include>
         <include>mons general events</include>
+        <event-block sid="861377419577383">
+            <conditions>
+                <condition id="0" name="On function" sid="510346940448324" type="Function">
+                    <param id="0" name="Name">&quot;first launch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="778403048852593">
+            <conditions>
+                <condition id="0" name="On function" sid="460851615227324" type="Function">
+                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="563498005400842">
             <conditions>
                 <condition id="0" name="On function" sid="232953855405828" type="Function">
@@ -33,7 +49,7 @@
                             <param id="0" name="Variable">i</param>
                             <param id="1" name="Value">3dex.CurrentKey</param>
                         </action>
-                        <action id="1" name="Append text" sid="986392081740200" type="3dexTxt">
+                        <action disabled="1" id="1" name="Append text" sid="986392081740200" type="3dexTxt">
                             <param id="0" name="Text">i+1</param>
                         </action>
                     </actions>
@@ -58,7 +74,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="440223061753587" type="3dexTxt">
-                                            <param id="0" name="Text">&quot;* &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; date&quot; &amp; newline</param>
+                                            <param id="0" name="Text">&quot;* &quot; &amp; i+1 &amp; &quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; : date&quot; &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -68,7 +84,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="100587844510606" type="3dexTxt">
-                                            <param id="0" name="Text">&quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; newline</param>
+                                            <param id="0" name="Text">&quot;  &quot; &amp; i+1 &amp; &quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -80,7 +96,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Append text" sid="245899050339163" type="3dexTxt">
-                                    <param id="0" name="Text">&quot;  &quot; &amp; &quot;????&quot; &amp; newline</param>
+                                    <param id="0" name="Text">&quot;  &quot; &amp; i+1 &amp; &quot;  &quot; &amp; &quot;????&quot; &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>

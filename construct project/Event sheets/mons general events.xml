@@ -106,10 +106,33 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;function mons.count&quot;</param>
                         </action>
-                        <action id="1" name="Set return value" sid="325371965940684" type="Function">
-                            <param id="0" name="Value">3trapsJSON.Size(0, &quot;mons&quot;)</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="533939913719822">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="451399704360793" type="3trapsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;mons&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="325371965940684" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Size(0, &quot;mons&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855572368963479">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="356422034945130" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="380722483072694" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from mons.count: The JSON don&apos;t contain a mons node.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="779863278442747">
                     <conditions>
@@ -135,10 +158,27 @@
                             </actions>
                         </event-block>
                         <event-block sid="450514119913050">
-                            <conditions />
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="911551505605742" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="917095018715515" type="Function">
                                     <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;name&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="887249519324757">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="732068283582448" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="308966402349643" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from mons.name: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -168,10 +208,27 @@
                             </actions>
                         </event-block>
                         <event-block sid="919539272537151">
-                            <conditions />
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="328232417797392" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="758326794617948" type="Function">
                                     <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;duration&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="997482772190112">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="158941075406765" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="490196580532365" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from mons.duration: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -201,10 +258,27 @@
                             </actions>
                         </event-block>
                         <event-block sid="200104175665877">
-                            <conditions />
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="510150766935951" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="622211621055718" type="Function">
                                     <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;gift&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="259419682100228">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="356589400764673" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="803572716115064" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from mons.gift: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -222,11 +296,34 @@
                                     <param id="0" name="Name">&quot;dex .count&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="475920387208752" type="Function">
-                                    <param id="0" name="Value">3dex.Size(0, &quot;pokedex&quot;)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="604473574966491">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="475920387208752" type="Function">
+                                            <param id="0" name="Value">3dex.Size(0, &quot;pokedex&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="453147585551593">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="362814695572167" type="3trapsJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="446108297157280" type="Function">
+                                            <param id="0" name="Value">0</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="136724556073958" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="164818019050705">
                             <conditions>
@@ -243,23 +340,41 @@
                             <sub-events>
                                 <event-block sid="238080037227527">
                                     <conditions>
-                                        <condition id="70" name="Is Empty" sid="350505684677366" type="3dex">
+                                        <condition id="60" name="Is undefined" sid="599194381197494" type="3dex">
                                             <param id="0" name="Reference point">0</param>
                                             <param id="1" name="Key {n}"></param>
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="14" name="Log" sid="880572940739359" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;creating the root&quot;</param>
+                                        </action>
                                         <action id="0" name="Set New Object" sid="817070009123537" type="3dex">
                                             <param id="0" name="Reference point">0</param>
                                             <param id="1" name="Key {n}"></param>
                                         </action>
-                                        <action id="10" name="Set New Array" sid="385013787692208" type="3dex">
+                                    </actions>
+                                </event-block>
+                                <event-block sid="792659480452838">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="227766430352059" type="3dex">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="679767073673102" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;creating the pokedex node&quot;</param>
+                                        </action>
+                                        <action id="10" name="Set New Array" sid="779720106023085" type="3dex">
                                             <param id="0" name="Reference point">0</param>
                                             <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>If the pokedex doesn&apos;t include 1 entry for each mons in the official JSON</comment>
+                                <comment>If the pokedex doesn&apos;t include 1 entry for each mons of the official JSON</comment>
                                 <event-block sid="158675874995549">
                                     <conditions>
                                         <condition id="-23" name="While" sid="232611488193411" type="System" />
@@ -270,9 +385,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="14" name="Log" sid="680287299769844" type="Browser">
+                                        <action id="14" name="Log" sid="680287299769844" type="Browser">
                                             <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;ici&quot;</param>
+                                            <param id="1" name="Message">&quot;creating 1 mon node&quot;</param>
                                         </action>
                                         <action id="200" name="Set Current Path" sid="834905280393351" type="3dex">
                                             <param id="0" name="Reference point">0</param>
@@ -324,10 +439,27 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="483589668127396">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="255814576402791" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="960149417067496" type="Function">
                                             <param id="0" name="Value">3dex.Value(0, &quot;pokedex&quot;, nb, &quot;visited&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="223812950031700">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="370464955140713" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="976213036007902" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from dex.isVisited: Trying to access &lt;0&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -352,12 +484,29 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="165436828836306">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="691195947296229" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
                                         <action id="30" name="Set Boolean" sid="583311725725276" type="3dex">
                                             <param id="0" name="value">0</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;visited&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="151547901962259">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="270075182734251" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="741663368385500" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from dex.addVisited: Trying to access &lt;0&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -382,10 +531,27 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="823606946479570">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="957479323357833" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="958832018720964" type="Function">
                                             <param id="0" name="Value">3dex.Value(0, &quot;pokedex&quot;, nb, &quot;met&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="161229059838387">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="152887656062639" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="936683885461610" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from dex.isMet: Trying to access &lt;0&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -400,6 +566,7 @@
                             <actions />
                             <sub-events>
                                 <variable constant="0" name="nb" sid="296057327567359" static="0" type="number">-1</variable>
+                                <variable constant="1" name="true" sid="172746146847857" static="0" type="number">1</variable>
                                 <event-block sid="270178683597717">
                                     <conditions />
                                     <actions>
@@ -409,22 +576,51 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="513270229913817">
-                                    <conditions />
+                                <event-block sid="622005984155331">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="849232884379256" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="513270229913817">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="769844928048454" type="System">
+                                                    <param id="0" name="First value">Function.Call(&quot;dex .isMet&quot;, nb)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">TRUE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="323571908305976" type="Function">
+                                                    <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
+                                                    <param id="1" name="Parameter {n}">nb</param>
+                                                </action>
+                                                <action id="30" name="Set Boolean" sid="577331903505829" type="3dex">
+                                                    <param id="0" name="value">0</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met&quot;</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="615918722592054" type="3dex">
+                                                    <param id="0" name="Value">Date.UnixTimestamp</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met_timestamp&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="580890766272285">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="575936857538946" type="System" />
+                                    </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="323571908305976" type="Function">
-                                            <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
-                                            <param id="1" name="Parameter {n}">nb</param>
-                                        </action>
-                                        <action id="30" name="Set Boolean" sid="577331903505829" type="3dex">
-                                            <param id="0" name="value">0</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met&quot;</param>
-                                        </action>
-                                        <action id="20" name="Set Value" sid="615918722592054" type="3dex">
-                                            <param id="0" name="Value">Date.UnixTimestamp</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met_timestamp&quot;</param>
+                                        <action id="14" name="Log" sid="206325844691734" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from dex.addMet: Trying to access &lt;0&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
