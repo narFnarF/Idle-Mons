@@ -30,8 +30,8 @@
                                 <condition id="3" name="On touched object" sid="7228765209026833" type="Touch">
                                     <param id="0" name="Object">arrows</param>
                                 </condition>
-                                <condition id="-9" inverted="1" name="Is visible" sid="55252332753933" type="purchasePopup" />
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1350413216091956" type="notificationBox">
+                                <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="55252332753933" type="purchasePopup" />
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="1350413216091956" type="notificationBox">
                                     <param id="0" name="Instance variable">open</param>
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="4655331437389203" type="arrows" />

@@ -8,56 +8,52 @@
         <include>gameplay stuff</include>
         <event-group description="" sid="315831820789093" title="Traps">
             <sub-events>
-                <event-group description="" sid="753817922202577" title="traps functions">
+                <event-block sid="831543791617884">
+                    <conditions>
+                        <condition id="0" name="On function" sid="573794856571839" type="Function">
+                            <param id="0" name="Name">&quot;traps .testTrapCapture&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="414467370306111" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function mons.monCaptured&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="831543791617884">
+                        <comment>Calculate if a new mon is captured.</comment>
+                        <comment>Returns the id of the mon captured, or -1 if no mon were captured.</comment>
+                        <variable constant="0" name="monsterId" sid="752794100873998" static="0" type="number">0</variable>
+                        <event-block sid="668507621416032">
                             <conditions>
-                                <condition id="0" name="On function" sid="573794856571839" type="Function">
-                                    <param id="0" name="Name">&quot;mons .testTrapCapture&quot;</param>
+                                <condition id="-8" name="Compare two values" sid="120950431300435" type="System">
+                                    <param id="0" name="First value">random(5)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="414467370306111" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;function mons.monCaptured&quot;</param>
+                                <action id="-9" name="Set value" sid="157691158738064" type="System">
+                                    <param id="0" name="Variable">monsterId</param>
+                                    <param id="1" name="Value">floor( random( Function.Call(&quot;mons .count&quot;) ) )</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="814782047916874" type="Function">
+                                    <param id="0" name="Value">monsterId</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <comment>Calculate if a new mon is captured.</comment>
-                                <comment>Returns the id of the mon captured, or -1 if no mon were captured.</comment>
-                                <variable constant="0" name="monsterId" sid="752794100873998" static="0" type="number">0</variable>
-                                <event-block sid="668507621416032">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="120950431300435" type="System">
-                                            <param id="0" name="First value">random(5)</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="157691158738064" type="System">
-                                            <param id="0" name="Variable">monsterId</param>
-                                            <param id="1" name="Value">floor( random( Function.Call(&quot;mons .count&quot;) ) )</param>
-                                        </action>
-                                        <action id="1" name="Set return value" sid="814782047916874" type="Function">
-                                            <param id="0" name="Value">monsterId</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="597898491845430">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="798498993501664" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="314618062184816" type="Function">
-                                            <param id="0" name="Value">-1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                        <event-block sid="597898491845430">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="798498993501664" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="314618062184816" type="Function">
+                                    <param id="0" name="Value">-1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
-                </event-group>
+                </event-block>
                 <event-block sid="227827290332802">
                     <conditions>
                         <condition id="0" name="On function" sid="741191467400781" type="Function">
@@ -270,7 +266,7 @@
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="487873649318147" type="System">
                                                             <param id="0" name="Variable">monCaptured</param>
-                                                            <param id="1" name="Value">Function.Call(&quot;mons .testTrapCapture&quot;)</param>
+                                                            <param id="1" name="Value">Function.Call(&quot;traps .testTrapCapture&quot;)</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -290,6 +286,10 @@
                                                         <action id="-10" name="Set value" sid="373274409514661" type="3trap">
                                                             <param id="0" name="Instance variable">minutesRemaining</param>
                                                             <param id="1" name="Value">Function.Call(&quot;mons .duration&quot;, monCaptured)</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="724326527950565" type="Function">
+                                                            <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
+                                                            <param id="1" name="Parameter {n}">monCaptured</param>
                                                         </action>
                                                         <action id="14" name="Log" sid="609621408870999" type="Browser">
                                                             <param id="0" name="Type">0</param>
@@ -381,6 +381,10 @@
                             <actions>
                                 <action id="0" name="Set text" sid="977291409766435" type="3trapsTxt">
                                     <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="150676197984669" type="Function">
+                                    <param id="0" name="Name">&quot;dex .addMet&quot;</param>
+                                    <param id="1" name="Parameter {n}">3trap.visitorId</param>
                                 </action>
                             </actions>
                         </event-block>

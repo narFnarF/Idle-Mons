@@ -412,6 +412,10 @@
                                 <event-block sid="513270229913817">
                                     <conditions />
                                     <actions>
+                                        <action id="0" name="Call function" sid="323571908305976" type="Function">
+                                            <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
+                                            <param id="1" name="Parameter {n}">nb</param>
+                                        </action>
                                         <action id="30" name="Set Boolean" sid="577331903505829" type="3dex">
                                             <param id="0" name="value">0</param>
                                             <param id="1" name="Reference point">0</param>

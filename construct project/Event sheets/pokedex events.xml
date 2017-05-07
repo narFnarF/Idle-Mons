@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>pokedex events</name>
     <events>
+        <include>gameplay stuff</include>
         <include>mons general events</include>
         <event-block sid="563498005400842">
             <conditions>
@@ -33,9 +34,57 @@
                             <param id="1" name="Value">3dex.CurrentKey</param>
                         </action>
                         <action id="1" name="Append text" sid="986392081740200" type="3dexTxt">
-                            <param id="0" name="Text">i+1 &amp; &quot; &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; ??&quot; &amp; newline</param>
+                            <param id="0" name="Text">i+1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="274218234503363">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="325991482234867" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;dex .isVisited&quot;, i)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="147693641451023">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="736943846104929" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;dex .isMet&quot;, i)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="440223061753587" type="3dexTxt">
+                                            <param id="0" name="Text">&quot;* &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; date&quot; &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="399819418747888">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="805492176904580" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="100587844510606" type="3dexTxt">
+                                            <param id="0" name="Text">&quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="241844603402801">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="637418913460398" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="245899050339163" type="3dexTxt">
+                                    <param id="0" name="Text">&quot;  &quot; &amp; &quot;????&quot; &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

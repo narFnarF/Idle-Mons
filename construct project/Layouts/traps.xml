@@ -183,6 +183,42 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="arrowLayout" uid="408">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <label>Pokedex</label>
+                        <name></name>
+                        <price>0</price>
+                        <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Pay </purchasePopupButtonText>
+                        <goto>pokedex</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>555</x>
+                        <y>899</y>
+                        <z>0</z>
+                        <width>131</width>
+                        <height>99</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
