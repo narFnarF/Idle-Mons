@@ -247,6 +247,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <comment>Else (mon is staying)</comment>
                                                 <event-block sid="628786644588355">
                                                     <conditions>
                                                         <condition id="-22" name="Else" sid="534963581207652" type="System" />
@@ -260,20 +261,20 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <comment>Trap is empty</comment>
+                                        <comment>Else (Trap is empty)</comment>
                                         <event-block sid="995983242889859">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="950957511835279" type="System" />
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <variable constant="0" name="monCaptured" sid="987804508915747" static="0" type="number">-1</variable>
+                                                <variable constant="0" name="visitorId" sid="987804508915747" static="0" type="number">-1</variable>
                                                 <comment>check if new mon</comment>
                                                 <event-block sid="260362210339063">
                                                     <conditions />
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="487873649318147" type="System">
-                                                            <param id="0" name="Variable">monCaptured</param>
+                                                            <param id="0" name="Variable">visitorId</param>
                                                             <param id="1" name="Value">Function.Call(&quot;traps .testTrapCapture&quot;)</param>
                                                         </action>
                                                     </actions>
@@ -281,7 +282,7 @@
                                                 <event-block sid="839868961344069">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="175726364026577" type="System">
-                                                            <param id="0" name="First value">monCaptured</param>
+                                                            <param id="0" name="First value">visitorId</param>
                                                             <param id="1" name="Comparison">1</param>
                                                             <param id="2" name="Second value">-1</param>
                                                         </condition>
@@ -289,19 +290,19 @@
                                                     <actions>
                                                         <action id="-10" name="Set value" sid="569476436039271" type="3trap">
                                                             <param id="0" name="Instance variable">visitorId</param>
-                                                            <param id="1" name="Value">monCaptured</param>
+                                                            <param id="1" name="Value">visitorId</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="373274409514661" type="3trap">
                                                             <param id="0" name="Instance variable">minutesRemaining</param>
-                                                            <param id="1" name="Value">Function.Call(&quot;mons .duration&quot;, monCaptured)</param>
+                                                            <param id="1" name="Value">Function.Call(&quot;mons .duration&quot;, visitorId)</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="724326527950565" type="Function">
                                                             <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
-                                                            <param id="1" name="Parameter {n}">monCaptured</param>
+                                                            <param id="1" name="Parameter {n}">visitorId</param>
                                                         </action>
                                                         <action id="14" name="Log" sid="609621408870999" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.IID &amp; &quot; caught &quot; &amp; Function.Call(&quot;mons .name&quot;, monCaptured) &amp; &quot; who will stay for &quot; &amp; Function.Call(&quot;mons .duration&quot;, monCaptured) &amp; &quot; minutes.&quot;</param>
+                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.IID &amp; &quot; has a visitor: &quot; &amp; Function.Call(&quot;mons .name&quot;, visitorId) &amp; &quot; who will stay for &quot; &amp; Function.Call(&quot;mons .duration&quot;, visitorId) &amp; &quot; minutes.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -312,7 +313,7 @@
                                                     <actions>
                                                         <action id="14" name="Log" sid="950446423349282" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.IID &amp; &quot; caught nothing.&quot;</param>
+                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.IID &amp; &quot; remains empty.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -529,7 +530,7 @@
         </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
             <sub-events>
-                <event-block sid="332699366555795">
+                <event-block disabled="1" sid="332699366555795">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
                             <param id="0" name="Interval (seconds)">5</param>
