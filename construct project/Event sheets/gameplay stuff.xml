@@ -1038,13 +1038,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="5019531696412462" title="Quests">
+        <event-group description="" disabled="1" sid="5019531696412462" title="Quests">
             <sub-events>
                 <comment>Populate the big list of quests</comment>
                 <comment>For event-based quests, the name of the quest needs to match the name of the event in the Stat dictionary.</comment>
                 <comment>For level-based quests, the name of the quest should be translated correctly by the &quot;get level of&quot; function.</comment>
                 <comment>Note: It&apos;s important to put the conditions ABOVE the function &quot;get or create&quot;, otherwise, it creates empty quests.</comment>
-                <event-block any="1" sid="6857513590205514">
+                <event-block any="1" disabled="1" sid="6857513590205514">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6904073112063201" type="System" />
                         <condition id="-29" name="On load complete" sid="9909417375595063" type="System" />
@@ -1057,7 +1057,7 @@
                     </actions>
                     <sub-events>
                         <comment>collected cabbage</comment>
-                        <event-block sid="8585534021451595">
+                        <event-block disabled="1" sid="8585534021451595">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="5607218444451159" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected cabbage&quot;)</param>
@@ -1088,12 +1088,12 @@
                         </event-block>
                         <comment>Collected salads</comment>
                         <comment>quest qui donne des pills</comment>
-                        <event-block sid="2036127766579293">
+                        <event-block disabled="1" sid="2036127766579293">
                             <conditions />
                             <actions />
                             <sub-events>
                                 <comment>Gives pills only if the menhir is below level 4 and the player isn&apos;t trying to stockpile a bunch of pills</comment>
-                                <event-block sid="6505171279708337">
+                                <event-block disabled="1" sid="6505171279708337">
                                     <conditions>
                                         <condition disabled="1" id="-8" name="Compare two values" sid="735615908519534" type="System">
                                             <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
@@ -1147,7 +1147,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>Le Else fait en sorte the la quest s&apos;overwrite quand elle n&apos;est plus disponible pour donner des pills, et se met à donner des tofus à la place.</comment>
-                                <event-block sid="9213066681281293">
+                                <event-block disabled="1" sid="9213066681281293">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="4203308747865835" type="System" />
                                         <condition id="-14" name="Pick by unique ID" sid="5383784588130987" type="quest">
@@ -1180,7 +1180,7 @@
                             </sub-events>
                         </event-block>
                         <comment>sent lions on mission</comment>
-                        <event-block sid="2471713764657516">
+                        <event-block disabled="1" sid="2471713764657516">
                             <conditions>
                                 <condition disabled="1" id="3" name="Has key" sid="7217139633974638" type="saver">
                                     <param id="0" name="Key">&quot;arrow lions&quot;</param>
@@ -1218,7 +1218,7 @@
                             </actions>
                         </event-block>
                         <comment>menhir enlarged</comment>
-                        <event-block sid="271405396349379">
+                        <event-block disabled="1" sid="271405396349379">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4650005619749511" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
@@ -1253,7 +1253,7 @@
                             </actions>
                         </event-block>
                         <comment>upgraded silo</comment>
-                        <event-block sid="825762396107598">
+                        <event-block disabled="1" sid="825762396107598">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="4871117294248551" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;upgraded silo&quot;)</param>
@@ -1283,7 +1283,7 @@
                             </actions>
                         </event-block>
                         <comment>upgraded factory</comment>
-                        <event-block sid="4826793987574303">
+                        <event-block disabled="1" sid="4826793987574303">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="4796471263681378" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;upgraded factory&quot;)</param>
@@ -1313,7 +1313,7 @@
                             </actions>
                         </event-block>
                         <comment>upgraded a bee</comment>
-                        <event-block sid="8140635396500898">
+                        <event-block disabled="1" sid="8140635396500898">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2290065677737033" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;bee highest&quot;)</param>
@@ -1348,7 +1348,7 @@
                             </actions>
                         </event-block>
                         <comment>all bees above or equal</comment>
-                        <event-block sid="9490440616764986">
+                        <event-block disabled="1" sid="9490440616764986">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9440163674474692" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;bee lowest&quot;)</param>
@@ -1388,7 +1388,7 @@
                             </actions>
                         </event-block>
                         <comment>leveled up a lion</comment>
-                        <event-block sid="775229316826496">
+                        <event-block disabled="1" sid="775229316826496">
                             <conditions>
                                 <condition disabled="1" id="3" name="Has key" sid="8195863701073977" type="saver">
                                     <param id="0" name="Key">&quot;arrow lions&quot;</param>
@@ -1426,7 +1426,7 @@
                             </actions>
                         </event-block>
                         <comment>all lions above or equal</comment>
-                        <event-block sid="6344964130345521">
+                        <event-block disabled="1" sid="6344964130345521">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1318005228160451" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;lion3&quot;)</param>
@@ -1461,7 +1461,7 @@
                             </actions>
                         </event-block>
                         <comment>at the end, delete the quests that were not updated, because they are from a previous version of the game, or because they&apos;re inactive</comment>
-                        <event-block any="1" sid="3491830434832082">
+                        <event-block any="1" disabled="1" sid="3491830434832082">
                             <conditions>
                                 <condition id="0" inverted="1" name="Compare value" sid="4468448352658223" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
@@ -1476,7 +1476,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="3692665080270452">
+                                <event-block disabled="1" sid="3692665080270452">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="3843054536793176" type="System">
                                             <param id="0" name="Object">quest</param>
@@ -1494,7 +1494,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2089964565695481">
+                <event-block disabled="1" sid="2089964565695481">
                     <conditions>
                         <condition id="0" name="On function" sid="4058368446126709" type="Function">
                             <param id="0" name="Name">&quot;get or create&quot;</param>
@@ -1503,7 +1503,7 @@
                     <actions />
                     <sub-events>
                         <variable constant="0" name="name" sid="626921950708316" static="0" type="text"></variable>
-                        <event-block sid="7848143035200872">
+                        <event-block disabled="1" sid="7848143035200872">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="3895654702598826" type="System">
                                     <param id="0" name="First value">Function.ParamCount</param>
@@ -1523,7 +1523,7 @@
                             </actions>
                             <sub-events>
                                 <comment>return the quest with that name</comment>
-                                <event-block sid="5837547847958386">
+                                <event-block disabled="1" sid="5837547847958386">
                                     <conditions>
                                         <condition id="0" name="Compare value" sid="3970380100115832" type="quest">
                                             <param id="0" name="Key">&quot;type&quot;</param>
@@ -1539,7 +1539,7 @@
                                 </event-block>
                                 <comment>otherwise, create one, and return that one</comment>
                                 <comment>I hope it&apos;s not bad to create something on layer 0...</comment>
-                                <event-block sid="732106477943137">
+                                <event-block disabled="1" sid="732106477943137">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="7720656800834397" type="System" />
                                     </conditions>
@@ -1601,7 +1601,7 @@
                 </event-block>
                 <comment>Select the list of active quest. (Set some quests as &quot;active&quot; = 1)</comment>
                 <variable constant="1" name="SIMULTANEOUS_QUESTS_NB" sid="2933464365143761" static="0" type="number">3</variable>
-                <event-block sid="6362194391087918">
+                <event-block disabled="1" sid="6362194391087918">
                     <conditions>
                         <condition id="-23" name="While" sid="4930884065722942" type="System" />
                     </conditions>
@@ -1613,7 +1613,7 @@
                     </actions>
                     <sub-events>
                         <comment>if we have enough quests, stop looping</comment>
-                        <event-block sid="4822536761671897">
+                        <event-block disabled="1" sid="4822536761671897">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="2995566617225889" type="quest">
                                     <param id="0" name="Key">&quot;active&quot;</param>
@@ -1634,7 +1634,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="241246972396805">
+                        <event-block disabled="1" sid="241246972396805">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1231061346168539" type="System" />
                             </conditions>
@@ -1656,7 +1656,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>set active</comment>
-                                <event-block sid="1641185173334432">
+                                <event-block disabled="1" sid="1641185173334432">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="5810936934632942" type="System" />
                                         <condition id="-14" name="Pick by unique ID" sid="7790130957399894" type="quest">
@@ -1681,7 +1681,7 @@
                             </sub-events>
                         </event-block>
                         <comment>added security in case there isn&apos;t enough quests and they are all active</comment>
-                        <event-block sid="242103884420269">
+                        <event-block disabled="1" sid="242103884420269">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="2088218220977623" type="quest">
                                     <param id="0" name="Key">&quot;active&quot;</param>
@@ -1704,7 +1704,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4935592827701667">
+                <event-block disabled="1" sid="4935592827701667">
                     <conditions>
                         <condition id="0" name="On function" sid="8046096312010163" type="Function">
                             <param id="0" name="Name">&quot;pick random quest&quot;</param>
@@ -1712,7 +1712,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5031033786922448">
+                        <event-block disabled="1" sid="5031033786922448">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="9619134522426496" type="quest">
                                     <param id="0" name="Key">&quot;active&quot;</param>
@@ -1739,7 +1739,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3295254125563705">
+                <event-block disabled="1" sid="3295254125563705">
                     <conditions>
                         <condition id="0" name="On function" sid="3676879681192129" type="Function">
                             <param id="0" name="Name">&quot;pick least completed quest&quot;</param>
@@ -1755,7 +1755,7 @@
                         <comment>returns the UID of the least completed inactive quest (if ties: a random one among the lowest)</comment>
                         <variable constant="0" name="timeCompleted" sid="78837180079192" static="0" type="number">0</variable>
                         <variable constant="0" name="questId" sid="2358569011510915" static="0" type="number">0</variable>
-                        <event-block sid="4517908857136412">
+                        <event-block disabled="1" sid="4517908857136412">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="2991004587453147" type="quest">
                                     <param id="0" name="Key">&quot;active&quot;</param>
@@ -1765,7 +1765,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="1982701843942132">
+                                <event-block disabled="1" sid="1982701843942132">
                                     <conditions>
                                         <condition id="-34" name="Pick by evaluate" sid="1745738166861233" type="System">
                                             <param id="0" name="Object">quest</param>
@@ -1783,7 +1783,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="9474119065648529">
+                                <event-block disabled="1" sid="9474119065648529">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="1310712251260271" type="System">
                                             <param id="0" name="Object">quest</param>
@@ -1805,7 +1805,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="5243920038850759">
+                                <event-block disabled="1" sid="5243920038850759">
                                     <conditions />
                                     <actions>
                                         <action id="1" name="Set return value" sid="700636339750102" type="Function">
@@ -1819,7 +1819,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="5745875173531076">
+                        <event-block disabled="1" sid="5745875173531076">
                             <conditions>
                                 <condition id="-22" name="Else" sid="6968522134018945" type="System" />
                             </conditions>
@@ -1835,7 +1835,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="6952970159719785">
+                <event-block disabled="1" sid="6952970159719785">
                     <conditions>
                         <condition id="0" name="On function" sid="890887251462341" type="Function">
                             <param id="0" name="Name">&quot;count for quests&quot;</param>
@@ -1846,11 +1846,11 @@
                         <comment>This function counts each time an quest action is completed (ex: count how many times lions are sent in mission)</comment>
                         <variable constant="0" name="name" sid="5085204026361302" static="0" type="text"></variable>
                         <variable constant="0" name="number" sid="6191564479956885" static="0" type="number">0</variable>
-                        <event-block sid="5729012916739044">
+                        <event-block disabled="1" sid="5729012916739044">
                             <conditions />
                             <actions />
                             <sub-events>
-                                <event-block sid="3899279880336129">
+                                <event-block disabled="1" sid="3899279880336129">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="6711410855952938" type="System">
                                             <param id="0" name="First value">Function.ParamCount</param>
@@ -1865,7 +1865,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="2154586166071731">
+                                <event-block disabled="1" sid="2154586166071731">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="1770773625766979" type="System">
                                             <param id="0" name="First value">Function.ParamCount</param>
@@ -1880,7 +1880,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="540780428699056">
+                                <event-block disabled="1" sid="540780428699056">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="5342725316491871" type="System" />
                                     </conditions>
@@ -1894,7 +1894,7 @@
                             </sub-events>
                         </event-block>
                         <comment>si l&apos;item correspond à une des quests actives, incrémente le compteur de cette quest</comment>
-                        <event-block sid="8359701898384163">
+                        <event-block disabled="1" sid="8359701898384163">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="6322673334457825" type="quest">
                                     <param id="0" name="Key">&quot;type&quot;</param>
