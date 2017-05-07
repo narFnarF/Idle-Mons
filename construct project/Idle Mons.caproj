@@ -1752,6 +1752,11 @@
                     <instance-variable name="minutesRemaining" sid="456081887022255" type="number" />
                     <instance-variable name="bait" sid="345122885626363" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="486468538722399">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>3trap</type>
                     <type>3trapsTxt</type>
