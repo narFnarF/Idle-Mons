@@ -468,7 +468,7 @@
                     <properties>
                         <text>3trapsTxt</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-19,400,0</font>
+                        <font>Arial,-21,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
