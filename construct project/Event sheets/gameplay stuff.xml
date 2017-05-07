@@ -349,16 +349,38 @@
                                     <param id="0" name="Interval (seconds)">29</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="450325989161527" type="System">
-                                    <param id="0" name="Variable">randomNotificationNumber</param>
-                                    <param id="1" name="Value">floor(random(0, sillyMessagesJSON.Size(0, &quot;areas&quot;, LayoutName) ) )</param>
-                                </action>
-                                <action id="0" name="Call function" sid="676435939913897" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">sillyMessagesJSON.Value(0, &quot;areas&quot;, LayoutName, randomNotificationNumber)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="945246362712042">
+                                    <conditions>
+                                        <condition id="-18" name="Is in preview" sid="207063896033859" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="306129904785707" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Silly message&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="822972694469195">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="794928749433430" type="sillyMessagesJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;areas&quot;{###}LayoutName</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="450325989161527" type="System">
+                                            <param id="0" name="Variable">randomNotificationNumber</param>
+                                            <param id="1" name="Value">floor(random(0, sillyMessagesJSON.Size(0, &quot;areas&quot;, LayoutName) ) )</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="676435939913897" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">sillyMessagesJSON.Value(0, &quot;areas&quot;, LayoutName, randomNotificationNumber)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
