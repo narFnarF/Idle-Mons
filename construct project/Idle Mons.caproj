@@ -1781,6 +1781,9 @@
             <object-type global="1" name="3dex" sid="825700273702844">
                 <plugin id="JSON" />
             </object-type>
+            <object-type name="3captureLogTxt" sid="286702061896519">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />

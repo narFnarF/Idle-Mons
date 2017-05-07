@@ -217,7 +217,7 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="487873649318147" type="System">
                                                     <param id="0" name="Variable">monCaptured</param>
-                                                    <param id="1" name="Value">Function.Call(&quot;mons .monCaptured&quot;)</param>
+                                                    <param id="1" name="Value">Function.Call(&quot;mons .monTrapped&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -359,6 +359,10 @@
                             <param id="0" name="JSON">AJAX.LastData</param>
                             <param id="1" name="Reference point">0</param>
                             <param id="2" name="Key {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="710814465641712" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -508,7 +512,7 @@
                 <event-block sid="831543791617884">
                     <conditions>
                         <condition id="0" name="On function" sid="573794856571839" type="Function">
-                            <param id="0" name="Name">&quot;mons .monCaptured&quot;</param>
+                            <param id="0" name="Name">&quot;mons .monTrapped&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -551,46 +555,10 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="272295611573002">
-                    <conditions>
-                        <condition id="0" name="On function" sid="871642291389406" type="Function">
-                            <param id="0" name="Name">&quot;mons .addToLog&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="id" sid="634661851205561" static="0" type="number">0</variable>
-                        <variable constant="0" name="gift" sid="868690269699964" static="0" type="number">0</variable>
-                        <event-block sid="792136681793593">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="778245313283040" type="System">
-                                    <param id="0" name="Variable">id</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="658045070272759" type="System">
-                                    <param id="0" name="Variable">gift</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="897997266406561">
-                            <conditions />
-                            <actions>
-                                <action id="5" name="Push" sid="343395511228731" type="3captureLog">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">id</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="822950420966543" type="3captureLog">
-                                    <param id="0" name="X">3captureLog.Width-1</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">gift</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="567121584826885" title="pokedex functions">
+            <sub-events>
                 <event-block sid="691683130420115">
                     <conditions>
                         <condition id="0" name="On function" sid="101897455002414" type="Function">
@@ -640,7 +608,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="753607435771907" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="753607435771907" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;ici&quot;</param>
                                 </action>
@@ -675,18 +643,35 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>TODO</comment>
+                <event-block sid="785690843005112">
+                    <conditions>
+                        <condition id="0" name="On function" sid="417789067914248" type="Function">
+                            <param id="0" name="Name">&quot;dex .visited&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="979703491321167">
+                    <conditions>
+                        <condition id="0" name="On function" sid="886979206347664" type="Function">
+                            <param id="0" name="Name">&quot;dex .seen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
             <sub-events>
-                <event-block sid="332699366555795">
+                <event-block disabled="1" sid="332699366555795">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
+                            <param id="0" name="Interval (seconds)">5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="698703762127055" type="Browser">
+                        <action id="14" name="Log" sid="698703762127055" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;before&quot;</param>
                         </action>
@@ -698,7 +683,23 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">3trapsJSON.Value(0, &quot;toto&quot;, &quot;titi&quot;)</param>
                         </action>
-                        <action disabled="1" id="14" name="Log" sid="670885946401365" type="Browser">
+                        <action id="14" name="Log" sid="998090685355026" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;removing a node&quot;</param>
+                        </action>
+                        <action id="50" name="Delete" sid="743987538434026" type="3trapsJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;mons&quot;{###}0</param>
+                        </action>
+                        <action id="14" name="Log" sid="489380042055646" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;re-initialize the pokedex JSON&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="593521751542346" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="14" name="Log" sid="670885946401365" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;after&quot;</param>
                         </action>
@@ -706,63 +707,143 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="697821194007688">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="696162746251300" type="System">
-                    <param id="0" name="Interval (seconds)">0.1</param>
-                </condition>
-                <condition id="-11" name="For Each" sid="929912707935820" type="System">
-                    <param id="0" name="Object">3trap</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="943839193267388" type="3trapsTxt">
-                    <param id="0" name="Text">&quot;&quot;</param>
-                </action>
-            </actions>
+        <event-group description="" sid="315831820789093" title="Traps">
             <sub-events>
-                <event-block sid="736452608725933">
+                <event-block sid="697821194007688">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="636465651992512" type="3trap">
-                            <param id="0" name="Instance variable">visitorId</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">-1</param>
+                        <condition id="-6" name="Every X seconds" sid="696162746251300" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="929912707935820" type="System">
+                            <param id="0" name="Object">3trap</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="977291409766435" type="3trapsTxt">
-                            <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
+                        <action id="0" name="Set text" sid="943839193267388" type="3trapsTxt">
+                            <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="340790824484576">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="672513958344978" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="459426892854914" type="3trapsTxt">
-                            <param id="0" name="Text">&quot;---&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="329986872480882">
-                    <conditions />
-                    <actions>
-                        <action id="1" name="Append text" sid="772207875819413" type="3trapsTxt">
-                            <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="736452608725933">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="636465651992512" type="3trap">
+                                    <param id="0" name="Instance variable">visitorId</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="977291409766435" type="3trapsTxt">
+                                    <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="340790824484576">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="672513958344978" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="459426892854914" type="3trapsTxt">
+                                    <param id="0" name="Text">&quot;---&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="329986872480882">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Append text" sid="772207875819413" type="3trapsTxt">
+                                    <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="692558840707029" title="visitor log">
+            <sub-events>
+                <event-block sid="272295611573002">
+                    <conditions>
+                        <condition id="0" name="On function" sid="871642291389406" type="Function">
+                            <param id="0" name="Name">&quot;mons .addToLog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="id" sid="634661851205561" static="0" type="number">0</variable>
+                        <variable constant="0" name="gift" sid="868690269699964" static="0" type="number">0</variable>
+                        <event-block sid="792136681793593">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="778245313283040" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="658045070272759" type="System">
+                                    <param id="0" name="Variable">gift</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="897997266406561">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="Push" sid="343395511228731" type="3captureLog">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">id</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="822950420966543" type="3captureLog">
+                                    <param id="0" name="X">3captureLog.Width-1</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">gift</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="264576484155843">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="674600533200818" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="638380238563542" type="Function">
+                            <param id="0" name="Name">&quot;log .updateLogTxt&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="709532695972098" type="3captureLogTxt">
+                            <param id="0" name="Text">&quot;Log:&quot; &amp; newline</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="i" sid="499906681761096" static="0" type="number">0</variable>
+                        <event-block sid="424424559130606">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="316433907316426" type="3captureLog">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="891514745513187" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">3captureLog.CurValue</param>
+                                </action>
+                                <action id="1" name="Append text" sid="822992038147451" type="3captureLogTxt">
+                                    <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, i) &amp; &quot; left you &quot; &amp; Function.Call(&quot;mons .gift&quot;, i) &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="571402838961887" title="Pokedex">
             <sub-events>
                 <comment>Fill the pokedex</comment>
                 <event-block sid="323492783053990">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="548898391168714" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="548898391168714" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="624472023115446" type="Function">
