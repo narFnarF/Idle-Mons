@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>traps events</name>
     <events>
+        <include>currency events</include>
         <include>inventory events</include>
         <include>mons general events</include>
         <include>global events</include>
@@ -701,6 +702,19 @@
                                 <action id="0" name="Call function" sid="172651646988407" type="Function">
                                     <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
                                     <param id="1" name="Parameter {n}">choose(1, 2, 3){###}choose(30, 60, 90){###}&quot;normal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="218402869732595">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="465412885648072" type="Touch">
+                                    <param id="0" name="Object">3trap</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="330567983773637" type="Function">
+                                    <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
+                                    <param id="1" name="Parameter {n}">3trap.id{###}60{###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>

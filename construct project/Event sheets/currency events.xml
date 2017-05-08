@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>currency events</name>
+    <events>
+        <event-block sid="984768500224384">
+            <conditions />
+            <actions>
+                <action id="-10" name="Set value" sid="345399973528471" type="currencyTxt">
+                    <param id="0" name="Instance variable">theText</param>
+                    <param id="1" name="Value">currencyTxt.type &amp; &quot;: &quot; &amp; 1234</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

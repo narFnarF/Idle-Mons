@@ -526,6 +526,12 @@
             <object-type name="3dexTxt" sid="728775228428525">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="currencyTxt" sid="157496960763764">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="type" sid="624088503556769" type="string" />
+                </instance-variables>
+            </object-type>
         </object-folder>
         <object-folder name="old cabbages stuff">
             <object-folder name="bee stuff">
@@ -1894,6 +1900,7 @@
         </family>
         <family name="labelUpdate" plugin-id="Text" sid="684843700387695">
             <members>
+                <member>currencyTxt</member>
                 <member>storyButtonLabel</member>
                 <member>storyDisplay</member>
                 <member>storyStatus</member>
@@ -1918,6 +1925,7 @@
             <layout>notifications bar.xml</layout>
             <layout>snow.xml</layout>
             <layout>purchase popup.xml</layout>
+            <layout>currency.xml</layout>
         </layout-folder>
         <layout-folder name="old cabbages stuff">
             <layout>lions.xml</layout>
@@ -1965,6 +1973,7 @@
         <event-sheet>traps events.xml</event-sheet>
         <event-sheet>pokedex events.xml</event-sheet>
         <event-sheet>inventory events.xml</event-sheet>
+        <event-sheet>currency events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
