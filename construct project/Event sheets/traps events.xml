@@ -106,7 +106,7 @@
                                 <condition id="-22" name="Else" sid="542244244846677" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="309947899400749" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="309947899400749" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;This absence wasn&apos;t long enough (less than 10 sec)&quot;</param>
                                 </action>
@@ -138,6 +138,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Repeat for each block of time, the recap what heppened while the game was closed</comment>
                         <event-block sid="105680083456008">
                             <conditions>
                                 <condition id="-23" name="While" sid="431170692293679" type="System" />
@@ -192,6 +193,16 @@
                                         <action id="14" name="Log" sid="566185711766322" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;thisBlock: &quot; &amp; thisBlock</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>reduce bait quantity</comment>
+                                <event-block sid="548494995530296">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="826802893699378" type="3trap">
+                                            <param id="0" name="Instance variable">baitQuantity</param>
+                                            <param id="1" name="Value">thisBlock</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -255,16 +266,36 @@
                                                     <actions>
                                                         <action id="14" name="Log" sid="498875887545357" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; is staying.&quot;</param>
+                                                            <param id="1" name="Message">&quot;Traps &quot; &amp; 3trap.id &amp; &quot;: &quot; &amp; Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; is staying.&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="598667313284658">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="985863458505225" type="3trap">
+                                                            <param id="0" name="Instance variable">baitQuantity</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="14" name="Log" sid="490096655329138" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.id &amp; &quot; is empty of food.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <comment>Else (Trap is empty)</comment>
+                                        <comment>Else (Trap is empty) and there&apos;s still food</comment>
                                         <event-block sid="995983242889859">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="950957511835279" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="988090990673384" type="3trap">
+                                                    <param id="0" name="Instance variable">baitQuantity</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -302,7 +333,7 @@
                                                         </action>
                                                         <action id="14" name="Log" sid="609621408870999" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.IID &amp; &quot; has a visitor: &quot; &amp; Function.Call(&quot;mons .name&quot;, visitorId) &amp; &quot; who will stay for &quot; &amp; Function.Call(&quot;mons .duration&quot;, visitorId) &amp; &quot; minutes.&quot;</param>
+                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.id &amp; &quot; has a visitor: &quot; &amp; Function.Call(&quot;mons .name&quot;, visitorId) &amp; &quot; who will stay for &quot; &amp; Function.Call(&quot;mons .duration&quot;, visitorId) &amp; &quot; minutes.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -313,11 +344,22 @@
                                                     <actions>
                                                         <action id="14" name="Log" sid="950446423349282" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.IID &amp; &quot; remains empty.&quot;</param>
+                                                            <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.id &amp; &quot; remains empty.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
+                                        </event-block>
+                                        <event-block sid="592238453175658">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="782261450747238" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="14" name="Log" sid="689744780788651" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;Trap &quot; &amp; 3trap.id &amp; &quot; has no food.&quot;</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -338,6 +380,98 @@
                                 <action id="14" name="Log" sid="944621944543237" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;End of traps.simulateTime&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="820981368276782">
+                    <conditions>
+                        <condition id="0" name="On function" sid="785065140914631" type="Function">
+                            <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="trapId" sid="281562525377815" static="0" type="number">0</variable>
+                        <variable comment="in minutes" constant="0" name="quantity" sid="154451084190827" static="0" type="number">0</variable>
+                        <variable constant="0" name="baitType" sid="284311459943960" static="0" type="text"></variable>
+                        <event-block sid="677681344588778">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="496355861176838" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                                <condition id="-42" name="Is value type" sid="794942329087292" type="System">
+                                    <param id="0" name="Value">Function.Param(0)</param>
+                                    <param id="1" name="Type">0</param>
+                                </condition>
+                                <condition id="-42" name="Is value type" sid="648275543917650" type="System">
+                                    <param id="0" name="Value">Function.Param(1)</param>
+                                    <param id="1" name="Type">0</param>
+                                </condition>
+                                <condition id="-42" name="Is value type" sid="956372804898701" type="System">
+                                    <param id="0" name="Value">Function.Param(2)</param>
+                                    <param id="1" name="Type">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="723739251456353">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="658355673151947" type="System">
+                                            <param id="0" name="Variable">trapId</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="121722168712658" type="System">
+                                            <param id="0" name="Variable">quantity</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="681238273591655" type="System">
+                                            <param id="0" name="Variable">baitType</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="747482156233240" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Traps &quot; &amp; trapId &amp; &quot; receives &quot; &amp; quantity &amp; &quot; &quot; &amp; baitType</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="278961060542448">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="545906359100966" type="3trap">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">trapId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="761120510233358" type="3trap">
+                                            <param id="0" name="Instance variable">baitQuantity</param>
+                                            <param id="1" name="Value">quantity</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="545974884667133" type="3trap">
+                                            <param id="0" name="Instance variable">baitType</param>
+                                            <param id="1" name="Value">baitType</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="576704974076925" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;ici&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="920726107417984">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="278292278530336" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="829460799286490" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error in traps.refillFood: Incorrect parameters&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -394,7 +528,7 @@
                                             <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
                                         </action>
                                         <action id="1" name="Append text" sid="384478765714674" type="3trapsTxt">
-                                            <param id="0" name="Text">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; 3trap.baitQuantity</param>
+                                            <param id="0" name="Text">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; &quot; &quot; &amp; round(3trap.baitQuantity*60)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -530,26 +664,47 @@
         </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
             <sub-events>
-                <event-block disabled="1" sid="332699366555795">
+                <event-block sid="765528547089489">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
-                            <param id="0" name="Interval (seconds)">5</param>
-                        </condition>
+                        <condition id="-18" name="Is in preview" sid="661579519558927" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="698703762127055" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;before&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="593521751542346" type="Function">
-                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="14" name="Log" sid="670885946401365" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;after&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="332699366555795">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
+                                    <param id="0" name="Interval (seconds)">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="698703762127055" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;before&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="593521751542346" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="14" name="Log" sid="670885946401365" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;after&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="956388948606330">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="680652513636595" type="Keyboard">
+                                    <param id="0" name="Key">32 (Espace)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="172651646988407" type="Function">
+                                    <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
+                                    <param id="1" name="Parameter {n}">choose(1, 2, 3){###}choose(30, 60, 90){###}&quot;normal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

@@ -480,9 +480,10 @@
             <object-type name="3trap" sid="813539396306480">
                 <plugin id="Sprite" />
                 <instance-variables>
+                    <instance-variable name="id" sid="102664272844282" type="number" />
                     <instance-variable name="visitorId" sid="467207101000778" type="number" />
-                    <instance-variable name="minutesRemaining" sid="456081887022255" type="number" />
-                    <instance-variable name="baitQuantity" sid="345122885626363" type="number" />
+                    <instance-variable comment="in minutes" name="minutesRemaining" sid="456081887022255" type="number" />
+                    <instance-variable comment="in minutes" name="baitQuantity" sid="345122885626363" type="number" />
                     <instance-variable name="baitType" sid="577766129098558" type="string" />
                 </instance-variables>
                 <behaviors>
