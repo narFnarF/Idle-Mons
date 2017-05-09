@@ -2,7 +2,7 @@
 <c2layout>
     <name>currency</name>
     <sid>269923150277321</sid>
-    <event-sheet>currency events</event-sheet>
+    <event-sheet>eCurrency</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>

@@ -1969,13 +1969,13 @@
             <event-sheet>snow events.xml</event-sheet>
             <event-sheet>story events.xml</event-sheet>
         </event-folder>
-        <event-sheet>grinding events.xml</event-sheet>
-        <event-sheet>grinding sector events.xml</event-sheet>
-        <event-sheet>traps events.xml</event-sheet>
-        <event-sheet>pokedex events.xml</event-sheet>
-        <event-sheet>inventory events.xml</event-sheet>
-        <event-sheet>currency events.xml</event-sheet>
-        <event-sheet>shop events.xml</event-sheet>
+        <event-sheet>eGrinding.xml</event-sheet>
+        <event-sheet>eGgrinding sector.xml</event-sheet>
+        <event-sheet>eTraps.xml</event-sheet>
+        <event-sheet>ePokedex.xml</event-sheet>
+        <event-sheet>eInventory.xml</event-sheet>
+        <event-sheet>eCurrency.xml</event-sheet>
+        <event-sheet>eShop.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

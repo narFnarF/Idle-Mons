@@ -2,7 +2,7 @@
 <c2layout>
     <name>traps</name>
     <sid>769277986301650</sid>
-    <event-sheet>traps events</event-sheet>
+    <event-sheet>eTraps</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>

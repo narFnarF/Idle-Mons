@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>grinding sector events</name>
+    <name>eGgrinding sector</name>
     <events>
         <include>global events</include>
         <include>gameplay stuff</include>

@@ -2,7 +2,7 @@
 <c2layout>
     <name>shop</name>
     <sid>440115157761430</sid>
-    <event-sheet>shop events</event-sheet>
+    <event-sheet>eShop</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>

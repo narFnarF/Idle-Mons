@@ -2,7 +2,7 @@
 <c2layout>
     <name>pokedex</name>
     <sid>846676365051695</sid>
-    <event-sheet>pokedex events</event-sheet>
+    <event-sheet>ePokedex</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>
