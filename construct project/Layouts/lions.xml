@@ -1923,7 +1923,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="inventory" uid="113" />
+        <instance type="2inventory" uid="113" />
         <instance type="lionRandomItems" uid="122">
             <properties>
                 <width>0</width>

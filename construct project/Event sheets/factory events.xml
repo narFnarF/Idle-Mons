@@ -598,7 +598,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
-                                    <param id="0" name="Text">&quot;Honey: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;honey&quot;) ) &amp; newline</param>
+                                    <param id="0" name="Text">&quot;Honey: &quot; &amp; Function.Call(&quot;format numbers&quot;, 2inventory.Get(&quot;honey&quot;) ) &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -612,7 +612,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Append text" sid="7549619855654483" type="globalStats">
-                                    <param id="0" name="Text">&quot;Pills: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;pills&quot;) ) &amp; newline</param>
+                                    <param id="0" name="Text">&quot;Pills: &quot; &amp; Function.Call(&quot;format numbers&quot;, 2inventory.Get(&quot;pills&quot;) ) &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -636,7 +636,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="5318087948879611" type="globalStats">
-                                            <param id="0" name="Text">&quot;Tofu: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu&quot;) ) &amp; newline</param>
+                                            <param id="0" name="Text">&quot;Tofu: &quot; &amp; Function.Call(&quot;format numbers&quot;, 2inventory.Get(&quot;tofu&quot;) ) &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -650,7 +650,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="5461587760108215" type="globalStats">
-                                            <param id="0" name="Text">&quot;Tofu steaks: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu steak&quot;) ) &amp; newline</param>
+                                            <param id="0" name="Text">&quot;Tofu steaks: &quot; &amp; Function.Call(&quot;format numbers&quot;, 2inventory.Get(&quot;tofu steak&quot;) ) &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>

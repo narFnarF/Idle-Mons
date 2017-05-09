@@ -32,9 +32,9 @@
                         <event-block sid="445503500472230">
                             <conditions />
                             <actions>
-                                <action id="0" name="Add key" sid="149652559440822" type="inventory">
+                                <action id="0" name="Add key" sid="149652559440822" type="2inventory">
                                     <param id="0" name="Key">item</param>
-                                    <param id="1" name="Value">inventory.Get(item) + quantity</param>
+                                    <param id="1" name="Value">2inventory.Get(item) + quantity</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -76,13 +76,13 @@
                         <comment>inventory items</comment>
                         <event-block sid="593887202489167">
                             <conditions>
-                                <condition id="3" name="Has key" sid="610667601716606" type="inventory">
+                                <condition id="3" name="Has key" sid="610667601716606" type="2inventory">
                                     <param id="0" name="Key">item</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="607486182790685" type="Function">
-                                    <param id="0" name="Value">inventory.Get(item)</param>
+                                    <param id="0" name="Value">2inventory.Get(item)</param>
                                 </action>
                             </actions>
                         </event-block>

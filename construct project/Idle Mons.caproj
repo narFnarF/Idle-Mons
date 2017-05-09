@@ -999,9 +999,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type global="1" name="inventory" sid="977963652630131">
-                    <plugin id="Dictionary" />
-                </object-type>
                 <object-type name="lionBtn" sid="5989880898955489">
                     <plugin id="NinePatch" />
                     <behaviors>
@@ -1835,6 +1832,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="2inventory" sid="977963652630131">
+            <plugin id="Dictionary" />
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -1939,6 +1939,7 @@
         <layout>grinding sector.xml</layout>
         <layout>traps.xml</layout>
         <layout>pokedex.xml</layout>
+        <layout>shop.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="menus">
@@ -1974,6 +1975,7 @@
         <event-sheet>pokedex events.xml</event-sheet>
         <event-sheet>inventory events.xml</event-sheet>
         <event-sheet>currency events.xml</event-sheet>
+        <event-sheet>shop events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

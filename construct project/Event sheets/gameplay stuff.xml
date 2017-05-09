@@ -3057,6 +3057,36 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <event-group description="" sid="469246174217207" title="Currency">
+                            <sub-events>
+                                <event-block sid="519521778026106">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="876092952346200" type="Keyboard">
+                                            <param id="0" name="Key">49 (1)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="765272469228522" type="Function">
+                                            <param id="0" name="Name">&quot;inventory .receive&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;soft&quot;{###}1000</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="412567689248474">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="294127601756569" type="Keyboard">
+                                            <param id="0" name="Key">50 (2)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="521028282645308" type="Function">
+                                            <param id="0" name="Name">&quot;inventory .receive&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;hard&quot;{###}100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-block>
             </sub-events>

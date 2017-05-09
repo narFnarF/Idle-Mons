@@ -589,15 +589,15 @@
                     <sub-events>
                         <event-block sid="2016851193101917">
                             <conditions>
-                                <condition id="1" name="For each key" sid="1843117495493218" type="inventory" />
-                                <condition id="2" name="Compare current value" sid="7080405899856152" type="inventory">
+                                <condition id="1" name="For each key" sid="1843117495493218" type="2inventory" />
+                                <condition id="2" name="Compare current value" sid="7080405899856152" type="2inventory">
                                     <param id="0" name="Comparison">1</param>
                                     <param id="1" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Append text" sid="9582223125546397" type="inventoryDisplay">
-                                    <param id="0" name="Text">inventory.CurrentKey &amp; &quot;: &quot; &amp; inventory.CurrentValue &amp; newline</param>
+                                    <param id="0" name="Text">2inventory.CurrentKey &amp; &quot;: &quot; &amp; 2inventory.CurrentValue &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>

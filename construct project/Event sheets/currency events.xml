@@ -8,7 +8,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="345399973528471" type="currencyTxt">
                     <param id="0" name="Instance variable">theText</param>
-                    <param id="1" name="Value">currencyTxt.type &amp; &quot;: &quot; &amp; 1234</param>
+                    <param id="1" name="Value">currencyTxt.type &amp; &quot;: &quot; &amp; Function.Call(&quot;inventory .getQuantity&quot;, currencyTxt.type)</param>
                 </action>
             </actions>
         </event-block>
