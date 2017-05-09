@@ -5,8 +5,8 @@
     <events>
         <include>eCurrency</include>
         <include>eInventory</include>
-        <include>gameplay stuff</include>
-        <include>mons general events</include>
+        <include>eGameplay stuff</include>
+        <include>eMons general</include>
         <event-block sid="861377419577383">
             <conditions>
                 <condition id="0" name="On function" sid="510346940448324" type="Function">

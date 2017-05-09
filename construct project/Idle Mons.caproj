@@ -1917,9 +1917,8 @@
             <layout>manual loading.xml</layout>
             <layout>delete savefile.xml</layout>
         </layout-folder>
-        <layout-folder name="old or useless">
+        <layout-folder name="hidden">
             <layout>spawned objects.xml</layout>
-            <layout>Verachou.xml</layout>
         </layout-folder>
         <layout-folder name="global layers">
             <layout>notifications bar.xml</layout>
@@ -1934,6 +1933,7 @@
             <layout>bumper.xml</layout>
             <layout>pachinko.xml</layout>
             <layout>story.xml</layout>
+            <layout>Verachou.xml</layout>
         </layout-folder>
         <layout>grinding.xml</layout>
         <layout>grinding sector.xml</layout>
@@ -1948,19 +1948,17 @@
             <event-sheet>intro events.xml</event-sheet>
             <event-sheet>delete savefile events.xml</event-sheet>
         </event-folder>
-        <event-folder name="old">
+        <event-folder name="general">
+            <event-sheet>eGameplay stuff.xml</event-sheet>
+            <event-sheet>eGlobal.xml</event-sheet>
+            <event-sheet>eSavefile migration.xml</event-sheet>
+            <event-sheet>eMons general.xml</event-sheet>
+        </event-folder>
+        <event-folder name="old cabbages stuff">
             <event-folder name="verachou">
                 <event-sheet>verachou.xml</event-sheet>
                 <event-sheet>verachou main.xml</event-sheet>
             </event-folder>
-        </event-folder>
-        <event-folder name="general">
-            <event-sheet>gameplay stuff.xml</event-sheet>
-            <event-sheet>global events.xml</event-sheet>
-            <event-sheet>savefile migration.xml</event-sheet>
-            <event-sheet>mons general events.xml</event-sheet>
-        </event-folder>
-        <event-folder name="old cabbages stuff">
             <event-sheet>bumper events.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
             <event-sheet>lions events.xml</event-sheet>

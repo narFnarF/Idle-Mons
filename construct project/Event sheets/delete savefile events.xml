@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>delete savefile events</name>
     <events>
-        <include>global events</include>
+        <include>eGlobal</include>
         <event-block sid="1610478759320779">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="3118681479649214" type="System" />

@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eGrinding</name>
     <events>
-        <include>gameplay stuff</include>
-        <include>global events</include>
+        <include>eGameplay stuff</include>
+        <include>eGlobal</include>
         <comment>Ce bloc sert à créer le pkStat s&apos;il est manquant ou effacer les duplicatas si y&apos;en a.</comment>
         <event-block sid="8664207262082495">
             <conditions>

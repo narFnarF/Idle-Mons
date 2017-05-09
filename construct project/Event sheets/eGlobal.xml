@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>global events</name>
+    <name>eGlobal</name>
     <events>
-        <include>savefile migration</include>
+        <include>eSavefile migration</include>
         <event-group description="" sid="8276294162597945" title="cheat">
             <sub-events>
                 <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>

@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eGgrinding sector</name>
     <events>
-        <include>global events</include>
-        <include>gameplay stuff</include>
+        <include>eGlobal</include>
+        <include>eGameplay stuff</include>
         <comment>first launch is here only to not display error messages</comment>
         <event-block sid="7175952774688262">
             <conditions>

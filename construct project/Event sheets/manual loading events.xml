@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>manual loading events</name>
     <events>
-        <include>savefile migration</include>
+        <include>eSavefile migration</include>
         <comment>save</comment>
         <event-block sid="4226205492298222">
             <conditions>

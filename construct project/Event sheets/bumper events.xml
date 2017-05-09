@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>bumper events</name>
     <events>
-        <include>gameplay stuff</include>
-        <include>global events</include>
+        <include>eGameplay stuff</include>
+        <include>eGlobal</include>
         <include>snow events</include>
         <event-block sid="9984069444931865">
             <conditions>

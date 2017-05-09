@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>verachou main</name>
     <events>
-        <include>gameplay stuff</include>
+        <include>eGameplay stuff</include>
         <include>verachou</include>
-        <include>global events</include>
+        <include>eGlobal</include>
     </events>
 </c2eventsheet>

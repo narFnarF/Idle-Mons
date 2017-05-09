@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>story events</name>
     <events>
-        <include>gameplay stuff</include>
+        <include>eGameplay stuff</include>
         <event-block sid="817314785781340">
             <conditions>
                 <condition id="0" name="On function" sid="986386813652536" type="Function">

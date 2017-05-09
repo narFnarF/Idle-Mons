@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>pachinko events</name>
     <events>
-        <include>gameplay stuff</include>
-        <include>global events</include>
+        <include>eGameplay stuff</include>
+        <include>eGlobal</include>
         <event-group description="" sid="8722717593667838" title="spawn lions">
             <sub-events>
                 <event-block sid="3534036462911107">

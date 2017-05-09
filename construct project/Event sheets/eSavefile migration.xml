@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>savefile migration</name>
+    <name>eSavefile migration</name>
     <events>
         <variable comment="stores the entire history of version used" constant="0" name="versionsHistory" sid="5178529854886543" static="0" type="text">pet</variable>
         <variable comment="stores the name/number of the last version used (ex: v123)" constant="0" name="lastVersionUsed" sid="1562373015406176" static="0" type="text"></variable>

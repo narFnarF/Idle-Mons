@@ -4,8 +4,8 @@
     <name>rewards screen events</name>
     <events>
         <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
-        <include>gameplay stuff</include>
-        <include>global events</include>
+        <include>eGameplay stuff</include>
+        <include>eGlobal</include>
         <include>snow events</include>
         <event-block sid="6749129359702008">
             <conditions>

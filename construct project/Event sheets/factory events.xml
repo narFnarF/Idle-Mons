@@ -4,8 +4,8 @@
     <name>factory events</name>
     <events>
         <include>snow events</include>
-        <include>gameplay stuff</include>
-        <include>global events</include>
+        <include>eGameplay stuff</include>
+        <include>eGlobal</include>
         <event-block sid="9542002391878686">
             <conditions>
                 <condition id="0" name="On function" sid="9142559592817151" type="Function">
