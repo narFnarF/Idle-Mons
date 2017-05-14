@@ -30,8 +30,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="478847018580023" type="3dexTxt">
+                <action disabled="1" id="0" name="Set text" sid="478847018580023" type="3dexTxt">
                     <param id="0" name="Text">&quot;Pokedex:&quot; &amp; newline</param>
+                </action>
+                <action id="-10" name="Set value" sid="894858995979097" type="3dexTxt">
+                    <param id="0" name="Instance variable">theText</param>
+                    <param id="1" name="Value">&quot;Pokedex:&quot; &amp; newline</param>
                 </action>
             </actions>
             <sub-events>
@@ -69,8 +73,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="1" name="Append text" sid="440223061753587" type="3dexTxt">
+                                        <action disabled="1" id="1" name="Append text" sid="440223061753587" type="3dexTxt">
                                             <param id="0" name="Text">&quot;* &quot; &amp; i+1 &amp; &quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; : date&quot; &amp; newline</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="402425912033527" type="3dexTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">&quot;* &quot; &amp; i+1 &amp; &quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; &quot; : date&quot; &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -79,8 +87,12 @@
                                         <condition id="-22" name="Else" sid="805492176904580" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="1" name="Append text" sid="100587844510606" type="3dexTxt">
+                                        <action disabled="1" id="1" name="Append text" sid="100587844510606" type="3dexTxt">
                                             <param id="0" name="Text">&quot;  &quot; &amp; i+1 &amp; &quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; newline</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="493070607580896" type="3dexTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">&quot;  &quot; &amp; i+1 &amp; &quot;  &quot; &amp; Function.Call(&quot;mons .name&quot;, i) &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -91,8 +103,12 @@
                                 <condition id="-22" name="Else" sid="637418913460398" type="System" />
                             </conditions>
                             <actions>
-                                <action id="1" name="Append text" sid="245899050339163" type="3dexTxt">
+                                <action disabled="1" id="1" name="Append text" sid="245899050339163" type="3dexTxt">
                                     <param id="0" name="Text">&quot;  &quot; &amp; i+1 &amp; &quot;  &quot; &amp; &quot;????&quot; &amp; newline</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="480904830533966" type="3dexTxt">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">&quot;  &quot; &amp; i+1 &amp; &quot;  &quot; &amp; &quot;????&quot; &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>

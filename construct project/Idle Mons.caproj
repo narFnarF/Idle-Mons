@@ -1900,6 +1900,9 @@
         </family>
         <family name="labelUpdate" plugin-id="Text" sid="684843700387695">
             <members>
+                <member>3captureLogTxt</member>
+                <member>3dexTxt</member>
+                <member>3trapsTxt</member>
                 <member>currencyTxt</member>
                 <member>storyButtonLabel</member>
                 <member>storyDisplay</member>

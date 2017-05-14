@@ -47,8 +47,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="943839193267388" type="3trapsTxt">
+                                <action disabled="1" id="0" name="Set text" sid="943839193267388" type="3trapsTxt">
                                     <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="213512157825687" type="3trapsTxt">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -61,8 +65,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set text" sid="977291409766435" type="3trapsTxt">
+                                        <action disabled="1" id="0" name="Set text" sid="977291409766435" type="3trapsTxt">
                                             <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="383125026237853" type="3trapsTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -71,19 +79,31 @@
                                         <condition id="-22" name="Else" sid="672513958344978" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Set text" sid="459426892854914" type="3trapsTxt">
+                                        <action disabled="1" id="0" name="Set text" sid="459426892854914" type="3trapsTxt">
                                             <param id="0" name="Text">&quot;---&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="193117559434076" type="3trapsTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">&quot;---&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="329986872480882">
                                     <conditions />
                                     <actions>
-                                        <action id="1" name="Append text" sid="772207875819413" type="3trapsTxt">
+                                        <action disabled="1" id="1" name="Append text" sid="772207875819413" type="3trapsTxt">
                                             <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
                                         </action>
-                                        <action id="1" name="Append text" sid="384478765714674" type="3trapsTxt">
+                                        <action disabled="1" id="1" name="Append text" sid="384478765714674" type="3trapsTxt">
                                             <param id="0" name="Text">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; &quot; &quot; &amp; round(3trap.baitQuantity*60)</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="434520236079587" type="3trapsTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="405020879392279" type="3trapsTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; &quot; &quot; &amp; round(3trap.baitQuantity*60)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -645,8 +665,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="709532695972098" type="3captureLogTxt">
+                        <action disabled="1" id="0" name="Set text" sid="709532695972098" type="3captureLogTxt">
                             <param id="0" name="Text">&quot;Log:&quot; &amp; newline</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="372542361620330" type="3captureLogTxt">
+                            <param id="0" name="Instance variable">theText</param>
+                            <param id="1" name="Value">&quot;Log:&quot; &amp; newline</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -662,8 +686,12 @@
                                     <param id="0" name="Variable">i</param>
                                     <param id="1" name="Value">3captureLog.CurValue</param>
                                 </action>
-                                <action id="1" name="Append text" sid="822992038147451" type="3captureLogTxt">
+                                <action disabled="1" id="1" name="Append text" sid="822992038147451" type="3captureLogTxt">
                                     <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, i) &amp; &quot; left you &quot; &amp; Function.Call(&quot;mons .gift&quot;, i) &amp; newline</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="542891008317631" type="3captureLogTxt">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">Function.Call(&quot;mons .name&quot;, i) &amp; &quot; left you &quot; &amp; Function.Call(&quot;mons .gift&quot;, i) &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
