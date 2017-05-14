@@ -601,6 +601,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>temporary refill mecanism</comment>
                 <event-block sid="218402869732595">
                     <conditions>
                         <condition id="17" name="On tap object" sid="465412885648072" type="Touch">
@@ -610,7 +611,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="330567983773637" type="Function">
                             <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
-                            <param id="1" name="Parameter {n}">3trap.id{###}60{###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
+                            <param id="1" name="Parameter {n}">3trap.id{###}choose(10, 30, 60){###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
