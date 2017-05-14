@@ -2,5 +2,172 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eShop</name>
-    <events />
+    <events>
+        <include>eMons general</include>
+        <event-group description="" sid="440145928237922" title="JSON functions">
+            <sub-events>
+                <event-block sid="875678573268699">
+                    <conditions>
+                        <condition id="0" name="On function" sid="523590260312283" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitName&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="i" sid="232839569268453" static="0" type="number">-1</variable>
+                        <event-block sid="550051811230764">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="466444691320383" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="207037255082212">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="530987032102507" type="3trapsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}i{###}&quot;name&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="756985188223399" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, i, &quot;name&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="957647636189246">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="355768578093182" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="802890252627448" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="105626164097389">
+                    <conditions>
+                        <condition id="0" name="On function" sid="312484788009891" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitCost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="i" sid="785427278079773" static="0" type="number">-1</variable>
+                        <event-block sid="319030688054827">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="102032421189495" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137702438086916">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="877474038284682" type="3trapsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}i{###}&quot;cost&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="694862850578751" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, i, &quot;cost&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="432688923576096">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="285710007728193" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="880993688800138" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitCost&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="147882626678597">
+                    <conditions>
+                        <condition id="0" name="On function" sid="105210763986311" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitDuration&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="i" sid="378827895293308" static="0" type="number">-1</variable>
+                        <event-block sid="296011925110104">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="805537380257668" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="156358485538400">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="902751751854691" type="3trapsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}i{###}&quot;duration&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="251420733685480" type="Function">
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, i, &quot;duration&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="401338603399877">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="537334598600844" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="468515196174034" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitDuration&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="137895606791883" title="debug (Shop)">
+            <sub-events>
+                <event-block sid="626479786591933">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="395682766318617" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="666320355980308">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="861383706522647" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="314355139125320" type="Function">
+                                    <param id="0" name="Name">&quot;shop .getBaitDuration&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="595121416930735" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
