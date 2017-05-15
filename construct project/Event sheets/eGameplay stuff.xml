@@ -1918,12 +1918,12 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8261521222657646" title="generic buttons">
+        <event-group description="" disabled="1" sid="8261521222657646" title="generic buttons (old)">
             <sub-events>
-                <event-group description="" sid="1295116778471279" title="touch detection">
+                <event-group description="" disabled="1" sid="1295116778471279" title="touch detection (old)">
                     <sub-events>
                         <comment>start the press</comment>
-                        <event-block sid="629223296255289">
+                        <event-block disabled="1" sid="629223296255289">
                             <conditions>
                                 <condition id="10" name="On Nth touch start" sid="8855222167991441" type="Touch">
                                     <param id="0" name="Touch number">0</param>
@@ -1938,7 +1938,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="1547112631885341">
+                                <event-block disabled="1" sid="1547112631885341">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="1867589633328341" type="genericButtons">
                                             <param id="0" name="Instance variable">state</param>
@@ -1953,7 +1953,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="3064871916391406">
+                                <event-block disabled="1" sid="3064871916391406">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="1518884198447646" type="System" />
                                         <condition id="-7" name="Compare instance variable" sid="3036056807501591" type="genericButtons">
@@ -1975,7 +1975,7 @@
                             </sub-events>
                         </event-block>
                         <comment>complete the press (if still on the same object)</comment>
-                        <event-block sid="7040527707900623">
+                        <event-block disabled="1" sid="7040527707900623">
                             <conditions>
                                 <condition id="11" name="On Nth touch end" sid="2881746187244946" type="Touch">
                                     <param id="0" name="Touch number">0</param>
@@ -1995,7 +1995,7 @@
                             </actions>
                         </event-block>
                         <comment>reset everything when the touch is released</comment>
-                        <event-block sid="6975873049489151">
+                        <event-block disabled="1" sid="6975873049489151">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="5542424222845529" type="Touch" />
                             </conditions>
@@ -2007,7 +2007,7 @@
                             </actions>
                         </event-block>
                         <comment>adjust state</comment>
-                        <event-block sid="1955969300936504">
+                        <event-block disabled="1" sid="1955969300936504">
                             <conditions>
                                 <condition disabled="1" id="2" name="Is in touch" sid="8645191446107005" type="Touch" />
                                 <condition disabled="1" id="-11" name="For Each" sid="8654996883746433" type="System">
@@ -2016,7 +2016,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="7071525559314258">
+                                <event-block disabled="1" sid="7071525559314258">
                                     <conditions>
                                         <condition id="4" name="Is touching object" sid="7615333655305696" type="Touch">
                                             <param id="0" name="Object">genericButtons</param>
@@ -2037,7 +2037,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="5667205447331942">
+                                <event-block disabled="1" sid="5667205447331942">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="6917876037222526" type="genericButtons">
                                             <param id="0" name="Instance variable">state</param>
@@ -2064,7 +2064,7 @@
                     </sub-events>
                 </event-group>
                 <comment>Change appearance based on state</comment>
-                <event-block any="1" sid="3529872671410178">
+                <event-block any="1" disabled="1" sid="3529872671410178">
                     <conditions>
                         <condition disabled="1" id="2" name="Is in touch" sid="4030095566933811" type="Touch" />
                         <condition disabled="1" id="1" name="On any touch end" sid="7649062436628557" type="Touch" />
@@ -2072,7 +2072,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="3035054177911594">
+                        <event-block disabled="1" sid="3035054177911594">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8245980874777204" type="genericButtons">
                                     <param id="0" name="Instance variable">state</param>
@@ -2101,7 +2101,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3078173720833618">
+                        <event-block disabled="1" sid="3078173720833618">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8853927613415617" type="genericButtons">
                                     <param id="0" name="Instance variable">state</param>
@@ -2130,7 +2130,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8940295652719788">
+                        <event-block disabled="1" sid="8940295652719788">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="859726635365916" type="genericButtons">
                                     <param id="0" name="Instance variable">state</param>
@@ -2151,7 +2151,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7867947794977927">
+                        <event-block disabled="1" sid="7867947794977927">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5433823275141902" type="genericButtons">
                                     <param id="0" name="Instance variable">state</param>
@@ -2171,9 +2171,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="9948026963321727" title="button progress bars">
+                <event-group description="" disabled="1" sid="9948026963321727" title="button progress bars (old)">
                     <sub-events>
-                        <event-block any="1" sid="6853564231613715">
+                        <event-block any="1" disabled="1" sid="6853564231613715">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="5062335042028441" type="System" />
                                 <condition id="-29" name="On load complete" sid="8110415501654914" type="System" />
@@ -2190,7 +2190,7 @@
                             </actions>
                         </event-block>
                         <comment>make sure that the progression is between 0 and 1</comment>
-                        <event-block sid="8925624467258873">
+                        <event-block disabled="1" sid="8925624467258873">
                             <conditions />
                             <actions>
                                 <action id="-10" name="Set value" sid="7251703117066297" type="buttonProgressBg">
@@ -2200,7 +2200,7 @@
                             </actions>
                         </event-block>
                         <comment>adjust size and position</comment>
-                        <event-block sid="5365977374980938">
+                        <event-block disabled="1" sid="5365977374980938">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="3691414752105402" type="System">
                                     <param id="0" name="Object">buttonProgressBg</param>
@@ -2232,11 +2232,11 @@
                             </actions>
                             <sub-events>
                                 <comment>visibility</comment>
-                                <event-block sid="4429402656310128">
+                                <event-block disabled="1" sid="4429402656310128">
                                     <conditions />
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="1278053820595185">
+                                        <event-block disabled="1" sid="1278053820595185">
                                             <conditions>
                                                 <condition id="-9" name="Is visible" sid="9281401202134051" type="genericButtons" />
                                             </conditions>
@@ -2249,7 +2249,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="3743521392688186">
+                                        <event-block disabled="1" sid="3743521392688186">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="1359026778697372" type="System" />
                                                 <condition id="-9" inverted="1" name="Is visible" sid="708866750116313" type="genericButtons" />
@@ -2266,7 +2266,7 @@
                                     </sub-events>
                                 </event-block>
                                 <comment>adjust fill</comment>
-                                <event-block sid="3075301035586671">
+                                <event-block disabled="1" sid="3075301035586671">
                                     <conditions />
                                     <actions>
                                         <action id="-5" name="Set width" sid="5716358866201354" type="buttonProgressBar">

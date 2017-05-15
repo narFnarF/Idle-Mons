@@ -3,7 +3,26 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eShop</name>
     <events>
+        <include>generic buttons</include>
+        <include>eInventory</include>
+        <include>eGameplay stuff</include>
         <include>eMons general</include>
+        <event-block sid="960171520747524">
+            <conditions>
+                <condition id="0" name="On function" sid="351240196434483" type="Function">
+                    <param id="0" name="Name">&quot;first launch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="328831459610543">
+            <conditions>
+                <condition id="0" name="On function" sid="328587513102248" type="Function">
+                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-group description="" sid="440145928237922" title="JSON functions">
             <sub-events>
                 <event-block sid="875678573268699">

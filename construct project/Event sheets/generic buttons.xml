@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>generic buttons</name>
+    <events>
+        <event-group description="" sid="327113117516303" title="generic buttons">
+            <sub-events>
+                <event-group description="" sid="173943040905553" title="touch detection">
+                    <sub-events>
+                        <comment>start the press</comment>
+                        <event-block sid="811449334623328">
+                            <conditions>
+                                <condition id="10" name="On Nth touch start" sid="729469239647870" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="697364873951464" type="Touch">
+                                    <param id="0" name="Object">genericButtons</param>
+                                </condition>
+                                <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="926531792645839" type="purchasePopup" />
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="233198439001371" type="notificationBox">
+                                    <param id="0" name="Instance variable">open</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="655246567757135">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="953167404638221" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;normal&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="475893968516002" type="genericButtons">
+                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="226641702995623">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="688280757658789" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="437544443535816" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;disabled&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="604459354873964" type="genericButtons">
+                                            <param id="0" name="Instance variable">clickableEvenIfDisabled</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="806658505988753" type="genericButtons">
+                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>complete the press (if still on the same object)</comment>
+                        <event-block sid="143116611460646">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="452807932677590" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="804166179587594" type="Touch">
+                                    <param id="0" name="Object">genericButtons</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="784117940813942" type="genericButtons">
+                                    <param id="0" name="Instance variable">initialyPressed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="401547343592284" type="Function">
+                                    <param id="0" name="Name">genericButtons.callback</param>
+                                    <param id="1" name="Parameter {n}">genericButtons.callbackParamNb</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>reset everything when the touch is released</comment>
+                        <comment>we reset everything to be ready for the next press, I think</comment>
+                        <event-block sid="678077803141588">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="679415710790622" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="569782013190239" type="genericButtons">
+                                    <param id="0" name="Instance variable">initialyPressed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>adjust state</comment>
+                        <event-block sid="804194950562586">
+                            <conditions>
+                                <condition disabled="1" id="2" name="Is in touch" sid="574111146966150" type="Touch" />
+                                <condition disabled="1" id="-11" name="For Each" sid="232145653569305" type="System">
+                                    <param id="0" name="Object">genericButtons</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="200301580485427">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="720215565860176" type="Touch">
+                                            <param id="0" name="Object">genericButtons</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="875346685557108" type="genericButtons">
+                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="702837568164498" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;normal&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="682461287773449" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;pressed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="550167323118556">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="299938131305178" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pressed&quot;</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="128382189622193" type="Touch">
+                                            <param id="0" name="Object">genericButtons</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="514256499456688" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;normal&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="932916244384300" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;return to normal&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="327644211482790" title="Visual (generic buttons)">
+                    <sub-events>
+                        <comment>Change appearance based on state</comment>
+                        <event-block any="1" sid="461208311414797">
+                            <conditions>
+                                <condition disabled="1" id="2" name="Is in touch" sid="489370263676460" type="Touch" />
+                                <condition disabled="1" id="1" name="On any touch end" sid="222922711726861" type="Touch" />
+                                <condition disabled="1" id="-2" name="On start of layout" sid="365374661792869" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="193517439678406">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="572418734535588" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;normal&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="558288727451327" type="genericButtons">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="840066218173012" type="genericButtons">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="796891520615314" type="genericButtons">
+                                            <param id="0" name="Animation">&quot;normal&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="718657525384351" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;normal&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="767325717367526" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;normal &quot; &amp; genericButtons.PickedCount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="939316645504835">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="271584144876407" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pressed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="779044340268105" type="genericButtons">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="677263117995604" type="genericButtons">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="178264274783111" type="genericButtons">
+                                            <param id="0" name="Animation">&quot;pressed&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="466302935784764" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;pressed&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="672878791736018" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;pressed &quot; &amp; genericButtons.PickedCount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="145006053605964">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="833156511801838" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;disabled&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="776689414390978" type="genericButtons">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="742330067190296" type="genericButtons">
+                                            <param id="0" name="Opacity">30</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="709088582937683" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;disabled&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="724463587398940">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="555269912432127" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;invisible&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="783445419317872" type="genericButtons">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="608474443738899" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;invisible&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="633523527835468" title="button progress bars">
+                    <sub-events>
+                        <event-block any="1" sid="206841657990476">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="897621101708504" type="System" />
+                                <condition id="-29" name="On load complete" sid="142350417445027" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="247021913668329" type="buttonProgressBar">
+                                    <param id="0" name="Animation">buttonProgressBg.AnimationName</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="931002809782702" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bars updated&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>make sure that the progression is between 0 and 1</comment>
+                        <event-block sid="981106104869138">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="160587679865177" type="buttonProgressBg">
+                                    <param id="0" name="Instance variable">progression</param>
+                                    <param id="1" name="Value">clamp(buttonProgressBg.progression, 0, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>adjust size and position</comment>
+                        <event-block sid="628670667181978">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="114177501853957" type="System">
+                                    <param id="0" name="Object">buttonProgressBg</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="325713930195783" type="genericButtons">
+                                    <param id="0" name="Instance variable">progressBarId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">buttonProgressBg.buttonId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="470176928466365" type="buttonProgressBg">
+                                    <param id="0" name="Object">genericButtons</param>
+                                    <param id="1" name="Image point (optional)">&quot;bar&quot;</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="661258116460284" type="buttonProgressBg">
+                                    <param id="0" name="Width">genericButtons.Width</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="659574870389678" type="buttonProgressBg">
+                                    <param id="0" name="Opacity">genericButtons.Opacity</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="466978027264663" type="buttonProgressBar">
+                                    <param id="0" name="Object">buttonProgressBg</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="559975592510546" type="buttonProgressBar">
+                                    <param id="0" name="Height">buttonProgressBg.Height</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>visibility</comment>
+                                <event-block sid="983841757527377">
+                                    <conditions />
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="856702127241228">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="756878585719279" type="genericButtons" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="112205726275737" type="buttonProgressBg">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="831415704716752" type="buttonProgressBar">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="932159144596169">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="819352826929361" type="System" />
+                                                <condition id="-9" inverted="1" name="Is visible" sid="509422029398508" type="genericButtons" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="914431215477082" type="buttonProgressBg">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="765090625214833" type="buttonProgressBar">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>adjust fill</comment>
+                                <event-block sid="882038105230751">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="118814541804198" type="buttonProgressBar">
+                                            <param id="0" name="Width">buttonProgressBg.Width * buttonProgressBg.progression</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
