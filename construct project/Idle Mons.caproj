@@ -1800,7 +1800,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="lionTraderBtnBg" sid="3836552500968573">
+            <object-type name="shopBtn" sid="3836552500968573">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="7760523467200803" speed="5">
@@ -1835,7 +1835,7 @@
         <object-type global="1" name="2inventory" sid="977963652630131">
             <plugin id="Dictionary" />
         </object-type>
-        <object-type name="shopButtonLabel" sid="886622307955467">
+        <object-type name="shopBtnLabel" sid="886622307955467">
             <plugin id="Text" />
         </object-type>
     </object-folder>
@@ -1884,8 +1884,8 @@
         </family>
         <family name="genericButtons" plugin-id="Sprite" sid="4183274929016279">
             <members>
-                <member>lionTraderBtnBg</member>
                 <member>newButton</member>
+                <member>shopBtn</member>
             </members>
             <instance-variables>
                 <instance-variable comment="Does the button accept clicks even if disabled?" name="clickableEvenIfDisabled" sid="8634969934852378" type="boolean" />
@@ -1907,7 +1907,7 @@
                 <member>3dexTxt</member>
                 <member>3trapsTxt</member>
                 <member>currencyTxt</member>
-                <member>shopButtonLabel</member>
+                <member>shopBtnLabel</member>
                 <member>storyButtonLabel</member>
                 <member>storyDisplay</member>
                 <member>storyStatus</member>
@@ -1918,7 +1918,7 @@
         </family>
         <family name="genericButtonsLabel" plugin-id="Text" sid="405168231793847">
             <members>
-                <member>shopButtonLabel</member>
+                <member>shopBtnLabel</member>
             </members>
             <instance-variables>
                 <instance-variable name="buttonID" sid="388810329452991" type="number" />

@@ -151,9 +151,9 @@
                 </event-group>
                 <event-group description="" sid="327644211482790" title="Visual (generic buttons)">
                     <sub-events>
-                        <event-group description="" sid="713615060087289" title="button labels">
+                        <event-group description="" disabled="1" sid="713615060087289" title="button labels">
                             <sub-events>
-                                <event-block sid="933319676483525">
+                                <event-block disabled="1" sid="933319676483525">
                                     <conditions />
                                     <actions />
                                 </event-block>
@@ -196,6 +196,25 @@
                                             <param id="1" name="Message">&quot;normal &quot; &amp; genericButtons.PickedCount</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="119589188900395">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="806895757163359" type="genericButtonsLabel">
+                                                    <param id="0" name="Instance variable">buttonID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">genericButtons.buttonId</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="823408208975463" type="genericButtonsLabel">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="785169962824995" type="genericButtonsLabel">
+                                                    <param id="0" name="Opacity">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="939316645504835">
                                     <conditions>
@@ -225,6 +244,25 @@
                                             <param id="1" name="Message">&quot;pressed &quot; &amp; genericButtons.PickedCount</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="462056918016239">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="140533869001316" type="genericButtonsLabel">
+                                                    <param id="0" name="Instance variable">buttonID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">genericButtons.buttonId</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="376669273658608" type="genericButtonsLabel">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="687318242961011" type="genericButtonsLabel">
+                                                    <param id="0" name="Opacity">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="145006053605964">
                                     <conditions>
@@ -246,6 +284,25 @@
                                             <param id="1" name="Message">&quot;disabled&quot;</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="225053073404697">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="651335687738162" type="genericButtonsLabel">
+                                                    <param id="0" name="Instance variable">buttonID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">genericButtons.buttonId</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="288576331183839" type="genericButtonsLabel">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="938618791832037" type="genericButtonsLabel">
+                                                    <param id="0" name="Opacity">30</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="724463587398940">
                                     <conditions>
@@ -264,6 +321,25 @@
                                             <param id="1" name="Message">&quot;invisible&quot;</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="564482246057649">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="901803656169358" type="genericButtonsLabel">
+                                                    <param id="0" name="Instance variable">buttonID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">genericButtons.buttonId</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="538042836354415" type="genericButtonsLabel">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action disabled="1" id="-16" name="Set opacity" sid="840191423307078" type="genericButtonsLabel">
+                                                    <param id="0" name="Opacity">30</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

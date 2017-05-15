@@ -812,7 +812,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="256">
+                <instance type="shopBtn" uid="256">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -845,7 +845,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="240">
+                <instance type="shopBtn" uid="240">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -878,7 +878,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="257">
+                <instance type="shopBtn" uid="257">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -911,7 +911,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="259">
+                <instance type="shopBtn" uid="259">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -944,7 +944,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="260">
+                <instance type="shopBtn" uid="260">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

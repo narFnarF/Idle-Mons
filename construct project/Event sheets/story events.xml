@@ -874,14 +874,14 @@
                         <comment>the Pages buttons</comment>
                         <event-block sid="724683600764609">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="722089306619069" type="lionTraderBtnBg">
+                                <condition id="-7" name="Compare instance variable" sid="722089306619069" type="shopBtn">
                                     <param id="0" name="Instance variable">callback</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;story .changePage&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="837913677566763" type="lionTraderBtnBg">
+                                <action id="-10" name="Set value" sid="837913677566763" type="shopBtn">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;normal&quot;</param>
                                 </action>
@@ -892,7 +892,7 @@
                                 <comment>OR if the next page doesn&apos;t exist in the JSON</comment>
                                 <event-block sid="623023832015220">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="792131791236351" type="lionTraderBtnBg">
+                                        <condition id="-7" name="Compare instance variable" sid="792131791236351" type="shopBtn">
                                             <param id="0" name="Instance variable">callbackParamNb</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
@@ -917,7 +917,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="104473384235310" type="lionTraderBtnBg">
+                                                <action id="-10" name="Set value" sid="104473384235310" type="shopBtn">
                                                     <param id="0" name="Instance variable">state</param>
                                                     <param id="1" name="Value">&quot;disabled&quot;</param>
                                                 </action>
@@ -934,14 +934,14 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="405442849272094" type="lionTraderBtnBg">
+                                        <condition id="-7" name="Compare instance variable" sid="405442849272094" type="shopBtn">
                                             <param id="0" name="Instance variable">callbackParamNb</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">-1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="582167995554297" type="lionTraderBtnBg">
+                                        <action id="-10" name="Set value" sid="582167995554297" type="shopBtn">
                                             <param id="0" name="Instance variable">state</param>
                                             <param id="1" name="Value">&quot;disabled&quot;</param>
                                         </action>
@@ -952,14 +952,14 @@
                         <comment>the Receive button</comment>
                         <event-block sid="373627077266607">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="740840068667470" type="lionTraderBtnBg">
+                                <condition id="-7" name="Compare instance variable" sid="740840068667470" type="shopBtn">
                                     <param id="0" name="Instance variable">callback</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;story receive clicked&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="892233677822793" type="lionTraderBtnBg">
+                                <action id="-10" name="Set value" sid="892233677822793" type="shopBtn">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;invisible&quot;</param>
                                 </action>
@@ -975,7 +975,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="268729961485924" type="lionTraderBtnBg">
+                                        <action id="-10" name="Set value" sid="268729961485924" type="shopBtn">
                                             <param id="0" name="Instance variable">state</param>
                                             <param id="1" name="Value">&quot;disabled&quot;</param>
                                         </action>
@@ -995,7 +995,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="539216345492384" type="lionTraderBtnBg">
+                                                <action id="-10" name="Set value" sid="539216345492384" type="shopBtn">
                                                     <param id="0" name="Instance variable">state</param>
                                                     <param id="1" name="Value">&quot;normal&quot;</param>
                                                 </action>
@@ -1008,14 +1008,14 @@
                         <comment>the Decode button</comment>
                         <event-block any="1" sid="210530865760961">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="674643365780473" type="lionTraderBtnBg">
+                                <condition id="-7" name="Compare instance variable" sid="674643365780473" type="shopBtn">
                                     <param id="0" name="Instance variable">callback</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;story decode clicked&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="163781930516528" type="lionTraderBtnBg">
+                                <action id="-10" name="Set value" sid="163781930516528" type="shopBtn">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;invisible&quot;</param>
                                 </action>
@@ -1031,7 +1031,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="258740874789332" type="lionTraderBtnBg">
+                                        <action id="-10" name="Set value" sid="258740874789332" type="shopBtn">
                                             <param id="0" name="Instance variable">state</param>
                                             <param id="1" name="Value">&quot;disabled&quot;</param>
                                         </action>
@@ -1046,7 +1046,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="110067705527090" type="lionTraderBtnBg">
+                                                <action id="-10" name="Set value" sid="110067705527090" type="shopBtn">
                                                     <param id="0" name="Instance variable">state</param>
                                                     <param id="1" name="Value">&quot;normal&quot;</param>
                                                 </action>
@@ -1062,7 +1062,7 @@
                                 <condition id="-11" name="For Each" sid="487816481369929" type="System">
                                     <param id="0" name="Object">storyButtonLabel</param>
                                 </condition>
-                                <condition id="1" name="Is overlapping another object" sid="987767149199311" type="lionTraderBtnBg">
+                                <condition id="1" name="Is overlapping another object" sid="987767149199311" type="shopBtn">
                                     <param id="0" name="Object">storyButtonLabel</param>
                                 </condition>
                             </conditions>
@@ -1070,7 +1070,7 @@
                             <sub-events>
                                 <event-block sid="587846706666911">
                                     <conditions>
-                                        <condition id="-9" name="Is visible" sid="452793767019427" type="lionTraderBtnBg" />
+                                        <condition id="-9" name="Is visible" sid="452793767019427" type="shopBtn" />
                                     </conditions>
                                     <actions>
                                         <action id="-15" name="Set visible" sid="984612389557830" type="storyButtonLabel">

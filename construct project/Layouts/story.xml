@@ -114,7 +114,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="215">
+                <instance type="shopBtn" uid="215">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -147,7 +147,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="216">
+                <instance type="shopBtn" uid="216">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -279,7 +279,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="344">
+                <instance type="shopBtn" uid="344">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -312,7 +312,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="350">
+                <instance type="shopBtn" uid="350">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

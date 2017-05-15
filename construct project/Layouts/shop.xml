@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="lionTraderBtnBg" uid="410">
+                <instance type="shopBtn" uid="410">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -56,9 +56,9 @@
                     </properties>
                     <instance-variables>
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
-                        <callback>shop .getBaitName</callback>
-                        <callbackParamNb>-1</callbackParamNb>
-                        <buttonId>-1</buttonId>
+                        <callback>shop .buttonClicked</callback>
+                        <callbackParamNb>0</callbackParamNb>
+                        <buttonId>0</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -68,8 +68,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
-                        <y>131</y>
+                        <x>37</x>
+                        <y>221</y>
                         <z>0</z>
                         <width>315</width>
                         <height>145</height>
@@ -80,7 +80,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="413">
+                <instance type="shopBtn" uid="413">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -88,10 +88,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
-                        <callback>shop .getBaitName</callback>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>shop .buttonClicked</callback>
                         <callbackParamNb>1</callbackParamNb>
-                        <buttonId>-1</buttonId>
+                        <buttonId>1</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -101,8 +101,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
-                        <y>345</y>
+                        <x>37</x>
+                        <y>435</y>
                         <z>0</z>
                         <width>315</width>
                         <height>145</height>
@@ -113,7 +113,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="414">
+                <instance type="shopBtn" uid="414">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -122,9 +122,9 @@
                     </properties>
                     <instance-variables>
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
-                        <callback>shop .getBaitCost</callback>
-                        <callbackParamNb>1</callbackParamNb>
-                        <buttonId>-1</buttonId>
+                        <callback>shop .buttonClicked</callback>
+                        <callbackParamNb>2</callbackParamNb>
+                        <buttonId>2</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -134,8 +134,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
-                        <y>560</y>
+                        <x>37</x>
+                        <y>650</y>
                         <z>0</z>
                         <width>315</width>
                         <height>145</height>
@@ -146,40 +146,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lionTraderBtnBg" uid="415">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
-                        <callback>shop .getBaitCost</callback>
-                        <callbackParamNb>-1</callbackParamNb>
-                        <buttonId>-1</buttonId>
-                        <state>normal</state>
-                        <initialyPressed>false</initialyPressed>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>48</x>
-                        <y>774</y>
-                        <z>0</z>
-                        <width>315</width>
-                        <height>145</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="shopButtonLabel" uid="416">
+                <instance type="shopBtnLabel" uid="416">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -192,17 +159,17 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>text</theText>
-                        <buttonID>-1</buttonID>
+                        <theText>text1</theText>
+                        <buttonID>0</buttonID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>83</x>
-                        <y>168</y>
+                        <x>74</x>
+                        <y>246</y>
                         <z>0</z>
                         <width>235</width>
-                        <height>71</height>
+                        <height>99</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -210,7 +177,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="shopButtonLabel" uid="417">
+                <instance type="shopBtnLabel" uid="417">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -223,17 +190,17 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>text</theText>
-                        <buttonID>-1</buttonID>
+                        <theText>text2</theText>
+                        <buttonID>1</buttonID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>83</x>
-                        <y>384</y>
+                        <x>74</x>
+                        <y>461</y>
                         <z>0</z>
                         <width>235</width>
-                        <height>71</height>
+                        <height>99</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -241,7 +208,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="shopButtonLabel" uid="418">
+                <instance type="shopBtnLabel" uid="418">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -254,48 +221,17 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>text</theText>
-                        <buttonID>-1</buttonID>
+                        <theText>text3</theText>
+                        <buttonID>2</buttonID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>83</x>
-                        <y>606</y>
+                        <x>74</x>
+                        <y>674</y>
                         <z>0</z>
                         <width>235</width>
-                        <height>71</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="shopButtonLabel" uid="419">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <theText>text</theText>
-                        <buttonID>-1</buttonID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>83</x>
-                        <y>817</y>
-                        <z>0</z>
-                        <width>235</width>
-                        <height>71</height>
+                        <height>99</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
