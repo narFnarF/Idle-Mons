@@ -125,7 +125,7 @@
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>story receive clicked</callback>
                         <callbackParamNb>0</callbackParamNb>
-                        <progressBarId>1</progressBarId>
+                        <buttonId>1</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -158,7 +158,7 @@
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>story decode clicked</callback>
                         <callbackParamNb>0</callbackParamNb>
-                        <progressBarId>2</progressBarId>
+                        <buttonId>2</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -290,7 +290,7 @@
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>story .changePage</callback>
                         <callbackParamNb>-1</callbackParamNb>
-                        <progressBarId>1</progressBarId>
+                        <buttonId>1</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -323,7 +323,7 @@
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>story .changePage</callback>
                         <callbackParamNb>1</callbackParamNb>
-                        <progressBarId>2</progressBarId>
+                        <buttonId>2</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>

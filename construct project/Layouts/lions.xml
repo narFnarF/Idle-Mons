@@ -823,7 +823,7 @@
                         <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
                         <callback>lion trader clicked</callback>
                         <callbackParamNb>1</callbackParamNb>
-                        <progressBarId>1</progressBarId>
+                        <buttonId>1</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -856,7 +856,7 @@
                         <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
                         <callback>lion trader clicked</callback>
                         <callbackParamNb>2</callbackParamNb>
-                        <progressBarId>2</progressBarId>
+                        <buttonId>2</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -889,7 +889,7 @@
                         <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
                         <callback>lion trader clicked</callback>
                         <callbackParamNb>3</callbackParamNb>
-                        <progressBarId>3</progressBarId>
+                        <buttonId>3</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -922,7 +922,7 @@
                         <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
                         <callback>lion trader clicked</callback>
                         <callbackParamNb>4</callbackParamNb>
-                        <progressBarId>4</progressBarId>
+                        <buttonId>4</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -955,7 +955,7 @@
                         <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
                         <callback>lion trader clicked</callback>
                         <callbackParamNb>5</callbackParamNb>
-                        <progressBarId>5</progressBarId>
+                        <buttonId>5</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>

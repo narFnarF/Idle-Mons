@@ -1359,7 +1359,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="6106613957798281" type="buttonProgressBg">
                                     <param id="0" name="Instance variable">buttonId</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">genericButtons.progressBarId</param>
+                                    <param id="2" name="Value">genericButtons.buttonId</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1784,7 +1784,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="459938260139309" type="buttonProgressBg">
                                             <param id="0" name="Instance variable">buttonId</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">genericButtons.progressBarId</param>
+                                            <param id="2" name="Value">genericButtons.buttonId</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1839,7 +1839,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="3785701050899999" type="buttonProgressBg">
                                             <param id="0" name="Instance variable">buttonId</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">genericButtons.progressBarId</param>
+                                            <param id="2" name="Value">genericButtons.buttonId</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1894,7 +1894,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="5730326778426779" type="buttonProgressBg">
                                             <param id="0" name="Instance variable">buttonId</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">genericButtons.progressBarId</param>
+                                            <param id="2" name="Value">genericButtons.buttonId</param>
                                         </condition>
                                     </conditions>
                                     <actions>

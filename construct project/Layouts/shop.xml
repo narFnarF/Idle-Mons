@@ -55,43 +55,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
-                        <callback>lion trader clicked</callback>
-                        <callbackParamNb>2</callbackParamNb>
-                        <progressBarId>1</progressBarId>
-                        <state>normal</state>
-                        <initialyPressed>false</initialyPressed>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>75</x>
-                        <y>188</y>
-                        <z>0</z>
-                        <width>434</width>
-                        <height>124</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="newButton" uid="413">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>normal</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
                         <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
-                        <callback>clicked bee button</callback>
-                        <callbackParamNb>2</callbackParamNb>
-                        <progressBarId>5</progressBarId>
+                        <callback>shop .getBaitName</callback>
+                        <callbackParamNb>-1</callbackParamNb>
+                        <buttonId>-1</buttonId>
                         <state>normal</state>
                         <initialyPressed>false</initialyPressed>
                     </instance-variables>
@@ -101,11 +68,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>58</x>
-                        <y>431</y>
+                        <x>48</x>
+                        <y>131</y>
                         <z>0</z>
-                        <width>527</width>
-                        <height>106</height>
+                        <width>315</width>
+                        <height>145</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -113,69 +80,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton" uid="414">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>pressed</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
-                        <callback>clicked bee button</callback>
-                        <callbackParamNb>2</callbackParamNb>
-                        <progressBarId>6</progressBarId>
-                        <state>normal</state>
-                        <initialyPressed>false</initialyPressed>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>67</x>
-                        <y>617</y>
-                        <z>0</z>
-                        <width>527</width>
-                        <height>106</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="buttonProgressBg" uid="415">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>liontrader</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <progression>0.9</progression>
-                        <buttonId>1</buttonId>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>91</x>
-                        <y>324.059509277</y>
-                        <z>0</z>
-                        <width>412</width>
-                        <height>15</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="buttonProgressBg" uid="416">
+                <instance type="lionTraderBtnBg" uid="413">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -183,8 +88,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <progression>0.5</progression>
-                        <buttonId>5</buttonId>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>shop .getBaitName</callback>
+                        <callbackParamNb>1</callbackParamNb>
+                        <buttonId>-1</buttonId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -192,14 +101,204 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>344</x>
-                        <y>489</y>
+                        <x>48</x>
+                        <y>345</y>
                         <z>0</z>
-                        <width>412</width>
-                        <height>15</height>
+                        <width>315</width>
+                        <height>145</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="414">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>shop .getBaitCost</callback>
+                        <callbackParamNb>1</callbackParamNb>
+                        <buttonId>-1</buttonId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48</x>
+                        <y>560</y>
+                        <z>0</z>
+                        <width>315</width>
+                        <height>145</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="415">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>shop .getBaitCost</callback>
+                        <callbackParamNb>-1</callbackParamNb>
+                        <buttonId>-1</buttonId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48</x>
+                        <y>774</y>
+                        <z>0</z>
+                        <width>315</width>
+                        <height>145</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopButtonLabel" uid="416">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>text</theText>
+                        <buttonID>-1</buttonID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>83</x>
+                        <y>168</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopButtonLabel" uid="417">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>text</theText>
+                        <buttonID>-1</buttonID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>83</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopButtonLabel" uid="418">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>text</theText>
+                        <buttonID>-1</buttonID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>83</x>
+                        <y>606</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopButtonLabel" uid="419">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>text</theText>
+                        <buttonID>-1</buttonID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>83</x>
+                        <y>817</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

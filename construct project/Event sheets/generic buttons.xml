@@ -151,7 +151,15 @@
                 </event-group>
                 <event-group description="" sid="327644211482790" title="Visual (generic buttons)">
                     <sub-events>
-                        <comment>Change appearance based on state</comment>
+                        <event-group description="" sid="713615060087289" title="button labels">
+                            <sub-events>
+                                <event-block sid="933319676483525">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <comment>Change button appearance based on state</comment>
                         <event-block any="1" sid="461208311414797">
                             <conditions>
                                 <condition disabled="1" id="2" name="Is in touch" sid="489370263676460" type="Touch" />
@@ -296,7 +304,7 @@
                                     <param id="0" name="Object">buttonProgressBg</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="325713930195783" type="genericButtons">
-                                    <param id="0" name="Instance variable">progressBarId</param>
+                                    <param id="0" name="Instance variable">buttonId</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">buttonProgressBg.buttonId</param>
                                 </condition>

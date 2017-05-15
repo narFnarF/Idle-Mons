@@ -1084,7 +1084,7 @@
                                                 <condition id="-7" name="Compare instance variable" sid="5503466237073741" type="buttonProgressBg">
                                                     <param id="0" name="Instance variable">buttonId</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">lionTraderBtnBg.progressBarId</param>
+                                                    <param id="2" name="Value">lionTraderBtnBg.buttonId</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
