@@ -248,6 +248,15 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="989410145716826">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="801358648386537" type="Function">
+                            <param id="0" name="Name">&quot;shop .updateUI&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="255110207285770">
@@ -259,15 +268,11 @@
             <actions />
             <sub-events>
                 <variable constant="0" name="id" sid="126767341187973" static="0" type="number">0</variable>
+                <variable constant="0" name="cost" sid="565094612486525" static="0" type="number">0</variable>
                 <event-block sid="930647180402407">
                     <conditions>
                         <condition id="-11" name="For Each" sid="785205309497885" type="System">
                             <param id="0" name="Object">shopBtn</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="716355537485538" type="shopBtnLabel">
-                            <param id="0" name="Instance variable">buttonID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">shopBtn.buttonId</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -275,21 +280,84 @@
                             <param id="0" name="Variable">id</param>
                             <param id="1" name="Value">shopBtn.callbackParamNb</param>
                         </action>
-                        <action id="-10" name="Set value" sid="528933327709792" type="shopBtnLabel">
-                            <param id="0" name="Instance variable">theText</param>
-                            <param id="1" name="Value">&quot;Bait: &quot; &amp; Function.Call(&quot;shop .getBaitName&quot;, id) &amp; newline &amp; &quot;Cost: &quot; &amp; function.Call(&quot;shop .getBaitCost&quot;, id)</param>
+                        <action id="-9" name="Set value" sid="398465744387214" type="System">
+                            <param id="0" name="Variable">cost</param>
+                            <param id="1" name="Value">function.Call(&quot;shop .getBaitCost&quot;, id)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="863453559683394" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;id: &quot; &amp; id</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="799318527483422" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;cost: &quot; &amp; cost</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="657993585641179" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;hasEnough: &quot; &amp; function.Call(&quot;inventory .hasEnough&quot;, &quot;soft&quot;, cost)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="464355293879382" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;has: &quot; &amp; Function.Call(&quot;inventory .getQuantity&quot;, &quot;soft&quot;)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="385578176551202">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="716355537485538" type="shopBtnLabel">
+                                    <param id="0" name="Instance variable">buttonID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">shopBtn.buttonId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="528933327709792" type="shopBtnLabel">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">&quot;Bait: &quot; &amp; Function.Call(&quot;shop .getBaitName&quot;, id) &amp; newline &amp; &quot;Cost: &quot; &amp; cost</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="489014399368565">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="812364255468044" type="System">
+                                    <param id="0" name="First value">function.Call(&quot;inventory .hasEnough&quot;, &quot;soft&quot;, cost)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="700019472393898" type="shopBtn">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;disabled&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="161464630353916">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="571153971329852" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="309361551072447" type="shopBtn">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;normal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="365079765971194">
+        <event-block any="1" sid="365079765971194">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="565118180202329" type="System">
+                <condition id="-2" name="On start of layout" sid="199647627280433" type="System" />
+                <condition id="-6" name="Every X seconds" sid="381813424977174" type="System">
                     <param id="0" name="Interval (seconds)">1</param>
                 </condition>
             </conditions>
             <actions>
+                <action id="-16" name="Wait" sid="805922947684463" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
                 <action id="0" name="Call function" sid="244350942431148" type="Function">
                     <param id="0" name="Name">&quot;shop .updateUI&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
