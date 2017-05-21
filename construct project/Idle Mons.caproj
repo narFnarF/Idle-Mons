@@ -1928,6 +1928,8 @@
         <family name="touchable" plugin-id="Sprite" sid="985003826828823">
             <members>
                 <member>3trap</member>
+                <member>arrowCamera</member>
+                <member>arrowLayout</member>
                 <member>newButton</member>
                 <member>questCollectBtn</member>
                 <member>saveBtn</member>

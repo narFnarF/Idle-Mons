@@ -435,6 +435,7 @@
                         <visibilityMinimum>0</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -471,6 +472,7 @@
                         <visibilityMinimum>1</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -507,6 +509,7 @@
                         <visibilityMinimum>0</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -543,6 +546,7 @@
                         <visibilityMinimum>0</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -579,6 +583,7 @@
                         <visibilityMinimum>2</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -615,6 +620,7 @@
                         <visibilityMinimum>20</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -651,6 +657,7 @@
                         <visibilityMinimum>0</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>grinding</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -687,6 +694,7 @@
                         <visibilityMinimum>3</visibilityMinimum>
                         <purchasePopupText>Some kid with a giant dog shows you an eBook reader. &quot;This book is a joy to read, you&apos;ll see. I haven&apos;t finished it though.&quot;</purchasePopupText>
                         <purchasePopupButtonText>Buy for </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>story</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -1740,6 +1748,7 @@
                         <visibilityMinimum>0</visibilityMinimum>
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>

@@ -435,6 +435,7 @@
                         <visibilityMinimum>0</visibilityMinimum>
                         <purchasePopupText></purchasePopupText>
                         <purchasePopupButtonText></purchasePopupButtonText>
+                        <allowClickThrough>false</allowClickThrough>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
