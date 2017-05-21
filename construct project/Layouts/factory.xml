@@ -291,8 +291,10 @@
                         <callback>clicked bee button</callback>
                         <callbackParamNb>4</callbackParamNb>
                         <buttonId>7</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -324,8 +326,10 @@
                         <callback>clicked bee button</callback>
                         <callbackParamNb>3</callbackParamNb>
                         <buttonId>6</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -357,8 +361,10 @@
                         <callback>clicked bee button</callback>
                         <callbackParamNb>2</callbackParamNb>
                         <buttonId>5</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -390,8 +396,10 @@
                         <callback>clicked bee button</callback>
                         <callbackParamNb>1</callbackParamNb>
                         <buttonId>4</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1400,8 +1408,10 @@
                         <callback>purchase upgrade silo</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <buttonId>1</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1433,8 +1443,10 @@
                         <callback>purchase upgrade factory productivity</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <buttonId>2</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1466,8 +1478,10 @@
                         <callback>purchase upgrade factory capacity</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <buttonId>3</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

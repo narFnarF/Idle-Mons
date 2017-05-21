@@ -242,6 +242,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
                         <nb>0</nb>
                         <questID>-1</questID>
                     </instance-variables>
@@ -268,6 +269,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
                         <nb>1</nb>
                         <questID>-1</questID>
                     </instance-variables>
@@ -294,6 +296,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
                         <nb>2</nb>
                         <questID>-1</questID>
                     </instance-variables>

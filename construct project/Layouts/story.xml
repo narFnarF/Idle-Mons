@@ -126,8 +126,10 @@
                         <callback>story receive clicked</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <buttonId>1</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -159,8 +161,10 @@
                         <callback>story decode clicked</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <buttonId>2</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -291,8 +295,10 @@
                         <callback>story .changePage</callback>
                         <callbackParamNb>-1</callbackParamNb>
                         <buttonId>1</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -324,8 +330,10 @@
                         <callback>story .changePage</callback>
                         <callbackParamNb>1</callbackParamNb>
                         <buttonId>2</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

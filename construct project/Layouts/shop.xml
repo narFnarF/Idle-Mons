@@ -59,8 +59,10 @@
                         <callback>shop .buttonClicked</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <buttonId>0</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -88,12 +90,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>shop .buttonClicked</callback>
                         <callbackParamNb>1</callbackParamNb>
                         <buttonId>1</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -125,8 +129,10 @@
                         <callback>shop .buttonClicked</callback>
                         <callbackParamNb>2</callbackParamNb>
                         <buttonId>2</buttonId>
-                        <state>normal</state>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

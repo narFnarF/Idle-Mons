@@ -1892,7 +1892,8 @@
                 <instance-variable comment="Name of the function that is going to be called when the button is clicked." name="callback" sid="6708884644703998" type="string" />
                 <instance-variable comment='Parameter sent to the function &quot;callback&quot; when clicked. Useful to send the ID of the button, when there&apos;s multiple instances of the button object.' name="callbackParamNb" sid="7965788020137503" type="number" />
                 <instance-variable comment="The ID of button. Used to link the button to its text label and progress bar." name="buttonId" sid="3723874214917857" type="number" />
-                <instance-variable comment="Options: normal, pressed, disabled, invisible" name="state" sid="9041518536292444" type="string" />
+                <instance-variable comment="Options: active, disabled, invisible" name="state" sid="9041518536292444" type="string" />
+                <instance-variable comment="Is the button currently pressed?" name="currentlyPressed" sid="403731279211350" type="boolean" />
                 <instance-variable comment="Private. The button uses this to know if a touch started on the button. Helps ignore clicks that started outside but released on the button." name="initialyPressed" sid="4112654331809096" type="boolean" />
             </instance-variables>
             <behaviors>
@@ -1922,6 +1923,21 @@
             </members>
             <instance-variables>
                 <instance-variable name="buttonID" sid="388810329452991" type="number" />
+            </instance-variables>
+        </family>
+        <family name="touchable" plugin-id="Sprite" sid="985003826828823">
+            <members>
+                <member>3trap</member>
+                <member>newButton</member>
+                <member>questCollectBtn</member>
+                <member>saveBtn</member>
+                <member>shopBtn</member>
+                <member>verachouFeedBtn</member>
+                <member>verachouGrowBtn</member>
+                <member>verachouStudyBtn</member>
+            </members>
+            <instance-variables>
+                <instance-variable comment="Will ignore click, and allow the next Touchable item under it to be clicked" name="allowClickThrough" sid="740014575241403" type="boolean" />
             </instance-variables>
         </family>
     </families>
@@ -1989,7 +2005,8 @@
         <event-sheet>eInventory.xml</event-sheet>
         <event-sheet>eCurrency.xml</event-sheet>
         <event-sheet>eShop.xml</event-sheet>
-        <event-sheet>generic buttons.xml</event-sheet>
+        <event-sheet>e Generic buttons.xml</event-sheet>
+        <event-sheet>eTouchable.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

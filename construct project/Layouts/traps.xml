@@ -55,6 +55,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
                         <id>1</id>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
@@ -115,6 +116,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
                         <id>2</id>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
@@ -147,6 +149,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
                         <id>3</id>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>

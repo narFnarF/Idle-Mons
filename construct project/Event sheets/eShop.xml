@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eShop</name>
     <events>
-        <include>generic buttons</include>
+        <include>e Generic buttons</include>
         <include>eCurrency</include>
         <include>eInventory</include>
         <include>eGameplay stuff</include>
@@ -185,6 +185,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="264612698236788">
+                            <conditions>
+                                <condition id="0" name="On function" sid="467270453624588" type="Function">
+                                    <param id="0" name="Name">&quot;prout&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="103511589468643" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;prout&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -197,12 +210,12 @@
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="id" sid="802388869514627" static="0" type="number">-1</variable>
+                <variable constant="0" name="baitId" sid="802388869514627" static="0" type="number">-1</variable>
                 <event-block sid="802122143090378">
                     <conditions />
                     <actions>
                         <action id="-9" name="Set value" sid="510229099572723" type="System">
-                            <param id="0" name="Variable">id</param>
+                            <param id="0" name="Variable">baitId</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
                     </actions>
@@ -217,15 +230,15 @@
                     <actions>
                         <action id="-9" name="Set value" sid="450530394541732" type="System">
                             <param id="0" name="Variable">baitName</param>
-                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitName&quot;, id)</param>
+                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitName&quot;, baitId)</param>
                         </action>
                         <action id="-9" name="Set value" sid="923359861915120" type="System">
                             <param id="0" name="Variable">cost</param>
-                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitCost&quot;, id)</param>
+                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitCost&quot;, baitId)</param>
                         </action>
                         <action id="-9" name="Set value" sid="734301235322396" type="System">
                             <param id="0" name="Variable">duration</param>
-                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitDuration&quot;, id)</param>
+                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitDuration&quot;, baitId)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -339,7 +352,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="309361551072447" type="shopBtn">
                                     <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Value">&quot;normal&quot;</param>
+                                    <param id="1" name="Value">&quot;active&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

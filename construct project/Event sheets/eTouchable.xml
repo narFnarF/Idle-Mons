@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eTouchable</name>
+    <events>
+        <event-group description="" sid="418853902659659" title="touchable">
+            <sub-events>
+                <event-block sid="801449539395388">
+                    <conditions>
+                        <condition id="0" name="On function" sid="490712388254845" type="Function">
+                            <param id="0" name="Name">&quot;touchable .isOnTop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable comment="The UID of the object who&apos;s calling the function" constant="0" name="uid" sid="455467455194219" static="0" type="number">-1</variable>
+                        <event-block sid="143388060923145">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="171509624036324" type="System">
+                                    <param id="0" name="Variable">uid</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="topMostObjectUID" sid="772185614300354" static="0" type="number">-1</variable>
+                        <event-block sid="237889997306107">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="892536869736859" type="Touch">
+                                    <param id="0" name="Object">touchable</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="669760294305210" type="touchable">
+                                    <param id="0" name="Instance variable">allowClickThrough</param>
+                                </condition>
+                                <condition id="-17" name="Pick top/bottom" sid="258005180822899" type="touchable">
+                                    <param id="0" name="Which">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="717549281243689" type="System">
+                                    <param id="0" name="Variable">topMostObjectUID</param>
+                                    <param id="1" name="Value">touchable.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="832631349421254">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="898009371281376" type="System">
+                                    <param id="0" name="Variable">topMostObjectUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">uid</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="920021867413530" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="230732572509168" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;touchable: true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="597643965544572">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="879553946093427" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="692736388059275" type="Function">
+                                    <param id="0" name="Value">&quot;false&quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="833631376326494" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;touchable: false&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
