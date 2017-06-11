@@ -466,6 +466,7 @@
                     <instance-variables>
                         <theText>3trapsTxt</theText>
                         <which>button</which>
+                        <id>0</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -497,6 +498,7 @@
                     <instance-variables>
                         <theText>3trapsTxt</theText>
                         <which>button</which>
+                        <id>1</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -528,6 +530,7 @@
                     <instance-variables>
                         <theText>3trapsTxt</theText>
                         <which>button</which>
+                        <id>2</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -559,6 +562,7 @@
                     <instance-variables>
                         <theText>3trapsTxt</theText>
                         <which>amount</which>
+                        <id>0</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -590,6 +594,7 @@
                     <instance-variables>
                         <theText>3trapsTxt</theText>
                         <which>amount</which>
+                        <id>1</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -621,6 +626,7 @@
                     <instance-variables>
                         <theText>3trapsTxt</theText>
                         <which>amount</which>
+                        <id>2</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

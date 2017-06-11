@@ -490,6 +490,7 @@
                     <plugin id="Text" />
                     <instance-variables>
                         <instance-variable comment="button or amount" name="which" sid="867488245301602" type="string" />
+                        <instance-variable name="id" sid="693498393925138" type="number" />
                     </instance-variables>
                 </object-type>
             </object-folder>

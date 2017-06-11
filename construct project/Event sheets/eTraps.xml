@@ -713,7 +713,46 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="850163292607216" title="bait selector" />
+        <event-group description="" sid="850163292607216" title="bait selector">
+            <sub-events>
+                <event-block sid="477800333207573">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="884615317269042" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="178685625921709" type="baitSelectorTxt">
+                            <param id="0" name="Instance variable">which</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;button&quot;</param>
+                        </condition>
+                        <condition id="-12" name="Repeat" sid="800862756388094" type="System">
+                            <param id="0" name="Count">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="395511061262306" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">loopindex</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="201240437671188">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="770803783920064" type="baitSelectorTxt">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">loopindex</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="766893067265036" type="baitSelectorTxt">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">Function.Call(&quot;shop .getBaitName&quot;, loopindex)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="799838731313010" title="debug (traps)">
             <sub-events>
                 <event-block sid="765528547089489">
