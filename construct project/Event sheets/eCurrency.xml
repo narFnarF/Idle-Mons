@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eCurrency</name>
     <events>
+        <comment>Events for the Currency bar on top</comment>
         <event-block sid="984768500224384">
             <conditions />
             <actions>

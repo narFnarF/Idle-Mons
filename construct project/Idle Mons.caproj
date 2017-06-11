@@ -1939,7 +1939,7 @@
                 <member>verachouStudyBtn</member>
             </members>
             <instance-variables>
-                <instance-variable comment="Will ignore click, and allow the next Touchable item under it to be clicked" name="allowClickThrough" sid="740014575241403" type="boolean" />
+                <instance-variable comment="If true, will ignore click, and allow the next Touchable item under it to be clicked" name="allowClickThrough" sid="740014575241403" type="boolean" />
             </instance-variables>
         </family>
     </families>
