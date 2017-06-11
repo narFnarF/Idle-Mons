@@ -34,12 +34,12 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="i" sid="232839569268453" static="0" type="number">-1</variable>
+                        <variable comment="the index of the bait in the json" constant="0" name="baitIndex" sid="232839569268453" static="0" type="number">-1</variable>
                         <event-block sid="550051811230764">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="466444691320383" type="System">
-                                    <param id="0" name="Variable">i</param>
+                                    <param id="0" name="Variable">baitIndex</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
                             </actions>
@@ -48,12 +48,12 @@
                             <conditions>
                                 <condition id="60" inverted="1" name="Is undefined" sid="530987032102507" type="3trapsJSON">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}i{###}&quot;name&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="756985188223399" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, i, &quot;name&quot;)</param>
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -64,7 +64,7 @@
                             <actions>
                                 <action id="14" name="Log" sid="802890252627448" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName : &quot; &amp; i</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName : &quot; &amp; baitIndex</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -78,12 +78,12 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="i" sid="785427278079773" static="0" type="number">-1</variable>
+                        <variable constant="0" name="baitIndex" sid="785427278079773" static="0" type="number">-1</variable>
                         <event-block sid="319030688054827">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="102032421189495" type="System">
-                                    <param id="0" name="Variable">i</param>
+                                    <param id="0" name="Variable">baitIndex</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
                             </actions>
@@ -92,12 +92,12 @@
                             <conditions>
                                 <condition id="60" inverted="1" name="Is undefined" sid="877474038284682" type="3trapsJSON">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}i{###}&quot;cost&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;cost&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="694862850578751" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, i, &quot;cost&quot;)</param>
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;cost&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -108,7 +108,7 @@
                             <actions>
                                 <action id="14" name="Log" sid="880993688800138" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitCost : &quot; &amp; i</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitCost : &quot; &amp; baitIndex</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -122,12 +122,12 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="i" sid="378827895293308" static="0" type="number">-1</variable>
+                        <variable constant="0" name="baitIndex" sid="378827895293308" static="0" type="number">-1</variable>
                         <event-block sid="296011925110104">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="805537380257668" type="System">
-                                    <param id="0" name="Variable">i</param>
+                                    <param id="0" name="Variable">baitIndex</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
                             </actions>
@@ -136,12 +136,12 @@
                             <conditions>
                                 <condition id="60" inverted="1" name="Is undefined" sid="902751751854691" type="3trapsJSON">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}i{###}&quot;duration&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;duration&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="251420733685480" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, i, &quot;duration&quot;)</param>
+                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;duration&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -152,7 +152,7 @@
                             <actions>
                                 <action id="14" name="Log" sid="468515196174034" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitDuration : &quot; &amp; i</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitDuration : &quot; &amp; baitIndex</param>
                                 </action>
                             </actions>
                         </event-block>
