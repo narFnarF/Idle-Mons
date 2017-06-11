@@ -29,6 +29,12 @@
             "duration": 100,
             "gift": 2,
             "nb": 5
+        },
+        {
+            "name": "Rarimon",
+            "duration": 100,
+            "gift": 2,
+            "nb": 5
         }
     ],
     "bait": [
