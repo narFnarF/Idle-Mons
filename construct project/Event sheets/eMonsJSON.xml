@@ -94,7 +94,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="774611380578229" title="general functions (mons.json)">
+        <event-group description="" sid="774611380578229" title="list of mons function">
             <sub-events>
                 <event-block sid="315454221851938">
                     <conditions>
@@ -280,6 +280,142 @@
                                 <action id="14" name="Log" sid="803572716115064" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from mons.gift: Trying to access &lt;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="350458092138267" title="shop functions">
+            <sub-events>
+                <event-block sid="595926452503371">
+                    <conditions>
+                        <condition id="0" name="On function" sid="332195353827654" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitName&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable comment="the index of the bait in the json" constant="0" name="baitIndex" sid="131338431457707" static="0" type="number">-1</variable>
+                        <event-block sid="459303111195987">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="462539717691897" type="System">
+                                    <param id="0" name="Variable">baitIndex</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="113815902654508">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="639170730672225" type="3monsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="680026643842119" type="Function">
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="563282013753011">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="999413779338982" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="171072163088194" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName : &quot; &amp; baitIndex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="756637415931428">
+                    <conditions>
+                        <condition id="0" name="On function" sid="318947028276299" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitCost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="baitIndex" sid="333297904402748" static="0" type="number">-1</variable>
+                        <event-block sid="178326497146000">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="413344868412810" type="System">
+                                    <param id="0" name="Variable">baitIndex</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="250127952228935">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="278937800732929" type="3monsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;cost&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="258361036139218" type="Function">
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;cost&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="361256752317416">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="311185151942910" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="732108900357982" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitCost : &quot; &amp; baitIndex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="536719245758514">
+                    <conditions>
+                        <condition id="0" name="On function" sid="921191982680091" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitDuration&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="baitIndex" sid="618721412565846" static="0" type="number">-1</variable>
+                        <event-block sid="905135823975571">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="902145566599362" type="System">
+                                    <param id="0" name="Variable">baitIndex</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="987379135325142">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="839946242329458" type="3monsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;duration&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="292633019210034" type="Function">
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;duration&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="186550680670614">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="973639387253777" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="148680063753680" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitDuration : &quot; &amp; baitIndex</param>
                                 </action>
                             </actions>
                         </event-block>
