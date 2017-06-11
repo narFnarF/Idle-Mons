@@ -477,6 +477,22 @@
             </object-type>
         </object-folder>
         <object-folder name="traps">
+            <object-folder name="bait selector">
+                <object-type name="baitSelectorBtn" sid="504627307915927">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170308501984785" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="baitSelectorTxt" sid="926229505667592">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable comment="button or amount" name="which" sid="867488245301602" type="string" />
+                    </instance-variables>
+                </object-type>
+            </object-folder>
             <object-type name="3trap" sid="813539396306480">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1838,6 +1854,14 @@
         <object-type name="shopBtnLabel" sid="886622307955467">
             <plugin id="Text" />
         </object-type>
+        <object-type name="popupBg" sid="345511294014809">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="blackBehindPopup" sid="494603409050722">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -1884,6 +1908,7 @@
         </family>
         <family name="genericButtons" plugin-id="Sprite" sid="4183274929016279">
             <members>
+                <member>baitSelectorBtn</member>
                 <member>newButton</member>
                 <member>shopBtn</member>
             </members>
@@ -1907,6 +1932,7 @@
                 <member>3captureLogTxt</member>
                 <member>3dexTxt</member>
                 <member>3trapsTxt</member>
+                <member>baitSelectorTxt</member>
                 <member>currencyTxt</member>
                 <member>shopBtnLabel</member>
                 <member>storyButtonLabel</member>

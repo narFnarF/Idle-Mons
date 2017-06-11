@@ -713,6 +713,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="850163292607216" title="bait selector" />
         <event-group description="" sid="799838731313010" title="debug (traps)">
             <sub-events>
                 <event-block sid="765528547089489">
