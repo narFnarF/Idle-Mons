@@ -4,54 +4,63 @@
             "name": "Pikachu",
             "duration": 15,
             "gift": 10,
-            "nb": 1
+            "nb": 1,
+            "visual": "?"
         },
         {
             "name": "Togepi",
             "duration": 15,
             "gift": 1,
-            "nb": 2
+            "nb": 2,
+            "visual": "?"
         },
         {
             "name": "Squirtle",
             "duration": 1,
             "gift": 100,
-            "nb": 3
+            "nb": 3,
+            "visual": "?"
         },
         {
             "name": "Miho",
             "duration": 2,
             "gift": 50,
-            "nb": 4
+            "nb": 4,
+            "visual": "?"
         },
         {
             "name": "Slime",
             "duration": 100,
             "gift": 2,
-            "nb": 5
+            "nb": 5,
+            "visual": "?"
         },
         {
             "name": "Rarimon",
             "duration": 100,
             "gift": 2,
-            "nb": 5
+            "nb": 5,
+            "visual": "?"
         }
     ],
     "bait": [
         {
             "name": "cheap",
             "cost": 1,
-            "duration": 10
+            "duration": 10,
+            "visual": "?"
         },
         {
             "name": "normal",
             "cost": 10,
-            "duration": 60
+            "duration": 60,
+            "visual": "?"
         },
         {
             "name": "fancy",
             "cost": 100,
-            "duration": 10
+            "duration": 10,
+            "visual": "?"
         }
     ]
 }
