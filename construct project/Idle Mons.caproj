@@ -1986,6 +1986,9 @@
             <event-sheet>eGlobal.xml</event-sheet>
             <event-sheet>eSavefile migration.xml</event-sheet>
             <event-sheet>eMons general.xml</event-sheet>
+            <event-sheet>e Generic buttons.xml</event-sheet>
+            <event-sheet>eInventory.xml</event-sheet>
+            <event-sheet>eTouchable.xml</event-sheet>
         </event-folder>
         <event-folder name="old cabbages stuff">
             <event-folder name="verachou">
@@ -2000,15 +2003,14 @@
             <event-sheet>snow events.xml</event-sheet>
             <event-sheet>story events.xml</event-sheet>
         </event-folder>
+        <event-folder name="global layers">
+            <event-sheet>eCurrency.xml</event-sheet>
+        </event-folder>
         <event-sheet>eGrinding.xml</event-sheet>
-        <event-sheet>eGgrinding sector.xml</event-sheet>
+        <event-sheet>eGrinding sector.xml</event-sheet>
         <event-sheet>eTraps.xml</event-sheet>
         <event-sheet>ePokedex.xml</event-sheet>
-        <event-sheet>eInventory.xml</event-sheet>
-        <event-sheet>eCurrency.xml</event-sheet>
         <event-sheet>eShop.xml</event-sheet>
-        <event-sheet>e Generic buttons.xml</event-sheet>
-        <event-sheet>eTouchable.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
