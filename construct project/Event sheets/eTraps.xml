@@ -5,7 +5,7 @@
     <events>
         <include>eCurrency</include>
         <include>eInventory</include>
-        <include>eMons general</include>
+        <include>eMonsJSON</include>
         <include>eGlobal</include>
         <include>eGameplay stuff</include>
         <event-block sid="649720904779646">

@@ -1952,7 +1952,7 @@
             </properties>
         </instance>
         <instance type="sillyMessagesJSON" uid="208" />
-        <instance type="3trapsJSON" uid="399">
+        <instance type="3monsJSON" uid="399">
             <instance-variables>
                 <date>-1</date>
             </instance-variables>
@@ -1964,7 +1964,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="3dex" uid="404" />
+        <instance type="3dexJSON" uid="404" />
     </nonworld-instances>
     <effects />
 </c2layout>

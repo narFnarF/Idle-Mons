@@ -7,7 +7,7 @@
         <include>eCurrency</include>
         <include>eInventory</include>
         <include>eGameplay stuff</include>
-        <include>eMons general</include>
+        <include>eMonsJSON</include>
         <event-block sid="960171520747524">
             <conditions>
                 <condition id="0" name="On function" sid="351240196434483" type="Function">
@@ -46,14 +46,14 @@
                         </event-block>
                         <event-block sid="207037255082212">
                             <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="530987032102507" type="3trapsJSON">
+                                <condition id="60" inverted="1" name="Is undefined" sid="530987032102507" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="756985188223399" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -90,14 +90,14 @@
                         </event-block>
                         <event-block sid="137702438086916">
                             <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="877474038284682" type="3trapsJSON">
+                                <condition id="60" inverted="1" name="Is undefined" sid="877474038284682" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;cost&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="694862850578751" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;cost&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;cost&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -134,14 +134,14 @@
                         </event-block>
                         <event-block sid="156358485538400">
                             <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="902751751854691" type="3trapsJSON">
+                                <condition id="60" inverted="1" name="Is undefined" sid="902751751854691" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;duration&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="251420733685480" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;duration&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;duration&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>

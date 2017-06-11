@@ -518,7 +518,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type global="1" name="3trapsJSON" sid="656523467114586">
+            <object-type global="1" name="3monsJSON" sid="656523467114586">
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="date" sid="270234482754530" type="number" />
@@ -534,7 +534,7 @@
             <object-type global="1" name="3captureLog" sid="739139951118881">
                 <plugin id="Arr" />
             </object-type>
-            <object-type global="1" name="3dex" sid="825700273702844">
+            <object-type global="1" name="3dexJSON" sid="825700273702844">
                 <plugin id="JSON" />
             </object-type>
             <object-type name="3captureLogTxt" sid="286702061896519">
@@ -2012,10 +2012,11 @@
             <event-sheet>eGameplay stuff.xml</event-sheet>
             <event-sheet>eGlobal.xml</event-sheet>
             <event-sheet>eSavefile migration.xml</event-sheet>
-            <event-sheet>eMons general.xml</event-sheet>
+            <event-sheet>eMonsJSON.xml</event-sheet>
             <event-sheet>e Generic buttons.xml</event-sheet>
             <event-sheet>eInventory.xml</event-sheet>
             <event-sheet>eTouchable.xml</event-sheet>
+            <event-sheet>eDexJSON.xml</event-sheet>
         </event-folder>
         <event-folder name="old cabbages stuff">
             <event-folder name="verachou">

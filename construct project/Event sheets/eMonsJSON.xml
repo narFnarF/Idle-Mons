@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>eMons general</name>
+    <name>eMonsJSON</name>
     <events>
         <event-group description="" sid="559641465357570" title="mons AJAX request">
             <sub-events>
@@ -9,7 +9,7 @@
                 <event-block sid="353587388221620">
                     <conditions>
                         <condition id="1" name="Is online" sid="358585779743503" type="Browser" />
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="778920771613644" type="3trapsJSON">
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="778920771613644" type="3monsJSON">
                             <param id="0" name="Instance variable">date</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">date.Date</param>
@@ -20,7 +20,7 @@
                             <param id="0" name="Tag">&quot;mons.json&quot;</param>
                             <param id="1" name="File">mons.json</param>
                         </action>
-                        <action id="-10" name="Set value" sid="360854307410305" type="3trapsJSON">
+                        <action id="-10" name="Set value" sid="360854307410305" type="3monsJSON">
                             <param id="0" name="Instance variable">date</param>
                             <param id="1" name="Value">Date.Date</param>
                         </action>
@@ -29,7 +29,7 @@
                 <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 15 sec</comment>
                 <event-block sid="106672379521351">
                     <conditions>
-                        <condition id="70" name="Is Empty" sid="708085315007437" type="3trapsJSON">
+                        <condition id="70" name="Is Empty" sid="708085315007437" type="3monsJSON">
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </condition>
@@ -56,7 +56,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="60" name="LoadJSON" sid="429544765197060" type="3trapsJSON">
+                        <action id="60" name="LoadJSON" sid="429544765197060" type="3monsJSON">
                             <param id="0" name="JSON">AJAX.LastData</param>
                             <param id="1" name="Reference point">0</param>
                             <param id="2" name="Key {n}"></param>
@@ -82,7 +82,7 @@
                 </event-block>
                 <event-block sid="411431548521860">
                     <conditions>
-                        <condition id="200" name="On JSON Parse Error" sid="444676574145155" type="3trapsJSON" />
+                        <condition id="200" name="On JSON Parse Error" sid="444676574145155" type="3monsJSON" />
                     </conditions>
                     <actions>
                         <action id="14" name="Log" sid="732927643711785" type="Browser">
@@ -110,14 +110,14 @@
                     <sub-events>
                         <event-block sid="533939913719822">
                             <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="451399704360793" type="3trapsJSON">
+                                <condition id="60" inverted="1" name="Is undefined" sid="451399704360793" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;mons&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="325371965940684" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Size(0, &quot;mons&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Size(0, &quot;mons&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -167,7 +167,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="917095018715515" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;name&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;mons&quot;, id, &quot;name&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -217,7 +217,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="758326794617948" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;duration&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;mons&quot;, id, &quot;duration&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -267,7 +267,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="622211621055718" type="Function">
-                                    <param id="0" name="Value">3trapsJSON.Value(0, &quot;mons&quot;, id, &quot;gift&quot;)</param>
+                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;mons&quot;, id, &quot;gift&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -300,13 +300,13 @@
                             <conditions />
                             <actions>
                                 <action id="1" name="Set return value" sid="475920387208752" type="Function">
-                                    <param id="0" name="Value">3dex.Size(0, &quot;pokedex&quot;)</param>
+                                    <param id="0" name="Value">3dexJSON.Size(0, &quot;pokedex&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="453147585551593">
                             <conditions>
-                                <condition id="60" name="Is undefined" sid="362814695572167" type="3trapsJSON">
+                                <condition id="60" name="Is undefined" sid="362814695572167" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
                                 </condition>
@@ -316,6 +316,23 @@
                                     <param id="0" name="Value">0</param>
                                 </action>
                                 <action id="14" name="Log" sid="136724556073958" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="902530080164764">
+                            <conditions>
+                                <condition id="60" name="Is undefined" sid="500005687908343" type="3monsJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="911207827146454" type="Function">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                                <action id="14" name="Log" sid="532867083357627" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
                                 </action>
@@ -338,7 +355,7 @@
                     <sub-events>
                         <event-block sid="238080037227527">
                             <conditions>
-                                <condition id="60" name="Is undefined" sid="599194381197494" type="3dex">
+                                <condition id="60" name="Is undefined" sid="599194381197494" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}"></param>
                                 </condition>
@@ -348,7 +365,7 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;creating the root&quot;</param>
                                 </action>
-                                <action id="0" name="Set New Object" sid="817070009123537" type="3dex">
+                                <action id="0" name="Set New Object" sid="817070009123537" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}"></param>
                                 </action>
@@ -356,7 +373,7 @@
                         </event-block>
                         <event-block sid="792659480452838">
                             <conditions>
-                                <condition id="60" name="Is undefined" sid="227766430352059" type="3dex">
+                                <condition id="60" name="Is undefined" sid="227766430352059" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
                                 </condition>
@@ -366,7 +383,7 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;creating the pokedex node&quot;</param>
                                 </action>
-                                <action id="10" name="Set New Array" sid="779720106023085" type="3dex">
+                                <action id="10" name="Set New Array" sid="779720106023085" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
                                 </action>
@@ -387,29 +404,29 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;creating 1 mon node&quot;</param>
                                 </action>
-                                <action id="200" name="Set Current Path" sid="834905280393351" type="3dex">
+                                <action id="200" name="Set Current Path" sid="834905280393351" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
                                 </action>
-                                <action id="0" name="Set New Object" sid="953252923723561" type="3dex">
+                                <action id="0" name="Set New Object" sid="953252923723561" type="3dexJSON">
                                     <param id="0" name="Reference point">1</param>
                                     <param id="1" name="Key {n}">Function.Call(&quot;dex .count&quot;)</param>
                                 </action>
-                                <action id="200" name="Set Current Path" sid="416360937885199" type="3dex">
+                                <action id="200" name="Set Current Path" sid="416360937885199" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;{###}Function.Call(&quot;dex .count&quot;)-1</param>
                                 </action>
-                                <action id="30" name="Set Boolean" sid="151448462783070" type="3dex">
+                                <action id="30" name="Set Boolean" sid="151448462783070" type="3dexJSON">
                                     <param id="0" name="value">1</param>
                                     <param id="1" name="Reference point">1</param>
                                     <param id="2" name="Key {n}">&quot;visited&quot;</param>
                                 </action>
-                                <action id="30" name="Set Boolean" sid="683683491432509" type="3dex">
+                                <action id="30" name="Set Boolean" sid="683683491432509" type="3dexJSON">
                                     <param id="0" name="value">1</param>
                                     <param id="1" name="Reference point">1</param>
                                     <param id="2" name="Key {n}">&quot;met&quot;</param>
                                 </action>
-                                <action id="20" name="Set Value" sid="437553851482611" type="3dex">
+                                <action id="20" name="Set Value" sid="437553851482611" type="3dexJSON">
                                     <param id="0" name="Value">-1</param>
                                     <param id="1" name="Reference point">1</param>
                                     <param id="2" name="Key {n}">&quot;met_timestamp&quot;</param>
@@ -446,7 +463,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="960149417067496" type="Function">
-                                    <param id="0" name="Value">3dex.Value(0, &quot;pokedex&quot;, nb, &quot;visited&quot;)</param>
+                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;visited&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -490,7 +507,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="30" name="Set Boolean" sid="583311725725276" type="3dex">
+                                <action id="30" name="Set Boolean" sid="583311725725276" type="3dexJSON">
                                     <param id="0" name="value">0</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;visited&quot;</param>
@@ -538,7 +555,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="958832018720964" type="Function">
-                                    <param id="0" name="Value">3dex.Value(0, &quot;pokedex&quot;, nb, &quot;met&quot;)</param>
+                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;met&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -597,12 +614,12 @@
                                             <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
                                             <param id="1" name="Parameter {n}">nb</param>
                                         </action>
-                                        <action id="30" name="Set Boolean" sid="577331903505829" type="3dex">
+                                        <action id="30" name="Set Boolean" sid="577331903505829" type="3dexJSON">
                                             <param id="0" name="value">0</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met&quot;</param>
                                         </action>
-                                        <action id="20" name="Set Value" sid="615918722592054" type="3dex">
+                                        <action id="20" name="Set Value" sid="615918722592054" type="3dexJSON">
                                             <param id="0" name="Value">Date.UnixTimestamp</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met_timestamp&quot;</param>
