@@ -297,30 +297,29 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="blackBehindPopup" uid="421">
+                <instance type="touchBlocker" uid="432">
                     <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <allowClickThrough>false</allowClickThrough>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>43</x>
-                        <y>219</y>
+                        <x>318.5</x>
+                        <y>475.5</y>
                         <z>0</z>
-                        <width>524</width>
-                        <height>647</height>
+                        <width>653</width>
+                        <height>977</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>0.400000006</opacity>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.300000012</opacity>
                     </world>
                 </instance>
                 <instance type="popupBg" uid="420">
@@ -339,10 +338,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>306.5</x>
-                        <y>549</y>
+                        <y>540</y>
                         <z>0</z>
                         <width>398</width>
-                        <height>533</height>
+                        <height>527</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -359,11 +358,12 @@
                     <instance-variables>
                         <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
                         <callback>lion trader clicked</callback>
-                        <callbackParamNb>1</callbackParamNb>
+                        <callbackParamNb>0</callbackParamNb>
                         <buttonId>1</buttonId>
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -372,7 +372,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>239</x>
-                        <y>410</y>
+                        <y>423</y>
                         <z>0</z>
                         <width>135</width>
                         <height>111</height>
@@ -398,6 +398,7 @@
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -406,7 +407,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>239</x>
-                        <y>545</y>
+                        <y>558</y>
                         <z>0</z>
                         <width>135</width>
                         <height>111</height>
@@ -432,6 +433,7 @@
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -440,7 +442,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>239</x>
-                        <y>691</y>
+                        <y>704</y>
                         <z>0</z>
                         <width>135</width>
                         <height>111</height>
@@ -464,7 +466,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>3trapsTxt</theText>
+                        <theText>type</theText>
                         <which>button</which>
                         <id>0</id>
                     </instance-variables>
@@ -472,7 +474,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>177</x>
-                        <y>373</y>
+                        <y>386</y>
                         <z>0</z>
                         <width>121</width>
                         <height>70</height>
@@ -496,7 +498,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>3trapsTxt</theText>
+                        <theText>type</theText>
                         <which>button</which>
                         <id>1</id>
                     </instance-variables>
@@ -504,7 +506,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>178</x>
-                        <y>512</y>
+                        <y>525</y>
                         <z>0</z>
                         <width>121</width>
                         <height>70</height>
@@ -528,7 +530,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>3trapsTxt</theText>
+                        <theText>type</theText>
                         <which>button</which>
                         <id>2</id>
                     </instance-variables>
@@ -536,7 +538,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>178</x>
-                        <y>659</y>
+                        <y>672</y>
                         <z>0</z>
                         <width>121</width>
                         <height>70</height>
@@ -560,7 +562,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>3trapsTxt</theText>
+                        <theText>x?</theText>
                         <which>amount</which>
                         <id>0</id>
                     </instance-variables>
@@ -568,7 +570,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>316</x>
-                        <y>379</y>
+                        <y>392</y>
                         <z>0</z>
                         <width>121</width>
                         <height>70</height>
@@ -592,7 +594,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>3trapsTxt</theText>
+                        <theText>x?</theText>
                         <which>amount</which>
                         <id>1</id>
                     </instance-variables>
@@ -600,7 +602,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>318</x>
-                        <y>512</y>
+                        <y>525</y>
                         <z>0</z>
                         <width>121</width>
                         <height>70</height>
@@ -624,7 +626,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <theText>3trapsTxt</theText>
+                        <theText>x?</theText>
                         <which>amount</which>
                         <id>2</id>
                     </instance-variables>
@@ -632,10 +634,109 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>318</x>
-                        <y>656</y>
+                        <y>669</y>
                         <z>0</z>
                         <width>121</width>
                         <height>70</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="baitSelectorTxt" uid="431">
+                    <properties>
+                        <text>Select bait</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>Select bait</theText>
+                        <which>title</which>
+                        <id>0</id>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>216</x>
+                        <y>308</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="baitSelectorBtn" uid="433">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>baitSelector .close</callback>
+                        <callbackParamNb>1</callbackParamNb>
+                        <buttonId>0</buttonId>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
+                        <initialyPressed>false</initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>453.5</x>
+                        <y>323.5</y>
+                        <z>0</z>
+                        <width>56</width>
+                        <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="baitSelectorTxt" uid="434">
+                    <properties>
+                        <text>X</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>X</theText>
+                        <which>X</which>
+                        <id>0</id>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>428.378814697</x>
+                        <y>302.587982178</y>
+                        <z>0</z>
+                        <width>51</width>
+                        <height>40.685791016</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

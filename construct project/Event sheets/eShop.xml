@@ -98,7 +98,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="125658614109201" type="Function">
                                     <param id="0" name="Name">&quot;inventory .receive&quot;</param>
-                                    <param id="1" name="Parameter {n}">baitName{###}1</param>
+                                    <param id="1" name="Parameter {n}">&quot;bait&quot; &amp; baitId{###}1</param>
                                 </action>
                             </actions>
                         </event-block>

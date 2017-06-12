@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eTraps</name>
     <events>
+        <include>e Generic buttons</include>
         <include>eCurrency</include>
         <include>eInventory</include>
         <include>eMonsJSON</include>
@@ -609,9 +610,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="330567983773637" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="330567983773637" type="Function">
                             <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
                             <param id="1" name="Parameter {n}">3trap.id{###}choose(10, 30, 60){###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="669482870446028" type="System">
+                            <param id="0" name="Layer">&quot;bait selector&quot;</param>
+                            <param id="1" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -715,41 +720,105 @@
         </event-group>
         <event-group description="" sid="850163292607216" title="bait selector">
             <sub-events>
-                <event-block sid="477800333207573">
+                <comment>Update visuals</comment>
+                <event-block sid="394487753729105">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="884615317269042" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="178685625921709" type="baitSelectorTxt">
-                            <param id="0" name="Instance variable">which</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;button&quot;</param>
-                        </condition>
-                        <condition id="-12" name="Repeat" sid="800862756388094" type="System">
-                            <param id="0" name="Count">3</param>
+                        <condition id="-9" name="Layer is visible" sid="981658119289163" type="System">
+                            <param id="0" name="Layer">baitSelectorBtn.LayerNumber</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="395511061262306" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">loopindex</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="201240437671188">
+                        <comment>Fill text labels on buttons</comment>
+                        <event-block sid="477800333207573">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="770803783920064" type="baitSelectorTxt">
+                                <condition id="-8" name="Is boolean instance variable set" sid="959827258562412" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="178685625921709" type="baitSelectorTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;button&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="441621474598193" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="201240437671188">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="800862756388094" type="System">
+                                            <param id="0" name="Count">3</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="770803783920064" type="baitSelectorTxt">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="395511061262306" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">loopindex</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="766893067265036" type="baitSelectorTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">Function.Call(&quot;shop .getBaitName&quot;, loopindex)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Update bait counters</comment>
+                        <event-block sid="726494162626412">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="502548065795961" type="baitSelectorTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;amount&quot;</param>
+                                </condition>
+                                <condition id="-12" name="Repeat" sid="259637942914457" type="System">
+                                    <param id="0" name="Count">3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="300848738235958" type="baitSelectorTxt">
                                     <param id="0" name="Instance variable">id</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">loopindex</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="766893067265036" type="baitSelectorTxt">
+                                <action id="-10" name="Set value" sid="471981934359070" type="baitSelectorTxt">
                                     <param id="0" name="Instance variable">theText</param>
-                                    <param id="1" name="Value">Function.Call(&quot;shop .getBaitName&quot;, loopindex)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;inventory .getQuantity&quot;, &quot;bait&quot;&amp;loopindex)</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Close popup when tapping outside</comment>
+                <event-block sid="529831266308582">
+                    <conditions>
+                        <condition id="0" name="On function" sid="327325626615718" type="Function">
+                            <param id="0" name="Name">&quot;baitSelector .close&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="667416137370700" type="System">
+                            <param id="0" name="Layer">&quot;bait selector&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="464994627393453">
+                    <conditions>
+                        <condition id="0" name="On function" sid="869794390476441" type="Function">
+                            <param id="0" name="Name">&quot;baitSelector .updateCounters&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="465675220796442">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -764,7 +833,7 @@
                         <event-block disabled="1" sid="332699366555795">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
-                                    <param id="0" name="Interval (seconds)">5</param>
+                                    <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
                             </conditions>
                             <actions>

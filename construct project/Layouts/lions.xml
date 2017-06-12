@@ -1955,6 +1955,7 @@
         <instance type="3monsJSON" uid="399">
             <instance-variables>
                 <date>-1</date>
+                <fullyLoaded>false</fullyLoaded>
             </instance-variables>
         </instance>
         <instance type="3captureLog" uid="403">

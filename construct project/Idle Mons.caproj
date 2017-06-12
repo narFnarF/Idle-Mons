@@ -481,7 +481,10 @@
                 <object-type name="baitSelectorBtn" sid="504627307915927">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170308501984785" speed="5">
+                        <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="170308501984785" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="759263161054039" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
@@ -522,6 +525,7 @@
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="date" sid="270234482754530" type="number" />
+                    <instance-variable comment="true if the json has been loaded and is ready to use" name="fullyLoaded" sid="119059697009010" type="boolean" />
                 </instance-variables>
             </object-type>
             <object-type name="3trapsTxt" sid="450094133584063">
@@ -1859,9 +1863,17 @@
             <plugin id="NinePatch" />
             <texture />
         </object-type>
-        <object-type name="blackBehindPopup" sid="494603409050722">
+        <object-type name="shadowBehindPopup" sid="494603409050722">
             <plugin id="NinePatch" />
             <texture />
+        </object-type>
+        <object-type name="touchBlocker" sid="565292933902922">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861915991280490" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1957,10 +1969,12 @@
                 <member>3trap</member>
                 <member>arrowCamera</member>
                 <member>arrowLayout</member>
+                <member>baitSelectorBtn</member>
                 <member>newButton</member>
                 <member>questCollectBtn</member>
                 <member>saveBtn</member>
                 <member>shopBtn</member>
+                <member>touchBlocker</member>
                 <member>verachouFeedBtn</member>
                 <member>verachouGrowBtn</member>
                 <member>verachouStudyBtn</member>

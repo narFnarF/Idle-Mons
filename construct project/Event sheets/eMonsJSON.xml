@@ -66,6 +66,10 @@
                             <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="158731153682540" type="3monsJSON">
+                            <param id="0" name="Instance variable">fullyLoaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="895380455501266">
@@ -94,7 +98,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="774611380578229" title="list of mons function">
+        <event-group description="" sid="774611380578229" title="mons function">
             <sub-events>
                 <event-block sid="315454221851938">
                     <conditions>
@@ -109,27 +113,48 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="533939913719822">
+                        <event-block sid="430065322211689">
                             <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="451399704360793" type="3monsJSON">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;mons&quot;</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="526568336719465" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="325371965940684" type="Function">
-                                    <param id="0" name="Value">3monsJSON.Size(0, &quot;mons&quot;)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="533939913719822">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="451399704360793" type="3monsJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;mons&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="325371965940684" type="Function">
+                                            <param id="0" name="Value">3monsJSON.Size(0, &quot;mons&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="855572368963479">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="356422034945130" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="380722483072694" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from mons.count: The JSON don&apos;t contain a mons node.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="855572368963479">
+                        <event-block sid="269409198504132">
                             <conditions>
-                                <condition id="-22" name="Else" sid="356422034945130" type="System" />
+                                <condition id="-22" name="Else" sid="889932534275644" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="380722483072694" type="Browser">
+                                <action id="14" name="Log" sid="462047393365487" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from mons.count: The JSON don&apos;t contain a mons node.&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from mons.count: Trying to access the JSON which is not yet loaded.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -158,28 +183,49 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="450514119913050">
+                        <event-block sid="497438105464808">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="911551505605742" type="System">
-                                    <param id="0" name="Variable">id</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="431226848132906" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="917095018715515" type="Function">
-                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;mons&quot;, id, &quot;name&quot;)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="450514119913050">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="911551505605742" type="System">
+                                            <param id="0" name="Variable">id</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="917095018715515" type="Function">
+                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;mons&quot;, id, &quot;name&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="887249519324757">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="732068283582448" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="308966402349643" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from mons.name: Trying to access &lt;0&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="887249519324757">
+                        <event-block sid="756051000794876">
                             <conditions>
-                                <condition id="-22" name="Else" sid="732068283582448" type="System" />
+                                <condition id="-22" name="Else" sid="739122741629200" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="308966402349643" type="Browser">
+                                <action id="14" name="Log" sid="652811099888395" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from mons.name: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from mons.name: Trying to access the JSON which is not yet loaded.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -307,27 +353,48 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="113815902654508">
+                        <event-block sid="742359007273462">
                             <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="639170730672225" type="3monsJSON">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="839687478890578" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="680026643842119" type="Function">
-                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="113815902654508">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="639170730672225" type="3monsJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="680026643842119" type="Function">
+                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="563282013753011">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="999413779338982" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="171072163088194" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName : &quot; &amp; baitIndex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="563282013753011">
+                        <event-block sid="689159381168664">
                             <conditions>
-                                <condition id="-22" name="Else" sid="999413779338982" type="System" />
+                                <condition id="-22" name="Else" sid="558946409377167" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="171072163088194" type="Browser">
+                                <action id="14" name="Log" sid="153282972964997" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName : &quot; &amp; baitIndex</param>
+                                    <param id="1" name="Message">&quot;Error from shop.getBaitName: Trying to access the JSON which is not yet loaded.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
