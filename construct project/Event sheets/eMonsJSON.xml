@@ -353,6 +353,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>TODO: Add security here, if the function tries to call a bait that doesn&apos;t exist, so that it doesn&apos;t pollute the browser log.</comment>
                         <event-block sid="742359007273462">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="839687478890578" type="3monsJSON">

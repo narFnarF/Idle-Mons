@@ -66,7 +66,7 @@
                         <p_onVisibleLayer>false</p_onVisibleLayer>
                         <id>1</id>
                         <p_visitorId>-1</p_visitorId>
-                        <p_minutesRemaining>0</p_minutesRemaining>
+                        <p_visitorMinutesRemaining>0</p_visitorMinutesRemaining>
                         <p_baitQuantity>0</p_baitQuantity>
                         <p_baitType></p_baitType>
                     </instance-variables>
@@ -136,7 +136,7 @@
                         <p_onVisibleLayer>false</p_onVisibleLayer>
                         <id>2</id>
                         <p_visitorId>-1</p_visitorId>
-                        <p_minutesRemaining>0</p_minutesRemaining>
+                        <p_visitorMinutesRemaining>0</p_visitorMinutesRemaining>
                         <p_baitQuantity>0</p_baitQuantity>
                         <p_baitType></p_baitType>
                     </instance-variables>
@@ -178,7 +178,7 @@
                         <p_onVisibleLayer>false</p_onVisibleLayer>
                         <id>3</id>
                         <p_visitorId>-1</p_visitorId>
-                        <p_minutesRemaining>0</p_minutesRemaining>
+                        <p_visitorMinutesRemaining>0</p_visitorMinutesRemaining>
                         <p_baitQuantity>0</p_baitQuantity>
                         <p_baitType></p_baitType>
                     </instance-variables>

@@ -502,7 +502,7 @@
                 <instance-variables>
                     <instance-variable name="id" sid="102664272844282" type="number" />
                     <instance-variable comment="Private." name="p_visitorId" sid="467207101000778" type="number" />
-                    <instance-variable comment="Private. In minutes" name="p_minutesRemaining" sid="456081887022255" type="number" />
+                    <instance-variable comment="Private. How long (in minutes) the mon will stay." name="p_visitorMinutesRemaining" sid="456081887022255" type="number" />
                     <instance-variable comment="in minutes" name="p_baitQuantity" sid="345122885626363" type="number" />
                     <instance-variable comment="Private." name="p_baitType" sid="577766129098558" type="string" />
                 </instance-variables>
