@@ -11,7 +11,12 @@
                             <param id="0" name="Name">&quot;touchable .isOnTop&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="353866830842866" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;touchable .isOnTop&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <variable comment="The UID of the object who&apos;s calling the function" constant="0" name="uid" sid="455467455194219" static="0" type="number">-1</variable>
                         <event-block sid="143388060923145">
@@ -67,16 +72,59 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="669760294305210" type="touchable">
                                     <param id="0" name="Instance variable">allowClickThrough</param>
                                 </condition>
-                                <condition id="-17" name="Pick top/bottom" sid="258005180822899" type="touchable">
-                                    <param id="0" name="Which">0</param>
-                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="717549281243689" type="System">
-                                    <param id="0" name="Variable">topMostObjectUID</param>
-                                    <param id="1" name="Value">touchable.UID</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="175402285759792">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="419077748984404" type="touchable">
+                                            <param id="0" name="Instance variable">onVisibleLayer</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="337796544181400">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="909368474467908" type="System">
+                                            <param id="0" name="Object">touchable</param>
+                                        </condition>
+                                        <condition id="-9" name="Layer is visible" sid="540203029268299" type="System">
+                                            <param id="0" name="Layer">touchable.LayerNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="627563996128271" type="touchable">
+                                            <param id="0" name="Instance variable">onVisibleLayer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="957391142162507" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;for each&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="642664031789466">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="608495431670312" type="touchable">
+                                            <param id="0" name="Instance variable">onVisibleLayer</param>
+                                        </condition>
+                                        <condition id="-17" name="Pick top/bottom" sid="258005180822899" type="touchable">
+                                            <param id="0" name="Which">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="717549281243689" type="System">
+                                            <param id="0" name="Variable">topMostObjectUID</param>
+                                            <param id="1" name="Value">touchable.UID</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="677008903685361" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;topmost touchable: &quot; &amp; touchable.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Compare if the queried object (uid) is the topmost object</comment>
                         <event-block sid="832631349421254">

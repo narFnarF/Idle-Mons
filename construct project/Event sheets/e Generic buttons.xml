@@ -29,7 +29,12 @@
                                     <param id="0" name="Layer">genericButtons.LayerNumber</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action disabled="1" id="14" name="Log" sid="384309945322317" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;pet pet&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="655246567757135">
                                     <conditions>

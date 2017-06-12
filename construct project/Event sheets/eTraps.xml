@@ -602,24 +602,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>temporary refill mecanism</comment>
-                <event-block sid="218402869732595">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="465412885648072" type="Touch">
-                            <param id="0" name="Object">3trap</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Call function" sid="330567983773637" type="Function">
-                            <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
-                            <param id="1" name="Parameter {n}">3trap.id{###}choose(10, 30, 60){###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="669482870446028" type="System">
-                            <param id="0" name="Layer">&quot;bait selector&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="692558840707029" title="visitor log">
@@ -720,6 +702,49 @@
         </event-group>
         <event-group description="" sid="850163292607216" title="bait selector">
             <sub-events>
+                <variable comment="button id of the trap that will receive the bait" constant="0" name="lastTrapClicked" sid="135495231081129" static="1" type="number">-1</variable>
+                <event-block sid="218402869732595">
+                    <conditions>
+                        <condition id="0" name="On function" sid="253482013961532" type="Function">
+                            <param id="0" name="Name">&quot;trap .clicked&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="486139223890224" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;pet&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="clickedId" sid="447515627885014" static="0" type="number">-1</variable>
+                        <event-block sid="684211172503399">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="335777185772412" type="System">
+                                    <param id="0" name="Variable">clickedId</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="390660485571524">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="330567983773637" type="Function">
+                                    <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
+                                    <param id="1" name="Parameter {n}">3trap.id{###}choose(10, 30, 60){###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="755390816136332" type="System">
+                                    <param id="0" name="Variable">lastTrapClicked</param>
+                                    <param id="1" name="Value">clickedId</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="669482870446028" type="System">
+                                    <param id="0" name="Layer">&quot;bait selector&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>Update visuals</comment>
                 <event-block sid="394487753729105">
                     <conditions>
@@ -756,7 +781,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="14" name="Log" sid="395511061262306" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="395511061262306" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">loopindex</param>
                                         </action>
@@ -785,16 +810,58 @@
                                     <param id="2" name="Value">loopindex</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="471981934359070" type="baitSelectorTxt">
-                                    <param id="0" name="Instance variable">theText</param>
-                                    <param id="1" name="Value">Function.Call(&quot;inventory .getQuantity&quot;, &quot;bait&quot;&amp;loopindex)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="quantity" sid="422940656797653" static="0" type="number">-1</variable>
+                                <event-block sid="240877203545360">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="389639677779766" type="System">
+                                            <param id="0" name="Variable">quantity</param>
+                                            <param id="1" name="Value">Function.Call(&quot;inventory .getQuantity&quot;, &quot;bait&quot;&amp;loopindex)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="471981934359070" type="baitSelectorTxt">
+                                            <param id="0" name="Instance variable">theText</param>
+                                            <param id="1" name="Value">quantity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="468428563371641">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="728233896725048" type="baitSelectorBtn">
+                                            <param id="0" name="Instance variable">buttonId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="695485978003227" type="baitSelectorBtn">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;active&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="542805695198409">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="349357335364606" type="System">
+                                                    <param id="0" name="Variable">quantity</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="800232973695281" type="baitSelectorBtn">
+                                                    <param id="0" name="Instance variable">state</param>
+                                                    <param id="1" name="Value">&quot;disabled&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Close popup when tapping outside</comment>
                 <event-block sid="529831266308582">
                     <conditions>
                         <condition id="0" name="On function" sid="327325626615718" type="Function">
@@ -808,17 +875,43 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="464994627393453">
+                <event-block sid="465675220796442">
                     <conditions>
-                        <condition id="0" name="On function" sid="869794390476441" type="Function">
-                            <param id="0" name="Name">&quot;baitSelector .updateCounters&quot;</param>
+                        <condition id="0" name="On function" sid="426925544165168" type="Function">
+                            <param id="0" name="Name">&quot;baitSelector .clickBait&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
-                </event-block>
-                <event-block sid="465675220796442">
-                    <conditions />
-                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="baitIndex" sid="493712381659318" static="0" type="number">-1</variable>
+                        <event-block sid="376510871624554">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="219755383794854" type="System">
+                                    <param id="0" name="Variable">baitIndex</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="349238530568936">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="754575054006239" type="Function">
+                                    <param id="0" name="Name">&quot;inventory .spend&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bait&quot; &amp; baitIndex{###}1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="870539626582289">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="609066383753390" type="Function">
+                                    <param id="0" name="Name">&quot;baitSelector .close&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

@@ -122,6 +122,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>traps</goto>
                     </instance-variables>
                     <behavior-instances>

@@ -55,7 +55,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>trap .clicked</callback>
+                        <callbackParamNb>1</callbackParamNb>
+                        <buttonId>1</buttonId>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
+                        <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <id>1</id>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
@@ -63,6 +71,7 @@
                         <baitType></baitType>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -116,7 +125,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>trap .clicked</callback>
+                        <callbackParamNb>2</callbackParamNb>
+                        <buttonId>2</buttonId>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
+                        <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <id>2</id>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
@@ -124,6 +141,7 @@
                         <baitType></baitType>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -149,7 +167,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>trap .clicked</callback>
+                        <callbackParamNb>3</callbackParamNb>
+                        <buttonId>3</buttonId>
+                        <state>active</state>
+                        <currentlyPressed>false</currentlyPressed>
+                        <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <id>3</id>
                         <visitorId>-1</visitorId>
                         <minutesRemaining>0</minutesRemaining>
@@ -157,6 +183,7 @@
                         <baitType></baitType>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -221,6 +248,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>pokedex</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -258,6 +286,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>shop</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -306,6 +335,7 @@
                     </properties>
                     <instance-variables>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -356,14 +386,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
-                        <callback>lion trader clicked</callback>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>baitSelector .clickBait</callback>
                         <callbackParamNb>0</callbackParamNb>
-                        <buttonId>1</buttonId>
+                        <buttonId>0</buttonId>
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -391,14 +422,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
-                        <callback>lion trader clicked</callback>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>baitSelector .clickBait</callback>
                         <callbackParamNb>1</callbackParamNb>
-                        <buttonId>2</buttonId>
+                        <buttonId>1</buttonId>
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -426,14 +458,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
-                        <callback>lion trader clicked</callback>
-                        <callbackParamNb>1</callbackParamNb>
-                        <buttonId>3</buttonId>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>baitSelector .clickBait</callback>
+                        <callbackParamNb>2</callbackParamNb>
+                        <buttonId>2</buttonId>
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -685,14 +718,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>baitSelector .close</callback>
-                        <callbackParamNb>1</callbackParamNb>
-                        <buttonId>0</buttonId>
+                        <callbackParamNb>0</callbackParamNb>
+                        <buttonId>3</buttonId>
                         <state>active</state>
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

@@ -1921,6 +1921,7 @@
         </family>
         <family name="genericButtons" plugin-id="Sprite" sid="4183274929016279">
             <members>
+                <member>3trap</member>
                 <member>baitSelectorBtn</member>
                 <member>newButton</member>
                 <member>shopBtn</member>
@@ -1981,6 +1982,7 @@
             </members>
             <instance-variables>
                 <instance-variable comment="If true, will ignore click, and allow the next Touchable item under it to be clicked" name="allowClickThrough" sid="740014575241403" type="boolean" />
+                <instance-variable comment="PRIVATE - is set to true if it&apos;s on a visible layer when touched" name="onVisibleLayer" sid="247242061107751" type="boolean" />
             </instance-variables>
         </family>
     </families>

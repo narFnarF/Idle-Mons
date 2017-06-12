@@ -215,6 +215,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -244,6 +245,7 @@
                     </properties>
                     <instance-variables>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <nb>0</nb>
                         <questID>-1</questID>
                     </instance-variables>
@@ -271,6 +273,7 @@
                     </properties>
                     <instance-variables>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <nb>1</nb>
                         <questID>-1</questID>
                     </instance-variables>
@@ -298,6 +301,7 @@
                     </properties>
                     <instance-variables>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <nb>2</nb>
                         <questID>-1</questID>
                     </instance-variables>

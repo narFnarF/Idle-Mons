@@ -63,6 +63,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -98,6 +99,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -133,6 +135,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -262,6 +265,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>traps</goto>
                     </instance-variables>
                     <behavior-instances>

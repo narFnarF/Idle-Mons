@@ -295,6 +295,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -330,6 +331,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -365,6 +367,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -400,6 +403,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -436,6 +440,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -473,6 +478,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -510,6 +516,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -547,6 +554,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -584,6 +592,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -621,6 +630,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -658,6 +668,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>grinding</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -695,6 +706,7 @@
                         <purchasePopupText>Some kid with a giant dog shows you an eBook reader. &quot;This book is a joy to read, you&apos;ll see. I haven&apos;t finished it though.&quot;</purchasePopupText>
                         <purchasePopupButtonText>Buy for </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>story</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -1420,6 +1432,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1455,6 +1468,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1490,6 +1504,7 @@
                         <currentlyPressed>false</currentlyPressed>
                         <initialyPressed>false</initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1749,6 +1764,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
+                        <onVisibleLayer>false</onVisibleLayer>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
