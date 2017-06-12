@@ -168,7 +168,7 @@
                     <instance-variables>
                         <energyCost>1</energyCost>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -573,7 +573,7 @@
                     <instance-variables>
                         <energyCost>1</energyCost>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -785,7 +785,7 @@
                     <instance-variables>
                         <energyCost>1</energyCost>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -945,7 +945,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>

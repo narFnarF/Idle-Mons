@@ -79,7 +79,7 @@
                                     <conditions />
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="419077748984404" type="touchable">
-                                            <param id="0" name="Instance variable">onVisibleLayer</param>
+                                            <param id="0" name="Instance variable">p_onVisibleLayer</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -95,7 +95,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="627563996128271" type="touchable">
-                                            <param id="0" name="Instance variable">onVisibleLayer</param>
+                                            <param id="0" name="Instance variable">p_onVisibleLayer</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action disabled="1" id="14" name="Log" sid="957391142162507" type="Browser">
@@ -107,7 +107,7 @@
                                 <event-block sid="642664031789466">
                                     <conditions>
                                         <condition id="-8" name="Is boolean instance variable set" sid="608495431670312" type="touchable">
-                                            <param id="0" name="Instance variable">onVisibleLayer</param>
+                                            <param id="0" name="Instance variable">p_onVisibleLayer</param>
                                         </condition>
                                         <condition id="-17" name="Pick top/bottom" sid="258005180822899" type="touchable">
                                             <param id="0" name="Which">0</param>

@@ -60,18 +60,18 @@
                                 <event-block sid="736452608725933">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="636465651992512" type="3trap">
-                                            <param id="0" name="Instance variable">visitorId</param>
+                                            <param id="0" name="Instance variable">p_visitorId</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">-1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action disabled="1" id="0" name="Set text" sid="977291409766435" type="3trapsTxt">
-                                            <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
+                                            <param id="0" name="Text">Function.Call(&quot;mons .name&quot;, 3trap.p_visitorId)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="383125026237853" type="3trapsTxt">
                                             <param id="0" name="Instance variable">theText</param>
-                                            <param id="1" name="Value">Function.Call(&quot;mons .name&quot;, 3trap.visitorId)</param>
+                                            <param id="1" name="Value">Function.Call(&quot;mons .name&quot;, 3trap.p_visitorId)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -93,18 +93,18 @@
                                     <conditions />
                                     <actions>
                                         <action disabled="1" id="1" name="Append text" sid="772207875819413" type="3trapsTxt">
-                                            <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
+                                            <param id="0" name="Text">newline &amp; &quot;time:&quot; &amp; round(3trap.p_minutesRemaining*60)</param>
                                         </action>
                                         <action disabled="1" id="1" name="Append text" sid="384478765714674" type="3trapsTxt">
-                                            <param id="0" name="Text">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; &quot; &quot; &amp; round(3trap.baitQuantity*60)</param>
+                                            <param id="0" name="Text">newline &amp; &quot;Bait: &quot; &amp; 3trap.p_baitType &amp; &quot; &quot; &amp; round(3trap.p_baitQuantity*60)</param>
                                         </action>
                                         <action id="-11" name="Add to" sid="434520236079587" type="3trapsTxt">
                                             <param id="0" name="Instance variable">theText</param>
-                                            <param id="1" name="Value">newline &amp; &quot;time:&quot; &amp; round(3trap.minutesRemaining*60)</param>
+                                            <param id="1" name="Value">newline &amp; &quot;time:&quot; &amp; round(3trap.p_minutesRemaining*60)</param>
                                         </action>
                                         <action id="-11" name="Add to" sid="405020879392279" type="3trapsTxt">
                                             <param id="0" name="Instance variable">theText</param>
-                                            <param id="1" name="Value">newline &amp; &quot;Bait: &quot; &amp; 3trap.baitType &amp; &quot; &quot; &amp; round(3trap.baitQuantity*60)</param>
+                                            <param id="1" name="Value">newline &amp; &quot;Bait: &quot; &amp; 3trap.p_baitType &amp; &quot; &quot; &amp; round(3trap.p_baitQuantity*60)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -300,7 +300,7 @@
                                     <conditions />
                                     <actions>
                                         <action id="-12" name="Subtract from" sid="826802893699378" type="3trap">
-                                            <param id="0" name="Instance variable">baitQuantity</param>
+                                            <param id="0" name="Instance variable">p_baitQuantity</param>
                                             <param id="1" name="Value">thisBlock</param>
                                         </action>
                                     </actions>
@@ -317,14 +317,14 @@
                                         <event-block sid="876157881656161">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="492012577566673" type="3trap">
-                                                    <param id="0" name="Instance variable">visitorId</param>
+                                                    <param id="0" name="Instance variable">p_visitorId</param>
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Value">-1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-12" name="Subtract from" sid="483501588285701" type="3trap">
-                                                    <param id="0" name="Instance variable">minutesRemaining</param>
+                                                    <param id="0" name="Instance variable">p_minutesRemaining</param>
                                                     <param id="1" name="Value">thisBlock</param>
                                                 </action>
                                             </actions>
@@ -333,7 +333,7 @@
                                                 <event-block sid="827542540895803">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="681129055259841" type="3trap">
-                                                            <param id="0" name="Instance variable">minutesRemaining</param>
+                                                            <param id="0" name="Instance variable">p_minutesRemaining</param>
                                                             <param id="1" name="Comparison">3</param>
                                                             <param id="2" name="Value">0</param>
                                                         </condition>
@@ -341,18 +341,18 @@
                                                     <actions>
                                                         <action id="14" name="Log" sid="606537948298584" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; left and gave &quot; &amp; Function.Call(&quot;mons .gift&quot;, 3trap.visitorId)</param>
+                                                            <param id="1" name="Message">Function.Call(&quot;mons .name&quot;, 3trap.p_visitorId) &amp; &quot; left and gave &quot; &amp; Function.Call(&quot;mons .gift&quot;, 3trap.p_visitorId)</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="538787920604462" type="Function">
                                                             <param id="0" name="Name">&quot;mons .addToLog&quot;</param>
-                                                            <param id="1" name="Parameter {n}">3trap.visitorId{###}Function.Call(&quot;mons .gift&quot;, 3trap.visitorId)</param>
+                                                            <param id="1" name="Parameter {n}">3trap.p_visitorId{###}Function.Call(&quot;mons .gift&quot;, 3trap.p_visitorId)</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="866173730105609" type="3trap">
-                                                            <param id="0" name="Instance variable">visitorId</param>
+                                                            <param id="0" name="Instance variable">p_visitorId</param>
                                                             <param id="1" name="Value">-1</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="332623101207398" type="3trap">
-                                                            <param id="0" name="Instance variable">minutesRemaining</param>
+                                                            <param id="0" name="Instance variable">p_minutesRemaining</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
                                                     </actions>
@@ -365,14 +365,14 @@
                                                     <actions>
                                                         <action id="14" name="Log" sid="498875887545357" type="Browser">
                                                             <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">&quot;Traps &quot; &amp; 3trap.id &amp; &quot;: &quot; &amp; Function.Call(&quot;mons .name&quot;, 3trap.visitorId) &amp; &quot; is staying.&quot;</param>
+                                                            <param id="1" name="Message">&quot;Traps &quot; &amp; 3trap.id &amp; &quot;: &quot; &amp; Function.Call(&quot;mons .name&quot;, 3trap.p_visitorId) &amp; &quot; is staying.&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="598667313284658">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="985863458505225" type="3trap">
-                                                            <param id="0" name="Instance variable">baitQuantity</param>
+                                                            <param id="0" name="Instance variable">p_baitQuantity</param>
                                                             <param id="1" name="Comparison">3</param>
                                                             <param id="2" name="Value">0</param>
                                                         </condition>
@@ -391,7 +391,7 @@
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="950957511835279" type="System" />
                                                 <condition id="-7" name="Compare instance variable" sid="988090990673384" type="3trap">
-                                                    <param id="0" name="Instance variable">baitQuantity</param>
+                                                    <param id="0" name="Instance variable">p_baitQuantity</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
@@ -419,11 +419,11 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-10" name="Set value" sid="569476436039271" type="3trap">
-                                                            <param id="0" name="Instance variable">visitorId</param>
+                                                            <param id="0" name="Instance variable">p_visitorId</param>
                                                             <param id="1" name="Value">visitorId</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="373274409514661" type="3trap">
-                                                            <param id="0" name="Instance variable">minutesRemaining</param>
+                                                            <param id="0" name="Instance variable">p_minutesRemaining</param>
                                                             <param id="1" name="Value">Function.Call(&quot;mons .duration&quot;, visitorId)</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="724326527950565" type="Function">
@@ -548,11 +548,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="761120510233358" type="3trap">
-                                            <param id="0" name="Instance variable">baitQuantity</param>
+                                            <param id="0" name="Instance variable">p_baitQuantity</param>
                                             <param id="1" name="Value">quantity</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="545974884667133" type="3trap">
-                                            <param id="0" name="Instance variable">baitType</param>
+                                            <param id="0" name="Instance variable">p_baitType</param>
                                             <param id="1" name="Value">baitType</param>
                                         </action>
                                         <action disabled="1" id="14" name="Log" sid="576704974076925" type="Browser">
@@ -587,7 +587,7 @@
                             <param id="0" name="Interval (seconds)">0.5</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="344507394873373" type="3trap">
-                            <param id="0" name="Instance variable">visitorId</param>
+                            <param id="0" name="Instance variable">p_visitorId</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">-1</param>
                         </condition>
@@ -598,7 +598,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="869837286786859" type="Function">
                             <param id="0" name="Name">&quot;dex .addMet&quot;</param>
-                            <param id="1" name="Parameter {n}">3trap.visitorId</param>
+                            <param id="1" name="Parameter {n}">3trap.p_visitorId</param>
                         </action>
                     </actions>
                 </event-block>

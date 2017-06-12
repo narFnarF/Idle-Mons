@@ -501,10 +501,10 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="id" sid="102664272844282" type="number" />
-                    <instance-variable name="visitorId" sid="467207101000778" type="number" />
-                    <instance-variable comment="in minutes" name="minutesRemaining" sid="456081887022255" type="number" />
-                    <instance-variable comment="in minutes" name="baitQuantity" sid="345122885626363" type="number" />
-                    <instance-variable name="baitType" sid="577766129098558" type="string" />
+                    <instance-variable comment="Private." name="p_visitorId" sid="467207101000778" type="number" />
+                    <instance-variable comment="Private. In minutes" name="p_minutesRemaining" sid="456081887022255" type="number" />
+                    <instance-variable comment="in minutes" name="p_baitQuantity" sid="345122885626363" type="number" />
+                    <instance-variable comment="Private." name="p_baitType" sid="577766129098558" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="486468538722399">
@@ -1932,8 +1932,8 @@
                 <instance-variable comment='Parameter sent to the function &quot;callback&quot; when clicked. Useful to send the ID of the button, when there&apos;s multiple instances of the button object.' name="callbackParamNb" sid="7965788020137503" type="number" />
                 <instance-variable comment="The ID of button. Used to link the button to its text label and progress bar." name="buttonId" sid="3723874214917857" type="number" />
                 <instance-variable comment="Options: active, disabled, invisible" name="state" sid="9041518536292444" type="string" />
-                <instance-variable comment="Is the button currently pressed?" name="currentlyPressed" sid="403731279211350" type="boolean" />
-                <instance-variable comment="Private. The button uses this to know if a touch started on the button. Helps ignore clicks that started outside but released on the button." name="initialyPressed" sid="4112654331809096" type="boolean" />
+                <instance-variable comment="PRIVATE. Is the button currently pressed?" name="p_currentlyPressed" sid="403731279211350" type="boolean" />
+                <instance-variable comment="Private. The button uses this to know if a touch started on the button. Helps ignore clicks that started outside but released on the button." name="p_initialyPressed" sid="4112654331809096" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="NoSave" sid="5841893004396971">
@@ -1982,7 +1982,7 @@
             </members>
             <instance-variables>
                 <instance-variable comment="If true, will ignore click, and allow the next Touchable item under it to be clicked" name="allowClickThrough" sid="740014575241403" type="boolean" />
-                <instance-variable comment="PRIVATE - is set to true if it&apos;s on a visible layer when touched" name="onVisibleLayer" sid="247242061107751" type="boolean" />
+                <instance-variable comment="Private. Is set to true if it&apos;s on a visible layer when touched" name="p_onVisibleLayer" sid="247242061107751" type="boolean" />
             </instance-variables>
         </family>
     </families>

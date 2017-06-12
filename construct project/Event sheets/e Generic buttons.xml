@@ -46,7 +46,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="475893968516002" type="genericButtons">
-                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="0" name="Instance variable">p_initialyPressed</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -65,7 +65,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="806658505988753" type="genericButtons">
-                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="0" name="Instance variable">p_initialyPressed</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -82,7 +82,7 @@
                                     <param id="0" name="Object">genericButtons</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="784117940813942" type="genericButtons">
-                                    <param id="0" name="Instance variable">initialyPressed</param>
+                                    <param id="0" name="Instance variable">p_initialyPressed</param>
                                 </condition>
                                 <condition disabled="1" id="-11" name="For Each" sid="282942932266006" type="System">
                                     <param id="0" name="Object">genericButtons</param>
@@ -116,7 +116,7 @@
                             </conditions>
                             <actions>
                                 <action id="-13" name="Set boolean" sid="569782013190239" type="genericButtons">
-                                    <param id="0" name="Instance variable">initialyPressed</param>
+                                    <param id="0" name="Instance variable">p_initialyPressed</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -131,7 +131,7 @@
                             </conditions>
                             <actions>
                                 <action id="-13" name="Set boolean" sid="763751392777941" type="genericButtons">
-                                    <param id="0" name="Instance variable">currentlyPressed</param>
+                                    <param id="0" name="Instance variable">p_currentlyPressed</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -150,7 +150,7 @@
                                             <param id="0" name="Object">genericButtons</param>
                                         </condition>
                                         <condition id="-8" name="Is boolean instance variable set" sid="916647140322933" type="genericButtons">
-                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="0" name="Instance variable">p_initialyPressed</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="879343791412004" type="System">
                                             <param id="0" name="First value">Function.Call(&quot;touchable .isOnTop&quot;, genericButtons.UID)</param>
@@ -160,7 +160,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="177650249835013" type="genericButtons">
-                                            <param id="0" name="Instance variable">currentlyPressed</param>
+                                            <param id="0" name="Instance variable">p_currentlyPressed</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -175,7 +175,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-13" name="Set boolean" sid="430167351557724" type="genericButtons">
-                                                    <param id="0" name="Instance variable">currentlyPressed</param>
+                                                    <param id="0" name="Instance variable">p_currentlyPressed</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
@@ -194,7 +194,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-13" name="Set boolean" sid="719150240548308" type="genericButtons">
-                                                    <param id="0" name="Instance variable">currentlyPressed</param>
+                                                    <param id="0" name="Instance variable">p_currentlyPressed</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
@@ -210,7 +210,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-13" name="Set boolean" sid="315705458084707" type="genericButtons">
-                                                    <param id="0" name="Instance variable">currentlyPressed</param>
+                                                    <param id="0" name="Instance variable">p_currentlyPressed</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
@@ -223,7 +223,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="687050999081536" type="genericButtons">
-                                            <param id="0" name="Instance variable">currentlyPressed</param>
+                                            <param id="0" name="Instance variable">p_currentlyPressed</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -314,7 +314,7 @@
                                         <event-block sid="482424987898758">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="256778460004176" type="genericButtons">
-                                                    <param id="0" name="Instance variable">currentlyPressed</param>
+                                                    <param id="0" name="Instance variable">p_currentlyPressed</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -345,7 +345,7 @@
                                             <param id="2" name="Value">&quot;pressed&quot;</param>
                                         </condition>
                                         <condition id="-8" name="Is boolean instance variable set" sid="744907435939098" type="genericButtons">
-                                            <param id="0" name="Instance variable">currentlyPressed</param>
+                                            <param id="0" name="Instance variable">p_currentlyPressed</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -425,7 +425,7 @@
                                         <event-block sid="779628424705821">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="549158471159768" type="genericButtons">
-                                                    <param id="0" name="Instance variable">currentlyPressed</param>
+                                                    <param id="0" name="Instance variable">p_currentlyPressed</param>
                                                 </condition>
                                             </conditions>
                                             <actions>

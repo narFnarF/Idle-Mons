@@ -172,7 +172,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -210,7 +210,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                         <goto>6</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -248,7 +248,7 @@
                         <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
                         <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -831,10 +831,10 @@
                         <callbackParamNb>1</callbackParamNb>
                         <buttonId>1</buttonId>
                         <state>active</state>
-                        <currentlyPressed>false</currentlyPressed>
-                        <initialyPressed>false</initialyPressed>
+                        <p_currentlyPressed>false</p_currentlyPressed>
+                        <p_initialyPressed>false</p_initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -867,10 +867,10 @@
                         <callbackParamNb>2</callbackParamNb>
                         <buttonId>2</buttonId>
                         <state>active</state>
-                        <currentlyPressed>false</currentlyPressed>
-                        <initialyPressed>false</initialyPressed>
+                        <p_currentlyPressed>false</p_currentlyPressed>
+                        <p_initialyPressed>false</p_initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -903,10 +903,10 @@
                         <callbackParamNb>3</callbackParamNb>
                         <buttonId>3</buttonId>
                         <state>active</state>
-                        <currentlyPressed>false</currentlyPressed>
-                        <initialyPressed>false</initialyPressed>
+                        <p_currentlyPressed>false</p_currentlyPressed>
+                        <p_initialyPressed>false</p_initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -939,10 +939,10 @@
                         <callbackParamNb>4</callbackParamNb>
                         <buttonId>4</buttonId>
                         <state>active</state>
-                        <currentlyPressed>false</currentlyPressed>
-                        <initialyPressed>false</initialyPressed>
+                        <p_currentlyPressed>false</p_currentlyPressed>
+                        <p_initialyPressed>false</p_initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -975,10 +975,10 @@
                         <callbackParamNb>5</callbackParamNb>
                         <buttonId>5</buttonId>
                         <state>active</state>
-                        <currentlyPressed>false</currentlyPressed>
-                        <initialyPressed>false</initialyPressed>
+                        <p_currentlyPressed>false</p_currentlyPressed>
+                        <p_initialyPressed>false</p_initialyPressed>
                         <allowClickThrough>false</allowClickThrough>
-                        <onVisibleLayer>false</onVisibleLayer>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
