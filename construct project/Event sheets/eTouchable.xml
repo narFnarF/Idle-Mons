@@ -23,6 +23,35 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Verify if the queried object (uid) actually exist</comment>
+                        <event-block sid="541584464778152">
+                            <conditions>
+                                <condition id="-31" inverted="1" name="Object UID exists" sid="509380956358023" type="System">
+                                    <param id="0" name="UID">uid</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="811834534049540" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error in function touchable.isOnTop : The queried uid (&quot; &amp; uid &amp; &quot;) doesn&apos;t exist.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Verify if the queried object (uid) is actually in the touchable family</comment>
+                        <event-block sid="602549870181262">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="257840978314396" type="touchable">
+                                    <param id="0" name="Unique ID">uid</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="783695113711726" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error in function touchable.isOnTop : The queried uid (&quot; &amp; uid &amp;&quot;) is not part of the &apos;touchable&apos; family.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Find the topmost object</comment>
                         <variable constant="0" name="topMostObjectUID" sid="772185614300354" static="0" type="number">-1</variable>
                         <event-block sid="237889997306107">
                             <conditions>
@@ -43,6 +72,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Compare if the queried object (uid) is the topmost object</comment>
                         <event-block sid="832631349421254">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="898009371281376" type="System">
