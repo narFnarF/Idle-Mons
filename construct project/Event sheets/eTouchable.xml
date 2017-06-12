@@ -40,12 +40,18 @@
                         <comment>Verify if the queried object (uid) is actually in the touchable family</comment>
                         <event-block sid="602549870181262">
                             <conditions>
-                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="257840978314396" type="touchable">
+                                <condition id="-14" name="Pick by unique ID" sid="257840978314396" type="touchable">
                                     <param id="0" name="Unique ID">uid</param>
                                 </condition>
                             </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="689910666845137">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="960533714649267" type="System" />
+                            </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="783695113711726" type="Browser">
+                                <action id="14" name="Log" sid="398028969121607" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error in function touchable.isOnTop : The queried uid (&quot; &amp; uid &amp;&quot;) is not part of the &apos;touchable&apos; family.&quot;</param>
                                 </action>
