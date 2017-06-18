@@ -68,7 +68,7 @@
                         <p_visitorId>-1</p_visitorId>
                         <p_visitorMinutesRemaining>0</p_visitorMinutesRemaining>
                         <p_baitQuantity>0</p_baitQuantity>
-                        <p_baitType></p_baitType>
+                        <p_baitType>0</p_baitType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -138,7 +138,7 @@
                         <p_visitorId>-1</p_visitorId>
                         <p_visitorMinutesRemaining>0</p_visitorMinutesRemaining>
                         <p_baitQuantity>0</p_baitQuantity>
-                        <p_baitType></p_baitType>
+                        <p_baitType>0</p_baitType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -180,7 +180,7 @@
                         <p_visitorId>-1</p_visitorId>
                         <p_visitorMinutesRemaining>0</p_visitorMinutesRemaining>
                         <p_baitQuantity>0</p_baitQuantity>
-                        <p_baitType></p_baitType>
+                        <p_baitType>0</p_baitType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

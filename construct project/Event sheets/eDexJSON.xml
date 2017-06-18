@@ -6,57 +6,23 @@
         <include>eMonsJSON</include>
         <event-group description="" sid="938449959790091" title="Pokedex functions">
             <sub-events>
-                <event-block sid="851543508562744">
+                <comment>Note for the future: When the mons.json is updated, we&apos;ll have to force savefiles to re-initiate by setting this to 0 again.</comment>
+                <variable comment="1=true" constant="0" name="dexInitiated" sid="481502982455840" static="1" type="number">0</variable>
+                <comment>initiate dex</comment>
+                <event-block sid="546689585423675">
                     <conditions>
-                        <condition id="0" name="On function" sid="142772653883455" type="Function">
-                            <param id="0" name="Name">&quot;dex .count&quot;</param>
+                        <condition id="-14" name="Compare variable" sid="360388187763262" type="System">
+                            <param id="0" name="Variable">dexInitiated</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="799371605898510">
-                            <conditions />
-                            <actions>
-                                <action id="1" name="Set return value" sid="554211421044000" type="Function">
-                                    <param id="0" name="Value">3dexJSON.Size(0, &quot;pokedex&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="316662807745304">
-                            <conditions>
-                                <condition id="60" name="Is undefined" sid="524772011213948" type="3monsJSON">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="516541478097667" type="Function">
-                                    <param id="0" name="Value">0</param>
-                                </action>
-                                <action id="14" name="Log" sid="688101644688331" type="Browser">
-                                    <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="946058619132738">
-                            <conditions>
-                                <condition id="60" name="Is undefined" sid="426226025007852" type="3monsJSON">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="895094648979606" type="Function">
-                                    <param id="0" name="Value">0</param>
-                                </action>
-                                <action id="14" name="Log" sid="803342375713525" type="Browser">
-                                    <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="517661168203104" type="Function">
+                            <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="617762223643548">
                     <conditions>
@@ -107,47 +73,133 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>If the pokedex doesn&apos;t include 1 entry for each mons of the official JSON</comment>
-                        <event-block sid="746475139521926">
+                        <event-block sid="472097183340694">
                             <conditions>
-                                <condition id="-23" name="While" sid="850043500341323" type="System" />
-                                <condition id="-8" name="Compare two values" sid="851728816932868" type="System">
-                                    <param id="0" name="First value">Function.Call(&quot;mons .count&quot;)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">Function.Call(&quot;dex .count&quot;)</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="546625187649833" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>If the pokedex doesn&apos;t include 1 entry for each mons of the official JSON</comment>
+                                <event-block sid="746475139521926">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="850043500341323" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="851728816932868" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;mons .count&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Function.Call(&quot;dex .count&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="404679392022062" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;creating 1 mon node&quot;</param>
+                                        </action>
+                                        <action id="200" name="Set Current Path" sid="707940149745581" type="3dexJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="780222116628096" type="3dexJSON">
+                                            <param id="0" name="Reference point">1</param>
+                                            <param id="1" name="Key {n}">Function.Call(&quot;dex .count&quot;)</param>
+                                        </action>
+                                        <action id="200" name="Set Current Path" sid="594052179665541" type="3dexJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;pokedex&quot;{###}Function.Call(&quot;dex .count&quot;)-1</param>
+                                        </action>
+                                        <action id="30" name="Set Boolean" sid="415176147624425" type="3dexJSON">
+                                            <param id="0" name="value">1</param>
+                                            <param id="1" name="Reference point">1</param>
+                                            <param id="2" name="Key {n}">&quot;visited&quot;</param>
+                                        </action>
+                                        <action id="30" name="Set Boolean" sid="148167749210182" type="3dexJSON">
+                                            <param id="0" name="value">1</param>
+                                            <param id="1" name="Reference point">1</param>
+                                            <param id="2" name="Key {n}">&quot;met&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="949971644282714" type="3dexJSON">
+                                            <param id="0" name="Value">-1</param>
+                                            <param id="1" name="Reference point">1</param>
+                                            <param id="2" name="Key {n}">&quot;met_timestamp&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="544004995863079">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="824638062141147" type="System">
+                                            <param id="0" name="Variable">dexInitiated</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="851543508562744">
+                    <conditions>
+                        <condition id="0" name="On function" sid="142772653883455" type="Function">
+                            <param id="0" name="Name">&quot;dex .count&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="119428181489939">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="390511357270145" type="System">
+                                    <param id="0" name="Variable">dexInitiated</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="404679392022062" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;creating 1 mon node&quot;</param>
+                                <action id="0" name="Call function" sid="491431117220026" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="200" name="Set Current Path" sid="707940149745581" type="3dexJSON">
+                            </actions>
+                        </event-block>
+                        <event-block sid="799371605898510">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="554211421044000" type="Function">
+                                    <param id="0" name="Value">3dexJSON.Size(0, &quot;pokedex&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="316662807745304">
+                            <conditions>
+                                <condition id="60" name="Is undefined" sid="524772011213948" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="516541478097667" type="Function">
+                                    <param id="0" name="Value">0</param>
                                 </action>
-                                <action id="0" name="Set New Object" sid="780222116628096" type="3dexJSON">
-                                    <param id="0" name="Reference point">1</param>
-                                    <param id="1" name="Key {n}">Function.Call(&quot;dex .count&quot;)</param>
+                                <action id="14" name="Log" sid="688101644688331" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
                                 </action>
-                                <action id="200" name="Set Current Path" sid="594052179665541" type="3dexJSON">
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="946058619132738">
+                            <conditions>
+                                <condition id="60" name="Is undefined" sid="426226025007852" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;pokedex&quot;{###}Function.Call(&quot;dex .count&quot;)-1</param>
+                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="895094648979606" type="Function">
+                                    <param id="0" name="Value">0</param>
                                 </action>
-                                <action id="30" name="Set Boolean" sid="415176147624425" type="3dexJSON">
-                                    <param id="0" name="value">1</param>
-                                    <param id="1" name="Reference point">1</param>
-                                    <param id="2" name="Key {n}">&quot;visited&quot;</param>
-                                </action>
-                                <action id="30" name="Set Boolean" sid="148167749210182" type="3dexJSON">
-                                    <param id="0" name="value">1</param>
-                                    <param id="1" name="Reference point">1</param>
-                                    <param id="2" name="Key {n}">&quot;met&quot;</param>
-                                </action>
-                                <action id="20" name="Set Value" sid="949971644282714" type="3dexJSON">
-                                    <param id="0" name="Value">-1</param>
-                                    <param id="1" name="Reference point">1</param>
-                                    <param id="2" name="Key {n}">&quot;met_timestamp&quot;</param>
+                                <action id="14" name="Log" sid="803342375713525" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -168,6 +220,21 @@
                                 <action id="-9" name="Set value" sid="224212494616717" type="System">
                                     <param id="0" name="Variable">nb</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="254554727925919">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="679911314433824" type="System">
+                                    <param id="0" name="Variable">dexInitiated</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="194768505719308" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -213,6 +280,21 @@
                                 <action id="-9" name="Set value" sid="526635840420317" type="System">
                                     <param id="0" name="Variable">nb</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828966528395510">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="951401528011984" type="System">
+                                    <param id="0" name="Variable">dexInitiated</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="675561654292616" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -263,6 +345,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="491549605594086">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="388096712399441" type="System">
+                                    <param id="0" name="Variable">dexInitiated</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="659546567596632" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="995584503609744">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="759144497319172" type="System">
@@ -306,6 +403,21 @@
                                 <action id="-9" name="Set value" sid="610877775923708" type="System">
                                     <param id="0" name="Variable">nb</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="505272519419544">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="762140254616475" type="System">
+                                    <param id="0" name="Variable">dexInitiated</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="359591622506721" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -354,6 +466,67 @@
                                 <action id="14" name="Log" sid="209792929235898" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from dex.addMet: Trying to access &lt;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="840404192307216">
+                    <conditions>
+                        <condition id="0" name="On function" sid="735181540513675" type="Function">
+                            <param id="0" name="Name">&quot;dex .dateMet&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>dex.dateMet returns the timestamp when the mon nb was met for the first time</comment>
+                        <variable constant="0" name="nb" sid="536064849690452" static="0" type="number">-1</variable>
+                        <event-block sid="419649192884611">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="943655346126058" type="System">
+                                    <param id="0" name="Variable">nb</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="453589976225223">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="312976126855092" type="System">
+                                    <param id="0" name="Variable">dexInitiated</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="168978816496036" type="Function">
+                                    <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="498649358691870">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="941730162763376" type="System">
+                                    <param id="0" name="Variable">nb</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="544471212664834" type="Function">
+                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;met_timestamp&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="183700700990259">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="837889124331567" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="973350695336120" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from dex.dateMet: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

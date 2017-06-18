@@ -338,22 +338,12 @@
                 <event-block sid="595926452503371">
                     <conditions>
                         <condition id="0" name="On function" sid="332195353827654" type="Function">
-                            <param id="0" name="Name">&quot;shop .getBaitName&quot;</param>
+                            <param id="0" name="Name">&quot;shop .baitCount&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <variable comment="the index of the bait in the json" constant="0" name="baitIndex" sid="131338431457707" static="0" type="number">-1</variable>
-                        <event-block sid="459303111195987">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="462539717691897" type="System">
-                                    <param id="0" name="Variable">baitIndex</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>TODO: Add security here, if the function tries to call a bait that doesn&apos;t exist, so that it doesn&apos;t pollute the browser log.</comment>
                         <event-block sid="742359007273462">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="839687478890578" type="3monsJSON">
@@ -366,12 +356,12 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="639170730672225" type="3monsJSON">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;bait&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="680026643842119" type="Function">
-                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
+                                            <param id="0" name="Value">3monsJSON.Size(0, &quot;bait&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -382,7 +372,7 @@
                                     <actions>
                                         <action id="14" name="Log" sid="171072163088194" type="Browser">
                                             <param id="0" name="Type">1</param>
-                                            <param id="1" name="Message">&quot;Trying to reach an undefined node in shop .getBaitName : &quot; &amp; baitIndex</param>
+                                            <param id="1" name="Message">&quot;Trying to reach an undefined node in shop.baitCount : &quot; &amp; baitIndex</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -394,6 +384,102 @@
                             </conditions>
                             <actions>
                                 <action id="14" name="Log" sid="153282972964997" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from shop.baitCount: Trying to access the JSON which is not yet loaded.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="945240023571915">
+                    <conditions>
+                        <condition id="0" name="On function" sid="697134036722151" type="Function">
+                            <param id="0" name="Name">&quot;shop .getBaitName&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable comment="the index of the bait in the json" constant="0" name="baitIndex" sid="908954983637031" static="0" type="number">-1</variable>
+                        <event-block sid="891812683096013">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="883882374845552" type="System">
+                                    <param id="0" name="Variable">baitIndex</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="693783762267451">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="271369028765466" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="755316875628313">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="187230168753838" type="System">
+                                            <param id="0" name="First value">baitIndex</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Function.Call(&quot;shop .baitCount&quot;)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="282626275475053" type="System">
+                                            <param id="0" name="First value">baitIndex</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-37" inverted="1" name="Is number NaN" sid="811904246390752" type="System">
+                                            <param id="0" name="Number">baitIndex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="347231921817562">
+                                            <conditions>
+                                                <condition id="60" inverted="1" name="Is undefined" sid="797555083855894" type="3monsJSON">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;bait&quot;{###}baitIndex{###}&quot;name&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="609621565379499" type="Function">
+                                                    <param id="0" name="Value">3monsJSON.Value(0, &quot;bait&quot;, baitIndex, &quot;name&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="145451611575514">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="519240090520745" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="14" name="Log" sid="470309603617158" type="Browser">
+                                                    <param id="0" name="Type">1</param>
+                                                    <param id="1" name="Message">&quot;Trying to reach an undefined node &apos;name&apos; in shop.getBaitName : &quot; &amp; baitIndex</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="358800214907644">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="265415395887570" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="382021362331245" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Trying to reach outside of the list of baits in shop.getBaitName : &quot; &amp; baitIndex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="136216049410585">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="146028568810970" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="990271927870041" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from shop.getBaitName: Trying to access the JSON which is not yet loaded.&quot;</param>
                                 </action>

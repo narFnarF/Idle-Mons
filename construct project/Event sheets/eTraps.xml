@@ -102,11 +102,39 @@
                                             <param id="0" name="Instance variable">theText</param>
                                             <param id="1" name="Value">newline &amp; &quot;time:&quot; &amp; round(3trap.p_visitorMinutesRemaining*60)</param>
                                         </action>
-                                        <action id="-11" name="Add to" sid="405020879392279" type="3trapsTxt">
-                                            <param id="0" name="Instance variable">theText</param>
-                                            <param id="1" name="Value">newline &amp; &quot;Bait: &quot; &amp; Function.Call(&quot;shop .getBaitName&quot;, 3trap.p_baitType) &amp; &quot; &quot; &amp; round(3trap.p_baitQuantity*60)</param>
+                                        <action disabled="1" id="14" name="Log" sid="584305364919522" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;pet &quot; </param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="352763176394993">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="285058368339585" type="3trap">
+                                                    <param id="0" name="Instance variable">p_baitQuantity</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="405020879392279" type="3trapsTxt">
+                                                    <param id="0" name="Instance variable">theText</param>
+                                                    <param id="1" name="Value">newline &amp; &quot;Bait: &quot; &amp; Function.Call(&quot;shop .getBaitName&quot;, 3trap.p_baitType) &amp; &quot; &quot; &amp; round(3trap.p_baitQuantity*60)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="692745218990024">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="953571005132903" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="513548038728172" type="3trapsTxt">
+                                                    <param id="0" name="Instance variable">theText</param>
+                                                    <param id="1" name="Value">newline &amp; &quot;Bait: empty&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
