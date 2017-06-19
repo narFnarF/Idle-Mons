@@ -75,7 +75,7 @@
                         <y>221</y>
                         <z>0</z>
                         <width>315</width>
-                        <height>145</height>
+                        <height>124</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -108,10 +108,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>37</x>
-                        <y>435</y>
+                        <y>371</y>
                         <z>0</z>
                         <width>315</width>
-                        <height>145</height>
+                        <height>124</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -144,10 +144,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>37</x>
-                        <y>650</y>
+                        <y>517</y>
                         <z>0</z>
                         <width>315</width>
-                        <height>145</height>
+                        <height>124</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -157,7 +157,38 @@
                 </instance>
                 <instance type="shopBtnLabel" uid="416">
                     <properties>
-                        <text>Text</text>
+                        <text>text0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>text0</theText>
+                        <buttonID>0</buttonID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>74</x>
+                        <y>246</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>78</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopBtnLabel" uid="417">
+                    <properties>
+                        <text>text1</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -169,16 +200,16 @@
                     </properties>
                     <instance-variables>
                         <theText>text1</theText>
-                        <buttonID>0</buttonID>
+                        <buttonID>1</buttonID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>74</x>
-                        <y>246</y>
+                        <y>397</y>
                         <z>0</z>
                         <width>235</width>
-                        <height>99</height>
+                        <height>78</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -186,9 +217,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="shopBtnLabel" uid="417">
+                <instance type="shopBtnLabel" uid="418">
                     <properties>
-                        <text>Text</text>
+                        <text>text2</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -200,47 +231,16 @@
                     </properties>
                     <instance-variables>
                         <theText>text2</theText>
-                        <buttonID>1</buttonID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>74</x>
-                        <y>461</y>
-                        <z>0</z>
-                        <width>235</width>
-                        <height>99</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="shopBtnLabel" uid="418">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <theText>text3</theText>
                         <buttonID>2</buttonID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>74</x>
-                        <y>674</y>
+                        <y>541</y>
                         <z>0</z>
                         <width>235</width>
-                        <height>99</height>
+                        <height>78</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -283,6 +283,73 @@
                         <hotspotX>0.502645493</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopBtn" uid="421">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>shop .buttonClicked</callback>
+                        <callbackParamNb>3</callbackParamNb>
+                        <buttonId>3</buttonId>
+                        <state>active</state>
+                        <p_currentlyPressed>false</p_currentlyPressed>
+                        <p_initialyPressed>false</p_initialyPressed>
+                        <allowClickThrough>false</allowClickThrough>
+                        <p_onVisibleLayer>false</p_onVisibleLayer>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>37</x>
+                        <y>671</y>
+                        <z>0</z>
+                        <width>315</width>
+                        <height>124</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="shopBtnLabel" uid="435">
+                    <properties>
+                        <text>text3</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <theText>text3</theText>
+                        <buttonID>3</buttonID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>74</x>
+                        <y>695</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>78</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

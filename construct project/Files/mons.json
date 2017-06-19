@@ -45,9 +45,15 @@
     ],
     "bait": [
         {
+            "name": "free",
+            "cost": 0,
+            "duration": 15,
+            "visual": "?"
+        },
+        {
             "name": "cheap",
             "cost": 1,
-            "duration": 10,
+            "duration": 30,
             "visual": "?"
         },
         {
@@ -59,7 +65,7 @@
         {
             "name": "fancy",
             "cost": 100,
-            "duration": 10,
+            "duration": 180,
             "visual": "?"
         }
     ]
