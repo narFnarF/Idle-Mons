@@ -495,6 +495,11 @@
                         <instance-variable comment="button or amount" name="which" sid="867488245301602" type="string" />
                         <instance-variable name="id" sid="693498393925138" type="number" />
                     </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="462806141764872">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
                 </object-type>
             </object-folder>
             <object-type name="3trap" sid="813539396306480">
@@ -543,6 +548,11 @@
             </object-type>
             <object-type name="3captureLogTxt" sid="286702061896519">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="810384317481450">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="3dexTxt" sid="728775228428525">
                 <plugin id="Text" />
@@ -1858,6 +1868,11 @@
         </object-type>
         <object-type name="shopBtnLabel" sid="886622307955467">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="NoSave" sid="410616293184611">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="popupBg" sid="345511294014809">
             <plugin id="NinePatch" />
