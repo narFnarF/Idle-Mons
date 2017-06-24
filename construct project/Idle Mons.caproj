@@ -1846,6 +1846,21 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="collectBtn" sid="269250290540579">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="913769765414851" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="bar" x="0" y="1" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="711059927424524" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="bar" x="0" y="1" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />
@@ -1938,6 +1953,7 @@
             <members>
                 <member>3trap</member>
                 <member>baitSelectorBtn</member>
+                <member>collectBtn</member>
                 <member>newButton</member>
                 <member>shopBtn</member>
             </members>
@@ -1986,6 +2002,7 @@
                 <member>arrowCamera</member>
                 <member>arrowLayout</member>
                 <member>baitSelectorBtn</member>
+                <member>collectBtn</member>
                 <member>newButton</member>
                 <member>questCollectBtn</member>
                 <member>saveBtn</member>
