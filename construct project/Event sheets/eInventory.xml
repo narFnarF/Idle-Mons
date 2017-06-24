@@ -30,26 +30,11 @@
                             </actions>
                         </event-block>
                         <event-block sid="445503500472230">
-                            <conditions>
-                                <condition id="-37" inverted="1" name="Is number NaN" sid="839403573285719" type="System">
-                                    <param id="0" name="Number">quantity</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions>
                                 <action id="0" name="Add key" sid="149652559440822" type="2inventory">
                                     <param id="0" name="Key">item</param>
                                     <param id="1" name="Value">2inventory.Get(item) + quantity</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="566163858620766">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="386519599102475" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="14" name="Log" sid="843489810201002" type="Browser">
-                                    <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error in inventory.receive : quantity parameter is NaN. &quot; &amp; Function.Param(0) &amp; &quot; &quot; &amp; Function.Param(1)</param>
                                 </action>
                             </actions>
                         </event-block>
