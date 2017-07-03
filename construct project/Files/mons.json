@@ -5,42 +5,48 @@
             "duration": 15,
             "gift": 10,
             "nb": 1,
-            "visual": "?"
+            "visual": "?",
+            "description": "bla bla"
         },
         {
             "name": "Togepi",
             "duration": 15,
             "gift": 1,
             "nb": 2,
-            "visual": "?"
+            "visual": "?",
+            "description": "bla bla"
         },
         {
             "name": "Squirtle",
             "duration": 1,
             "gift": 100,
             "nb": 3,
-            "visual": "?"
+            "visual": "?",
+            "description": "bla bla"
         },
         {
             "name": "Miho",
             "duration": 2,
             "gift": 50,
             "nb": 4,
-            "visual": "?"
+            "visual": "?",
+            "description": "bla bla"
         },
         {
             "name": "Slime",
             "duration": 100,
             "gift": 2,
             "nb": 5,
-            "visual": "?"
+            "visual": "?",
+            "description": "bla bla"
         },
         {
             "name": "Rarimon",
             "duration": 100,
             "gift": 2,
             "nb": 5,
-            "visual": "?"
+            "visual": "?",
+            "description": "bla bla"
         }
     ],
     "bait": [
