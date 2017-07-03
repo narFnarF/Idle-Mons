@@ -606,10 +606,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="356917688667266" title="Actions">
+        <event-group description="" sid="356917688667266" title="Capture">
             <sub-events>
                 <comment>Add monsters met in the pokedex</comment>
-                <event-block sid="478294794711464">
+                <event-block disabled="1" sid="478294794711464">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="533795553274215" type="System">
                             <param id="0" name="Interval (seconds)">0.5</param>
@@ -629,6 +629,10 @@
                             <param id="1" name="Parameter {n}">3trap.p_visitorId</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="404676057405003">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -860,13 +864,19 @@
                 </event-block>
                 <event-group description="" sid="165001282592495" title="Visuals (bait selector)">
                     <sub-events>
+                        <variable constant="0" name="nbBaits" sid="238868378063563" static="0" type="number">0</variable>
                         <event-block sid="394487753729105">
                             <conditions>
                                 <condition id="-9" name="Layer is visible" sid="981658119289163" type="System">
                                     <param id="0" name="Layer">baitSelectorBtn.LayerNumber</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="783059802828146" type="System">
+                                    <param id="0" name="Variable">nbBaits</param>
+                                    <param id="1" name="Value">Function.Call(&quot;shop .baitCount&quot;)</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <comment>Fill text labels on buttons</comment>
                                 <event-block sid="477800333207573">
@@ -886,7 +896,7 @@
                                         <event-block sid="201240437671188">
                                             <conditions>
                                                 <condition id="-12" name="Repeat" sid="800862756388094" type="System">
-                                                    <param id="0" name="Count">3</param>
+                                                    <param id="0" name="Count">nbBaits</param>
                                                 </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="770803783920064" type="baitSelectorTxt">
                                                     <param id="0" name="Instance variable">id</param>
@@ -916,7 +926,7 @@
                                             <param id="2" name="Value">&quot;amount&quot;</param>
                                         </condition>
                                         <condition id="-12" name="Repeat" sid="259637942914457" type="System">
-                                            <param id="0" name="Count">3</param>
+                                            <param id="0" name="Count">nbBaits</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="300848738235958" type="baitSelectorTxt">
                                             <param id="0" name="Instance variable">id</param>

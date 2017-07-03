@@ -343,6 +343,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Returns the number of baits</comment>
                         <variable comment="the index of the bait in the json" constant="0" name="baitIndex" sid="131338431457707" static="0" type="number">-1</variable>
                         <event-block sid="742359007273462">
                             <conditions>
