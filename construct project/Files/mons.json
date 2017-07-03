@@ -49,10 +49,19 @@
             "name": "Rarimon",
             "duration": 100,
             "gift": 2,
-            "nb": 5,
+            "nb": 6,
             "visual": "?",
             "description": "bla bla",
             "captureProbability": 0.1
+        },
+        {
+            "name": "Gros Tas",
+            "duration": 100,
+            "gift": 2,
+            "nb": 7,
+            "visual": "?",
+            "description": "bla bla",
+            "captureProbability": 0.5
         }
     ],
     "bait": [
