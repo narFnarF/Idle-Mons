@@ -797,8 +797,9 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <variable constant="0" name="visitorId" sid="550352425971668" static="0" type="number">-1</variable>
-                        <variable constant="0" name="odds" sid="557462692279159" static="0" type="number">-1</variable>
+                        <variable constant="0" name="visitorId" sid="550352425971668" static="1" type="number">-1</variable>
+                        <variable constant="0" name="odds" sid="557462692279159" static="1" type="number">-1</variable>
+                        <variable constant="0" name="dice" sid="967601312967934" static="1" type="number">-1</variable>
                         <event-block sid="276279797843109">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="216565014849113" type="3trap">
@@ -816,6 +817,14 @@
                                     <param id="0" name="Variable">odds</param>
                                     <param id="1" name="Value">Function.Call(&quot;mons .captureProbability&quot;, visitorId)</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="817288111844045" type="System">
+                                    <param id="0" name="Variable">dice</param>
+                                    <param id="1" name="Value">random(0,1)</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="655941861683352" type="System">
+                                    <param id="0" name="Layer">&quot;suspense&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
                                 <action id="14" name="Log" sid="862793199258503" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Visitor: &quot; &amp; visitorId &amp; &quot; &quot; &amp; Function.Call(&quot;mons .name&quot;, visitorId)</param>
@@ -824,24 +833,39 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Odds: &quot; &amp; odds</param>
                                 </action>
+                                <action id="14" name="Log" sid="538524908874059" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;dice: &quot; &amp; dice</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="395026487605432" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="813558583548339">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="401464779934952" type="System">
-                                            <param id="0" name="First value">random(0, 1)</param>
-                                            <param id="1" name="Comparison">3</param>
+                                            <param id="0" name="First value">dice</param>
+                                            <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">odds</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="869837286786859" type="Function">
+                                        <action disabled="1" id="0" name="Call function" sid="869837286786859" type="Function">
                                             <param id="0" name="Name">&quot;dex .addMet&quot;</param>
                                             <param id="1" name="Parameter {n}">visitorId</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="713140956875115" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;visitorID: &quot; &amp; visitorId</param>
                                         </action>
                                         <action id="14" name="Log" sid="394384999245557" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;Success!&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="716139758803552" type="Function">
+                                            <param id="0" name="Name">&quot;capture .prepareSuspensePopup&quot;</param>
+                                            <param id="1" name="Parameter {n}">visitorId</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -853,6 +877,10 @@
                                         <action id="14" name="Log" sid="183880661289971" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;Failed!&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="486232661437596" type="Function">
+                                            <param id="0" name="Name">&quot;capture .prepareSuspensePopup&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -878,6 +906,224 @@
                                     <param id="1" name="Parameter {n}">trapClicked{###}-1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Suspense</comment>
+                <variable constant="0" name="suspenseTimer" sid="958991750578581" static="1" type="number">0</variable>
+                <variable constant="1" name="DURATION" sid="711676064536323" static="0" type="number">2</variable>
+                <event-block sid="482409780793539">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="592444397030988" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="682785524401353" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="781735418792330">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="305218726503668" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="535453632799543" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="760803387208028" type="System">
+                            <param id="0" name="Variable">suspenseTimer</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="14" name="Log" sid="984152559865799" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;time: &quot; &amp; time</param>
+                        </action>
+                        <action id="14" name="Log" sid="623679654403919" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;stop at: &quot; &amp; suspenseTimer+DURATION</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="930867435228555">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="335749149427898" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="304040363657985" type="suspenseTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="396583294873217">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="577259086493381" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="130663951268433" type="suspenseTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="460503145281146">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="628586310044145" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="-7" name="Compare time" sid="109934312100456" type="System">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Time (seconds)">suspenseTimer+duration</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="861675910779691" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">suspenseTimer+DURATION</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-4" name="Set layer visible" sid="208830839880384" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="14" name="Log" sid="238953501581526" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;stop!&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="579970149659027">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="920884718690187" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="600911208632063" type="suspenseTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520080145084932">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="913396064028472" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="866462993692763" type="suspenseTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="214262591303819">
+                    <conditions>
+                        <condition id="0" name="On function" sid="744362329764166" type="Function">
+                            <param id="0" name="Name">&quot;capture .prepareSuspensePopup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable comment="-1 = nothing" constant="0" name="capturedId" sid="252961114682372" static="0" type="number">0</variable>
+                        <event-block sid="656155824577856">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="596794507374803" type="System">
+                                    <param id="0" name="Variable">capturedId</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="599298946940796">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="192562163039556" type="System">
+                                    <param id="0" name="Variable">capturedId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="695551610711839">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="577878159666555" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;title&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="947408271584029" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;Success!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="265278066476464">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="391993194452330" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;body&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="431020863667280" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;Captured &quot; &amp; Function.Call(&quot;mons .name&quot;, capturedId)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="560090554131690">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="755110935165116" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="247994961538815">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="385246624381133" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;title&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="343080266234339" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;Failed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="913320530915076">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="728827647844168" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;body&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="270507255977996" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;It escaped.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

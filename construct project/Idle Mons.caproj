@@ -505,6 +505,9 @@
             <object-folder name="suspense">
                 <object-type name="suspenseTxt" sid="310745648316132">
                     <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable comment="to differenciates each box in the code" name="which" sid="187019195940879" type="string" />
+                    </instance-variables>
                     <behaviors>
                         <behavior-type name="Sine" sid="850058221255482">
                             <behavior id="Sin" />
