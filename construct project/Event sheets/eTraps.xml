@@ -144,6 +144,12 @@
         </event-group>
         <event-group description="" sid="315831820789093" title="Traps functions">
             <sub-events>
+                <event-block sid="814395889117951">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="952107315109063" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
                 <event-block sid="831543791617884">
                     <conditions>
                         <condition id="0" name="On function" sid="573794856571839" type="Function">
@@ -375,11 +381,15 @@
                                                             <param id="0" name="Name">&quot;mons .addToLog&quot;</param>
                                                             <param id="1" name="Parameter {n}">3trap.p_visitorId{###}Function.Call(&quot;mons .gift&quot;, 3trap.p_visitorId)</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="866173730105609" type="3trap">
+                                                        <action id="0" name="Call function" sid="901675530649822" type="Function">
+                                                            <param id="0" name="Name">&quot;traps .setVisitor&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3trap.id{###}-1</param>
+                                                        </action>
+                                                        <action disabled="1" id="-10" name="Set value" sid="866173730105609" type="3trap">
                                                             <param id="0" name="Instance variable">p_visitorId</param>
                                                             <param id="1" name="Value">-1</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="332623101207398" type="3trap">
+                                                        <action disabled="1" id="-10" name="Set value" sid="332623101207398" type="3trap">
                                                             <param id="0" name="Instance variable">p_visitorMinutesRemaining</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
@@ -446,13 +456,17 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-10" name="Set value" sid="569476436039271" type="3trap">
+                                                        <action disabled="1" id="-10" name="Set value" sid="569476436039271" type="3trap">
                                                             <param id="0" name="Instance variable">p_visitorId</param>
                                                             <param id="1" name="Value">visitorId</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="373274409514661" type="3trap">
+                                                        <action disabled="1" id="-10" name="Set value" sid="373274409514661" type="3trap">
                                                             <param id="0" name="Instance variable">p_visitorMinutesRemaining</param>
                                                             <param id="1" name="Value">Function.Call(&quot;mons .duration&quot;, visitorId)</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="414172685825660" type="Function">
+                                                            <param id="0" name="Name">&quot;traps .setVisitor&quot;</param>
+                                                            <param id="1" name="Parameter {n}">3trap.id{###}visitorId</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="724326527950565" type="Function">
                                                             <param id="0" name="Name">&quot;dex .addVisited&quot;</param>
@@ -507,6 +521,157 @@
                                 <action id="14" name="Log" sid="944621944543237" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;End of traps.simulateTime&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="626826860768539">
+                    <conditions>
+                        <condition id="0" name="On function" sid="262302762612266" type="Function">
+                            <param id="0" name="Name">&quot;trap .clicked&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="trapClicked" sid="689914262556986" static="0" type="number">0</variable>
+                        <event-block sid="997635991222677">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="226238497869225" type="System">
+                                    <param id="0" name="Variable">trapClicked</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="981020424601805">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="196585041814639" type="3trap">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">trapClicked</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="569874093712820" type="3trap">
+                                    <param id="0" name="Instance variable">p_visitorId</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="985581806661533" type="Function">
+                                    <param id="0" name="Name">&quot;capture .try&quot;</param>
+                                    <param id="1" name="Parameter {n}">trapClicked</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="695691589285504">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="233179206371993" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="718822378498125" type="Function">
+                                    <param id="0" name="Name">&quot;baitSelector .open&quot;</param>
+                                    <param id="1" name="Parameter {n}">trapClicked</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="958124610354904">
+                    <conditions>
+                        <condition id="0" name="On function" sid="865490755924111" type="Function">
+                            <param id="0" name="Name">&quot;traps .setVisitor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="trapNb" sid="541631377378727" static="0" type="number">0</variable>
+                        <variable constant="0" name="visitorId" sid="556095950048640" static="0" type="number">0</variable>
+                        <event-block sid="287192044389738">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="719576613491409" type="System">
+                                    <param id="0" name="Variable">trapNb</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="385844059887014" type="System">
+                                    <param id="0" name="Variable">visitorId</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="902758799298246">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="706527573999924" type="3trap">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">trapNb</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>new visitor</comment>
+                                <event-block sid="180893101547309">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="989627999277518" type="System">
+                                            <param id="0" name="Variable">visitorId</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="650322685352271" type="3trap">
+                                            <param id="0" name="Instance variable">p_visitorId</param>
+                                            <param id="1" name="Value">visitorId</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="336461100397365" type="3trap">
+                                            <param id="0" name="Instance variable">p_visitorMinutesRemaining</param>
+                                            <param id="1" name="Value">Function.Call(&quot;mons .duration&quot;, visitorId)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>no visitor</comment>
+                                <event-block sid="597247369758768">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="680803256565872" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="916553790236570" type="System">
+                                            <param id="0" name="Variable">visitorId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="449641937072378" type="3trap">
+                                            <param id="0" name="Instance variable">p_visitorId</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="791850081824834" type="3trap">
+                                            <param id="0" name="Instance variable">p_visitorMinutesRemaining</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="345528573504934">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="836815977545076" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="634163043773204" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error in traps.setVisitor: visitorId is below zero : &quot; &amp; visitorId</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="397445941362097">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="829097783037425" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="419856953577867" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error in traps.setVisitor: No trap with nb equal to : &quot; &amp; trapNb</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -609,30 +774,365 @@
         <event-group description="" sid="356917688667266" title="Capture">
             <sub-events>
                 <comment>Add monsters met in the pokedex</comment>
-                <event-block disabled="1" sid="478294794711464">
+                <event-block sid="404676057405003">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="533795553274215" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="344507394873373" type="3trap">
-                            <param id="0" name="Instance variable">p_visitorId</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">-1</param>
-                        </condition>
-                        <condition id="-11" name="For Each" sid="469041856076076" type="System">
-                            <param id="0" name="Object">3trap</param>
+                        <condition id="0" name="On function" sid="535450137967593" type="Function">
+                            <param id="0" name="Name">&quot;capture .try&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="869837286786859" type="Function">
-                            <param id="0" name="Name">&quot;dex .addMet&quot;</param>
-                            <param id="1" name="Parameter {n}">3trap.p_visitorId</param>
+                        <action id="14" name="Log" sid="918724009188256" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;try to capture&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="trapClicked" sid="124529299064584" static="0" type="number">-1</variable>
+                        <event-block sid="797311919405091">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="435057544007844" type="System">
+                                    <param id="0" name="Variable">trapClicked</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="visitorId" sid="550352425971668" static="1" type="number">-1</variable>
+                        <variable constant="0" name="odds" sid="557462692279159" static="1" type="number">-1</variable>
+                        <variable constant="0" name="dice" sid="967601312967934" static="1" type="number">-1</variable>
+                        <event-block sid="276279797843109">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="216565014849113" type="3trap">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">trapClicked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="373899977211172" type="System">
+                                    <param id="0" name="Variable">visitorId</param>
+                                    <param id="1" name="Value">3trap.p_visitorId</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="264607263224698" type="System">
+                                    <param id="0" name="Variable">odds</param>
+                                    <param id="1" name="Value">Function.Call(&quot;mons .captureProbability&quot;, visitorId)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="817288111844045" type="System">
+                                    <param id="0" name="Variable">dice</param>
+                                    <param id="1" name="Value">random(0,1)</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="655941861683352" type="System">
+                                    <param id="0" name="Layer">&quot;suspense&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="862793199258503" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Visitor: &quot; &amp; visitorId &amp; &quot; &quot; &amp; Function.Call(&quot;mons .name&quot;, visitorId)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="191837642768277" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Odds: &quot; &amp; odds</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="538524908874059" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;dice: &quot; &amp; dice</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="395026487605432" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="813558583548339">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="401464779934952" type="System">
+                                            <param id="0" name="First value">dice</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">odds</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="869837286786859" type="Function">
+                                            <param id="0" name="Name">&quot;dex .addCaptured&quot;</param>
+                                            <param id="1" name="Parameter {n}">visitorId</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="713140956875115" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;visitorID: &quot; &amp; visitorId</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="394384999245557" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Success!&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="716139758803552" type="Function">
+                                            <param id="0" name="Name">&quot;capture .prepareSuspensePopup&quot;</param>
+                                            <param id="1" name="Parameter {n}">visitorId</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="460831418435882">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="268677982999052" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="14" name="Log" sid="183880661289971" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Failed!&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="486232661437596" type="Function">
+                                            <param id="0" name="Name">&quot;capture .prepareSuspensePopup&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="648967371798196">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="553798104203850" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="216511650656567" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error in capture.try: No traps exist with id &quot; &amp; trapClicked</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>remove the mon from the trap</comment>
+                        <event-block sid="330195358020684">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="988705826537086" type="Function">
+                                    <param id="0" name="Name">&quot;traps .setVisitor&quot;</param>
+                                    <param id="1" name="Parameter {n}">trapClicked{###}-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Suspense</comment>
+                <variable constant="0" name="suspenseTimer" sid="958991750578581" static="1" type="number">0</variable>
+                <variable constant="1" name="DURATION" sid="711676064536323" static="0" type="number">2</variable>
+                <event-block sid="482409780793539">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="592444397030988" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="682785524401353" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="404676057405003">
-                    <conditions />
+                <event-block sid="781735418792330">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="305218726503668" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="535453632799543" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="760803387208028" type="System">
+                            <param id="0" name="Variable">suspenseTimer</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="14" name="Log" sid="984152559865799" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;time: &quot; &amp; time</param>
+                        </action>
+                        <action id="14" name="Log" sid="623679654403919" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;stop at: &quot; &amp; suspenseTimer+DURATION</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="930867435228555">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="335749149427898" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="304040363657985" type="suspenseTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="396583294873217">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="577259086493381" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="130663951268433" type="suspenseTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="460503145281146">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="628586310044145" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="861675910779691" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">suspenseTimer+DURATION</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-4" name="Set layer visible" sid="208830839880384" type="System">
+                            <param id="0" name="Layer">&quot;suspense&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="238953501581526" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;stop!&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="579970149659027">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="920884718690187" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="600911208632063" type="suspenseTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520080145084932">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="913396064028472" type="suspenseTxt">
+                                    <param id="0" name="Instance variable">which</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;suspense&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="866462993692763" type="suspenseTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="642768393211109">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="491188916468274" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="838107191575469" type="System">
+                                    <param id="0" name="Layer">&quot;suspense&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="214262591303819">
+                    <conditions>
+                        <condition id="0" name="On function" sid="744362329764166" type="Function">
+                            <param id="0" name="Name">&quot;capture .prepareSuspensePopup&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions />
+                    <sub-events>
+                        <variable comment="-1 = nothing" constant="0" name="capturedId" sid="252961114682372" static="0" type="number">0</variable>
+                        <event-block sid="656155824577856">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="596794507374803" type="System">
+                                    <param id="0" name="Variable">capturedId</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="599298946940796">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="192562163039556" type="System">
+                                    <param id="0" name="Variable">capturedId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="695551610711839">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="577878159666555" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;title&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="947408271584029" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;Success!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="265278066476464">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="391993194452330" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;body&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="431020863667280" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;Captured &quot; &amp; Function.Call(&quot;mons .name&quot;, capturedId)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="560090554131690">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="755110935165116" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="247994961538815">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="385246624381133" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;title&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="343080266234339" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;Failed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="913320530915076">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="728827647844168" type="suspenseTxt">
+                                            <param id="0" name="Instance variable">which</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;body&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="270507255977996" type="suspenseTxt">
+                                            <param id="0" name="Text">&quot;It escaped.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -744,7 +1244,7 @@
                             <param id="0" name="Layer">&quot;bait selector&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="690854875355650" type="System">
+                        <action id="-9" name="Set value" sid="204126464518573" type="System">
                             <param id="0" name="Variable">lastTrapClicked</param>
                             <param id="1" name="Value">-1</param>
                         </action>
@@ -752,8 +1252,8 @@
                 </event-block>
                 <event-block sid="218402869732595">
                     <conditions>
-                        <condition id="0" name="On function" sid="253482013961532" type="Function">
-                            <param id="0" name="Name">&quot;trap .clicked&quot;</param>
+                        <condition id="0" name="On function" sid="133415545444115" type="Function">
+                            <param id="0" name="Name">&quot;baitSelector .open&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -776,10 +1276,6 @@
                         <event-block sid="390660485571524">
                             <conditions />
                             <actions>
-                                <action disabled="1" id="0" name="Call function" sid="330567983773637" type="Function">
-                                    <param id="0" name="Name">&quot;traps .refillFood&quot;</param>
-                                    <param id="1" name="Parameter {n}">3trap.id{###}choose(10, 30, 60){###}choose(&quot;normal&quot;, &quot;fancy&quot;)</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="755390816136332" type="System">
                                     <param id="0" name="Variable">lastTrapClicked</param>
                                     <param id="1" name="Value">clickedId</param>

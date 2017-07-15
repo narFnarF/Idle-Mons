@@ -116,12 +116,12 @@
                                         <action id="30" name="Set Boolean" sid="148167749210182" type="3dexJSON">
                                             <param id="0" name="value">1</param>
                                             <param id="1" name="Reference point">1</param>
-                                            <param id="2" name="Key {n}">&quot;met&quot;</param>
+                                            <param id="2" name="Key {n}">&quot;captured&quot;</param>
                                         </action>
                                         <action id="20" name="Set Value" sid="949971644282714" type="3dexJSON">
                                             <param id="0" name="Value">-1</param>
                                             <param id="1" name="Reference point">1</param>
-                                            <param id="2" name="Key {n}">&quot;met_timestamp&quot;</param>
+                                            <param id="2" name="Key {n}">&quot;captured_timestamp&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -330,7 +330,7 @@
                 <event-block sid="126787459628009">
                     <conditions>
                         <condition id="0" name="On function" sid="319388771153395" type="Function">
-                            <param id="0" name="Name">&quot;dex .isMet&quot;</param>
+                            <param id="0" name="Name">&quot;dex .isCaptured&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -370,7 +370,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="302014154181535" type="Function">
-                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;met&quot;)</param>
+                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;captured&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -381,7 +381,7 @@
                             <actions>
                                 <action id="14" name="Log" sid="383425920076453" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from dex.isMet: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from dex.isCaptured: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -390,7 +390,7 @@
                 <event-block sid="158992946363720">
                     <conditions>
                         <condition id="0" name="On function" sid="729748006827082" type="Function">
-                            <param id="0" name="Name">&quot;dex .addMet&quot;</param>
+                            <param id="0" name="Name">&quot;dex .addCaptured&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -434,7 +434,7 @@
                                 <event-block sid="508832927404668">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="999361638407190" type="System">
-                                            <param id="0" name="First value">Function.Call(&quot;dex .isMet&quot;, nb)</param>
+                                            <param id="0" name="First value">Function.Call(&quot;dex .isCaptured&quot;, nb)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">TRUE</param>
                                         </condition>
@@ -447,12 +447,12 @@
                                         <action id="30" name="Set Boolean" sid="481695449271388" type="3dexJSON">
                                             <param id="0" name="value">0</param>
                                             <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met&quot;</param>
+                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;captured&quot;</param>
                                         </action>
                                         <action id="20" name="Set Value" sid="709825285945858" type="3dexJSON">
                                             <param id="0" name="Value">Date.UnixTimestamp</param>
                                             <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;met_timestamp&quot;</param>
+                                            <param id="2" name="Key {n}">&quot;pokedex&quot;{###}nb{###}&quot;captured_timestamp&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -465,7 +465,7 @@
                             <actions>
                                 <action id="14" name="Log" sid="209792929235898" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from dex.addMet: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from dex.addCaptured: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -474,12 +474,12 @@
                 <event-block sid="840404192307216">
                     <conditions>
                         <condition id="0" name="On function" sid="735181540513675" type="Function">
-                            <param id="0" name="Name">&quot;dex .dateMet&quot;</param>
+                            <param id="0" name="Name">&quot;dex .dateCaptured&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <comment>dex.dateMet returns the timestamp when the mon nb was met for the first time</comment>
+                        <comment>dex.dateCaptured returns the timestamp when the mon nb was captured for the first time</comment>
                         <variable constant="0" name="nb" sid="536064849690452" static="0" type="number">-1</variable>
                         <event-block sid="419649192884611">
                             <conditions />
@@ -515,7 +515,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="544471212664834" type="Function">
-                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;met_timestamp&quot;)</param>
+                                    <param id="0" name="Value">3dexJSON.Value(0, &quot;pokedex&quot;, nb, &quot;captured_timestamp&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -526,7 +526,7 @@
                             <actions>
                                 <action id="14" name="Log" sid="973350695336120" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from dex.dateMet: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from dex.dateCaptured: Trying to access &lt;0&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
