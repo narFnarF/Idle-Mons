@@ -825,15 +825,15 @@
                                     <param id="0" name="Layer">&quot;suspense&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
-                                <action id="14" name="Log" sid="862793199258503" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="862793199258503" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Visitor: &quot; &amp; visitorId &amp; &quot; &quot; &amp; Function.Call(&quot;mons .name&quot;, visitorId)</param>
                                 </action>
-                                <action id="14" name="Log" sid="191837642768277" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="191837642768277" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Odds: &quot; &amp; odds</param>
                                 </action>
-                                <action id="14" name="Log" sid="538524908874059" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="538524908874059" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;dice: &quot; &amp; dice</param>
                                 </action>
@@ -851,15 +851,15 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="0" name="Call function" sid="869837286786859" type="Function">
-                                            <param id="0" name="Name">&quot;dex .addMet&quot;</param>
+                                        <action id="0" name="Call function" sid="869837286786859" type="Function">
+                                            <param id="0" name="Name">&quot;dex .addCaptured&quot;</param>
                                             <param id="1" name="Parameter {n}">visitorId</param>
                                         </action>
-                                        <action id="14" name="Log" sid="713140956875115" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="713140956875115" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;visitorID: &quot; &amp; visitorId</param>
                                         </action>
-                                        <action id="14" name="Log" sid="394384999245557" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="394384999245557" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;Success!&quot;</param>
                                         </action>
@@ -874,7 +874,7 @@
                                         <condition id="-22" name="Else" sid="268677982999052" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="14" name="Log" sid="183880661289971" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="183880661289971" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;Failed!&quot;</param>
                                         </action>
