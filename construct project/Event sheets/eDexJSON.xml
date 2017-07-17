@@ -4,6 +4,24 @@
     <name>eDexJSON</name>
     <events>
         <include>eMonsJSON</include>
+        <event-block any="1" disabled="1" sid="582292261737552">
+            <conditions>
+                <condition id="60" name="Is undefined" sid="778449135199535" type="3dexJSON">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </condition>
+                <condition id="60" name="Is undefined" sid="281231499368949" type="3dexJSON">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="520215932909862" type="Browser">
+                    <param id="0" name="Type">1</param>
+                    <param id="1" name="Message">&quot;Careful! The pokedex is still empty for some reason.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="938449959790091" title="Pokedex functions">
             <sub-events>
                 <comment>Note for the future: When the mons.json is updated, we&apos;ll have to force savefiles to re-initiate by setting this to 0 again.</comment>
@@ -16,8 +34,19 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-6" name="Every X seconds" sid="713627404482811" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="14" name="Log" sid="230058426088483" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;dexInitiated was 0&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="484058707162490" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;dex.count: &quot;&amp;Function.Call(&quot;dex .count&quot;)</param>
+                        </action>
                         <action id="0" name="Call function" sid="517661168203104" type="Function">
                             <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -31,7 +60,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="361196561392818" type="Browser">
+                        <action id="14" name="Log" sid="361196561392818" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;initializing pokedex JSON&quot;</param>
                         </action>
@@ -45,7 +74,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="265583406656608" type="Browser">
+                                <action id="14" name="Log" sid="265583406656608" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;creating the root&quot;</param>
                                 </action>
@@ -63,7 +92,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="813492453750207" type="Browser">
+                                <action id="14" name="Log" sid="813492453750207" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;creating the pokedex node&quot;</param>
                                 </action>
@@ -136,6 +165,17 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="390225943680431">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="188811350030087" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="881380822023700" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;failed ici&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="851543508562744">
@@ -144,7 +184,12 @@
                             <param id="0" name="Name">&quot;dex .count&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="14" name="Log" sid="665456516747071" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;entering dex.count&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block disabled="1" sid="119428181489939">
                             <conditions>
@@ -155,51 +200,66 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="491431117220026" type="Function">
+                                <action id="1" name="Set return value" sid="764612309942920" type="Function">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="720066462082282" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON was not ready to use.&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="491431117220026" type="Function">
                                     <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="799371605898510">
-                            <conditions />
-                            <actions>
-                                <action id="1" name="Set return value" sid="554211421044000" type="Function">
-                                    <param id="0" name="Value">3dexJSON.Size(0, &quot;pokedex&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="316662807745304">
+                        <event-block sid="316662807745304">
                             <conditions>
-                                <condition id="60" name="Is undefined" sid="524772011213948" type="3monsJSON">
+                                <condition disabled="1" id="-22" name="Else" sid="535699463994039" type="System" />
+                                <condition id="60" name="Is undefined" sid="825128711302021" type="3dexJSON">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
+                                    <param id="1" name="Key {n}"></param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="516541478097667" type="Function">
                                     <param id="0" name="Value">0</param>
                                 </action>
-                                <action id="14" name="Log" sid="688101644688331" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="688101644688331" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a root.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="946058619132738">
+                        <event-block sid="862670148137301">
                             <conditions>
-                                <condition id="60" name="Is undefined" sid="426226025007852" type="3monsJSON">
+                                <condition id="-22" name="Else" sid="940308902998369" type="System" />
+                                <condition id="60" name="Is undefined" sid="742612502473453" type="3monsJSON">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;pokedex&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set return value" sid="895094648979606" type="Function">
+                                <action id="1" name="Set return value" sid="237863857603974" type="Function">
                                     <param id="0" name="Value">0</param>
                                 </action>
-                                <action id="14" name="Log" sid="803342375713525" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="526410822416913" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from dex.count: The JSON don&apos;t contain a pokedex node.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="799371605898510">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="208173207762620" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="554211421044000" type="Function">
+                                    <param id="0" name="Value">3dexJSON.Size(0, &quot;pokedex&quot;)</param>
+                                </action>
+                                <action id="14" name="Log" sid="505803649493615" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;ici&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -527,6 +587,25 @@
                                 <action id="14" name="Log" sid="973350695336120" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from dex.dateCaptured: Trying to access &lt;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="532994638671854">
+                    <conditions>
+                        <condition id="0" name="On function" sid="136666648050564" type="Function">
+                            <param id="0" name="Name">&quot;dex .isReadyToUse&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Returns 1 if true. 0 if false</comment>
+                        <event-block sid="858835868947115">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="874039709242793" type="Function">
+                                    <param id="0" name="Value">dexInitiated</param>
                                 </action>
                             </actions>
                         </event-block>
