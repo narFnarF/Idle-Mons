@@ -89,5 +89,34 @@
             "duration": 180,
             "visual": "?"
         }
+    ],
+    "regions": [
+        {
+            "name": "the first region",
+            "common": [
+                0,
+                1
+            ],
+            "uncommon": [
+                2,
+                3
+            ],
+            "rare": [
+                4,
+                5
+            ]
+        },
+        {
+            "name": "the second region",
+            "common": [
+                6
+            ],
+            "uncommon": [
+                6
+            ],
+            "rare": [
+                6
+            ]
+        }
     ]
 }
