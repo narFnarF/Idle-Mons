@@ -14,11 +14,7 @@
                     <param id="1" name="Reference point">0</param>
                     <param id="2" name="Key {n}"></param>
                 </action>
-                <action disabled="1" id="14" name="Log" sid="892567736920145" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;initiate dex from mon.json start of layout event&quot;</param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="826040995899944" type="Function">
+                <action id="0" name="Call function" sid="826040995899944" type="Function">
                     <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
@@ -28,14 +24,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="818518449113699">
-            <conditions />
-            <actions />
-        </event-block>
         <event-group description="" sid="559641465357570" title="AJAX request (mons.json)">
             <sub-events>
                 <comment>Request the json once per day (it also triggers on the first start, for a New Game)</comment>
-                <event-block disabled="1" sid="353587388221620">
+                <event-block sid="353587388221620">
                     <conditions>
                         <condition id="1" name="Is online" sid="358585779743503" type="Browser" />
                         <condition id="-7" inverted="1" name="Compare instance variable" sid="778920771613644" type="3monsJSON">
@@ -56,7 +48,7 @@
                     </actions>
                 </event-block>
                 <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 15 sec</comment>
-                <event-block disabled="1" sid="106672379521351">
+                <event-block sid="106672379521351">
                     <conditions>
                         <condition id="70" name="Is Empty" sid="708085315007437" type="3monsJSON">
                             <param id="0" name="Reference point">0</param>
@@ -70,7 +62,7 @@
                     <actions>
                         <action id="14" name="Log" sid="924001208575954" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Trying to get again the mons.json&quot;</param>
+                            <param id="1" name="Message">&quot;Trying to get again the traps JSON&quot;</param>
                         </action>
                         <action id="1" name="Request project file" sid="713218814779843" type="AJAX">
                             <param id="0" name="Tag">&quot;mons.json&quot;</param>
@@ -78,7 +70,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="532419638753226">
+                <event-block sid="532419638753226">
                     <conditions>
                         <condition id="0" name="On completed" sid="322087223870364" type="AJAX">
                             <param id="0" name="Tag">&quot;mons.json&quot;</param>
@@ -100,7 +92,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="895380455501266">
+                <event-block sid="895380455501266">
                     <conditions>
                         <condition id="1" name="On error" sid="296132172079394" type="AJAX">
                             <param id="0" name="Tag">&quot;mons.json&quot;</param>
@@ -121,10 +113,6 @@
                         <action id="14" name="Log" sid="732927643711785" type="Browser">
                             <param id="0" name="Type">1</param>
                             <param id="1" name="Message">&quot;The mons.json is not formated properly.&quot;</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="322862425022481" type="3monsJSON">
-                            <param id="0" name="Instance variable">fullyLoaded</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
