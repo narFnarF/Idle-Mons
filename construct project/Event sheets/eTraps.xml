@@ -9,6 +9,7 @@
         <include>eMonsJSON</include>
         <include>eGlobal</include>
         <include>eGameplay stuff</include>
+        <include>eWeightedRNG</include>
         <event-block sid="649720904779646">
             <conditions>
                 <condition id="0" name="On function" sid="665948647074020" type="Function">
@@ -149,7 +150,7 @@
                 <event-block sid="831543791617884">
                     <conditions>
                         <condition id="0" name="On function" sid="573794856571839" type="Function">
-                            <param id="0" name="Name">&quot;traps .randomVisitor&quot;</param>
+                            <param id="0" name="Name">&quot;traps .pickRandomVisitor&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -439,7 +440,7 @@
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="487873649318147" type="System">
                                                             <param id="0" name="Variable">visitorId</param>
-                                                            <param id="1" name="Value">Function.Call(&quot;traps .randomVisitor&quot;)</param>
+                                                            <param id="1" name="Value">Function.Call(&quot;traps .pickRandomVisitor&quot;)</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -1535,14 +1536,14 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="332699366555795">
+                        <event-block sid="332699366555795">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
                                     <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="698703762127055" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="698703762127055" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;before&quot;</param>
                                 </action>
@@ -1550,11 +1551,30 @@
                                     <param id="0" name="Name">&quot;dex .initiateDex&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="14" name="Log" sid="670885946401365" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="670885946401365" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;after&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="468866311719089">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="454213716543497" type="System">
+                                            <param id="0" name="Count">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="424775061050308" type="Function">
+                                            <param id="0" name="Name">&quot;global .weightedRNG&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;*,60,****,20,************,1&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="902640438380919" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">Function.ReturnValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

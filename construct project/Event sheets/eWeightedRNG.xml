@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eWeightedRNG</name>
+    <events>
+        <comment>inputs always have to be a pair of VALUE and WEIGHT seperated by a comma   ---&gt; (A,50,B,70) and they have to be all together in 1 string</comment>
+        <event-block sid="716710919910419">
+            <conditions>
+                <condition id="0" name="On function" sid="632057798179961" type="Function">
+                    <param id="0" name="Name">&quot;global .weightedRNG&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="648217806001088">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="390248236421254" type="System">
+                            <param id="0" name="First value">tokencount(Function.Param(0),&quot;,&quot;)%2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="weights" sid="836984316925185" static="0" type="text"></variable>
+                        <variable constant="0" name="values" sid="773995832928367" static="0" type="text"></variable>
+                        <variable constant="0" name="totalweight" sid="601191057134789" static="0" type="number">0</variable>
+                        <variable constant="0" name="tmpRng" sid="359278940207097" static="0" type="number">0</variable>
+                        <comment>seperate weights and values and put them in the respective variables</comment>
+                        <event-block sid="153398669833074">
+                            <conditions>
+                                <condition id="-10" name="For" sid="901255749233666" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">tokencount(Function.Param(0),&quot;,&quot;)-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>first inputs dont get a &quot;,&quot; infront  because it has to look like this --&gt; weights=&quot;50,50&quot; not like this ---&gt; weights=&quot;,50,50&quot;</comment>
+                                <event-block any="1" sid="941727851594356">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="654379626383112" type="System">
+                                            <param id="0" name="First value">loopindex</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="709227676812834" type="System">
+                                            <param id="0" name="First value">loopindex</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="435739917857109">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="402399923770137" type="System">
+                                                    <param id="0" name="First value">loopindex%2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="360954277403800" type="System">
+                                                    <param id="0" name="Variable">values</param>
+                                                    <param id="1" name="Value">tokenat(Function.Param(0), loopindex, &quot;,&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="368771440927360">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="694285515583318" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="426234971487430" type="System">
+                                                    <param id="0" name="First value">loopindex%2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="267768826780918" type="System">
+                                                    <param id="0" name="Variable">weights</param>
+                                                    <param id="1" name="Value">tokenat(Function.Param(0), loopindex, &quot;,&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="743074145703173">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="524880686719304" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="824522987448678">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="145840090112331" type="System">
+                                                    <param id="0" name="First value">loopindex%2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="402411354536415" type="System">
+                                                    <param id="0" name="Variable">values</param>
+                                                    <param id="1" name="Value">&quot;,&quot;&amp; tokenat(Function.Param(0), loopindex, &quot;,&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="399779612623250">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="537365817097801" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="140022968382962" type="System">
+                                                    <param id="0" name="First value">loopindex%2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="938153962398373" type="System">
+                                                    <param id="0" name="Variable">weights</param>
+                                                    <param id="1" name="Value">&quot;,&quot;&amp; tokenat(Function.Param(0), loopindex, &quot;,&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>add the weights together</comment>
+                        <event-block sid="783907119242381">
+                            <conditions>
+                                <condition id="-10" name="For" sid="192369086448857" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">tokencount(weights, &quot;,&quot;)-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="423175785593556" type="System">
+                                    <param id="0" name="Variable">totalweight</param>
+                                    <param id="1" name="Value">tokenat(weights, loopindex, &quot;,&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>get a random number out of the total weight</comment>
+                        <event-block sid="879652725500742">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="801239213789578" type="System">
+                                    <param id="0" name="Variable">tmpRng</param>
+                                    <param id="1" name="Value">random(totalweight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>subtract every weight in the list till the random picked number is below 0</comment>
+                        <event-block sid="897337964622489">
+                            <conditions>
+                                <condition id="-10" name="For" sid="968639942597145" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">tokencount(weights, &quot;,&quot;)-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="120843227958697" type="System">
+                                    <param id="0" name="Variable">tmpRng</param>
+                                    <param id="1" name="Value">tokenat(weights, loopindex, &quot;,&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>the higher the random picked number is the longer it will take to subtract it down to 0 or below </comment>
+                                <event-block sid="679672253275936">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="685877380316647" type="System">
+                                            <param id="0" name="Variable">tmpRng</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="861841850849004" type="Function">
+                                            <param id="0" name="Value">tokenat(values, loopindex, &quot;,&quot;)</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="389082515220929" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>error, parameter count is not dividable by 2 (inputs always have to be a pair of VALUE and WEIGHT)</comment>
+                <event-block sid="321514883781092">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="629096914555143" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="1" name="Set return value" sid="374219614388508" type="Function">
+                            <param id="0" name="Value">&quot;!ERROR!&quot;&amp;newline&amp;&quot; parameter count is not dividable by 2&quot;&amp;newline&amp;&quot; (inputs always have to be a pair of VALUE and WEIGHT)&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="168602707437774" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;!ERROR!&quot;&amp;newline&amp;&quot; parameter count is not dividable by 2&quot;&amp;newline&amp;&quot; (inputs always have to be a pair of VALUE and WEIGHT)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

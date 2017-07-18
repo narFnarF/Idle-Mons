@@ -2078,6 +2078,7 @@
             <event-sheet>eInventory.xml</event-sheet>
             <event-sheet>eTouchable.xml</event-sheet>
             <event-sheet>eDexJSON.xml</event-sheet>
+            <event-sheet>eWeightedRNG.xml</event-sheet>
         </event-folder>
         <event-folder name="old cabbages stuff">
             <event-folder name="verachou">
