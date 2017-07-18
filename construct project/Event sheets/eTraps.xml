@@ -1495,7 +1495,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="235996965648866" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="235996965648866" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Collect start&quot;</param>
                         </action>
@@ -1518,7 +1518,7 @@
                         <event-block sid="169617109355295">
                             <conditions />
                             <actions>
-                                <action id="14" name="Log" sid="698113338547958" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="698113338547958" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Collected &quot; &amp; sum</param>
                                 </action>
