@@ -643,6 +643,73 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="611506170582945" title="regions functions">
+            <sub-events>
+                <event-block sid="819971137136416">
+                    <conditions>
+                        <condition id="0" name="On function" sid="725055740222817" type="Function">
+                            <param id="0" name="Name">&quot;regions .count&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>returns the number of regions</comment>
+                        <event-block sid="728207444832026">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="200144588740968">
+                    <conditions>
+                        <condition id="0" name="On function" sid="959517925714017" type="Function">
+                            <param id="0" name="Name">&quot;regions .getName&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>1 parameter: index of the region (nb)</comment>
+                        <comment>returns the name of a region</comment>
+                        <event-block sid="145287347847004">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="713406024235763">
+                    <conditions>
+                        <condition id="0" name="On function" sid="536855367109518" type="Function">
+                            <param id="0" name="Name">&quot;regions .getProbability&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>2 parameters: &#x0D;&#x0A;1) index of the region (nb)&#x0D;&#x0A;2) name of the rarity (string)</comment>
+                        <comment>returns the name of a region</comment>
+                        <event-block sid="356417345817462">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="592422745240659">
+                    <conditions>
+                        <condition id="0" name="On function" sid="141755682439534" type="Function">
+                            <param id="0" name="Name">&quot;regions .countForRarity&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>2 parameters: &#x0D;&#x0A;1) index of the region (nb)&#x0D;&#x0A;2) name of the rarity (string)</comment>
+                        <comment>returns the number of mons for that rarity in that region</comment>
+                        <event-block sid="517783958531064">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="745819940776691" title="debug (mons.json)">
             <sub-events>
                 <event-block sid="830324351519742">
