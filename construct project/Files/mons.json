@@ -93,6 +93,12 @@
     "regions": [
         {
             "name": "the first region",
+            "probability": {
+                "common": 20,
+                "uncommon": 10,
+                "rare": 2,
+                "nothing": 20
+            },
             "common": [
                 0,
                 1
@@ -108,6 +114,12 @@
         },
         {
             "name": "the second region",
+            "probability": {
+                "common": 1,
+                "uncommon": 1,
+                "rare": 1,
+                "nothing": 10
+            },
             "common": [
                 6
             ],

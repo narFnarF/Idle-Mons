@@ -2727,6 +2727,10 @@
                                             <param id="0" name="Name">&quot;inventory .receive&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;soft&quot;{###}1000</param>
                                         </action>
+                                        <action id="14" name="Log" sid="848845548394098" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Received 1000 soft currency&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="412567689248474">
@@ -2739,6 +2743,10 @@
                                         <action id="0" name="Call function" sid="521028282645308" type="Function">
                                             <param id="0" name="Name">&quot;inventory .receive&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;hard&quot;{###}100</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="862616811105957" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Received 100 hard currency&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
