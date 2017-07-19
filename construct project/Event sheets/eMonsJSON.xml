@@ -660,8 +660,49 @@
                     <sub-events>
                         <comment>returns the number of regions</comment>
                         <event-block sid="728207444832026">
-                            <conditions />
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="139082825288556" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                            </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="529052517255287">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="134917187081712" type="3monsJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;regions&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="885619154028815" type="Function">
+                                            <param id="0" name="Value">3monsJSON.Size(0, &quot;regions&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="819705111348707">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="137590049821156" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="951584299352199" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from regions.count: The JSON don&apos;t contain a region node.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="981628499619634">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="956420738154976" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="599578603932385" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from regions.count: Trying to access the JSON which is not yet loaded.&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -675,9 +716,66 @@
                     <sub-events>
                         <comment>1 parameter: index of the region (nb)</comment>
                         <comment>returns the name of a region</comment>
-                        <event-block sid="145287347847004">
+                        <variable constant="0" name="id" sid="247656859086452" static="0" type="number">-1</variable>
+                        <event-block sid="343475855951630">
                             <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="908113523805476" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="501793662429609">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="686380787991760" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                            </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="592542295432049">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="875085806204793" type="System">
+                                            <param id="0" name="Variable">id</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="967629443682332" type="System">
+                                            <param id="0" name="Variable">id</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Function.Call(&quot;regions .count&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="888177516570585" type="Function">
+                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;regions&quot;, id, &quot;name&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="407823380713940">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="878791547239876" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="538252811913990" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from regions.name: Trying to access out of range: &quot; &amp; id</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="431520129704668">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="996705929743734" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="410158586881383" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from regions.name: Trying to access the JSON which is not yet loaded.&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -728,19 +826,24 @@
                                 <condition id="-6" name="Every X seconds" sid="199670017431012" type="System">
                                     <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="960545008298217" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="579306133422179" type="Browser">
+                                <action id="14" name="Log" sid="579306133422179" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;before: &quot; &amp; Function.Call(&quot;dex .isMet&quot;, 1)</param>
+                                    <param id="1" name="Message">&quot;region.count:&quot; &amp; Function.Call(&quot;regions .count&quot;)</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="651796085968194" type="Function">
-                                    <param id="0" name="Name">&quot;dex .addMet&quot;</param>
-                                    <param id="1" name="Parameter {n}">1</param>
-                                </action>
-                                <action disabled="1" id="14" name="Log" sid="982808968182699" type="Browser">
+                                <action id="14" name="Log" sid="944068225064940" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;before: &quot; &amp; Function.Call(&quot;dex .isMet&quot;, 1)</param>
+                                    <param id="1" name="Message">&quot;region.getName(0):&quot; &amp; Function.Call(&quot;regions .getName&quot;, 0)</param>
+                                </action>
+                                <action id="14" name="Log" sid="180833050781141" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;region.getName(1):&quot; &amp; Function.Call(&quot;regions .getName&quot;, 1)</param>
+                                </action>
+                                <action id="14" name="Log" sid="938150027785084" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;region.getName(2):&quot; &amp; Function.Call(&quot;regions .getName&quot;, 2)</param>
                                 </action>
                             </actions>
                         </event-block>
