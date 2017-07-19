@@ -286,6 +286,11 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="755023599324527" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">Function.Call(&quot;mons .count&quot;)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="758326794617948" type="Function">
@@ -298,9 +303,9 @@
                                 <condition id="-22" name="Else" sid="158941075406765" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="490196580532365" type="Browser">
+                                <action id="14" name="Log" sid="981461775851026" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from mons.duration: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from mons.duration: Trying to access out of range: &quot; &amp; id</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -336,6 +341,11 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="256198983445806" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">Function.Call(&quot;mons .count&quot;)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="622211621055718" type="Function">
@@ -348,9 +358,9 @@
                                 <condition id="-22" name="Else" sid="356589400764673" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="803572716115064" type="Browser">
+                                <action id="14" name="Log" sid="744336450921551" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from mons.gift: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from mons.gift: Trying to access out of range: &quot; &amp; id</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -381,6 +391,11 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="549549032745153" type="System">
+                                    <param id="0" name="Variable">id</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">Function.Call(&quot;mons .count&quot;)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="367589441655617" type="Function">
@@ -393,9 +408,9 @@
                                 <condition id="-22" name="Else" sid="343386985917062" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="734083805092630" type="Browser">
+                                <action id="14" name="Log" sid="752126815113727" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Error from mons.captureProbability: Trying to access &lt;0&quot;</param>
+                                    <param id="1" name="Message">&quot;Error from mons.captureProbability: Trying to access out of range: &quot; &amp; id</param>
                                 </action>
                             </actions>
                         </event-block>
