@@ -11,7 +11,7 @@
             </conditions>
             <actions>
                 <action id="60" name="LoadJSON" sid="511571762087564" type="3monsJSON">
-                    <param id="0" name="JSON">&quot;{&quot;&quot;mons&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;Pikachu&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:10,&quot;&quot;nb&quot;&quot;:1,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5},{&quot;&quot;name&quot;&quot;:&quot;&quot;Togepi&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:1,&quot;&quot;nb&quot;&quot;:2,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Squirtle&quot;&quot;,&quot;&quot;duration&quot;&quot;:1,&quot;&quot;gift&quot;&quot;:100,&quot;&quot;nb&quot;&quot;:3,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Miho&quot;&quot;,&quot;&quot;duration&quot;&quot;:2,&quot;&quot;gift&quot;&quot;:50,&quot;&quot;nb&quot;&quot;:4,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Slime&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:5,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.9},{&quot;&quot;name&quot;&quot;:&quot;&quot;Rarimon&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:6,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Gros Tas&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:7,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5}],&quot;&quot;bait&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;free&quot;&quot;,&quot;&quot;cost&quot;&quot;:0,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;cheap&quot;&quot;,&quot;&quot;cost&quot;&quot;:1,&quot;&quot;duration&quot;&quot;:30,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;normal&quot;&quot;,&quot;&quot;cost&quot;&quot;:10,&quot;&quot;duration&quot;&quot;:60,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;fancy&quot;&quot;,&quot;&quot;cost&quot;&quot;:100,&quot;&quot;duration&quot;&quot;:180,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;}],&quot;&quot;regions&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;the first region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:20,&quot;&quot;uncommon&quot;&quot;:10,&quot;&quot;rare&quot;&quot;:2,&quot;&quot;nothing&quot;&quot;:20},&quot;&quot;common&quot;&quot;:[0,1],&quot;&quot;uncommon&quot;&quot;:[2,3],&quot;&quot;rare&quot;&quot;:[4,5]},{&quot;&quot;name&quot;&quot;:&quot;&quot;the second region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:1,&quot;&quot;uncommon&quot;&quot;:1,&quot;&quot;rare&quot;&quot;:1,&quot;&quot;nothing&quot;&quot;:10},&quot;&quot;common&quot;&quot;:[6],&quot;&quot;uncommon&quot;&quot;:[6],&quot;&quot;rare&quot;&quot;:[6]}]}&quot;</param>
+                    <param id="0" name="JSON">&quot;{&quot;&quot;mons&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;Pikachu&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:10,&quot;&quot;nb&quot;&quot;:1,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5},{&quot;&quot;name&quot;&quot;:&quot;&quot;Togepi&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:1,&quot;&quot;nb&quot;&quot;:2,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Squirtle&quot;&quot;,&quot;&quot;duration&quot;&quot;:1,&quot;&quot;gift&quot;&quot;:100,&quot;&quot;nb&quot;&quot;:3,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Miho&quot;&quot;,&quot;&quot;duration&quot;&quot;:2,&quot;&quot;gift&quot;&quot;:50,&quot;&quot;nb&quot;&quot;:4,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Slime&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:5,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.9},{&quot;&quot;name&quot;&quot;:&quot;&quot;Rarimon&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:6,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Gros Tas&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:7,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5}],&quot;&quot;bait&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;free&quot;&quot;,&quot;&quot;cost&quot;&quot;:0,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;cheap&quot;&quot;,&quot;&quot;cost&quot;&quot;:1,&quot;&quot;duration&quot;&quot;:30,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;normal&quot;&quot;,&quot;&quot;cost&quot;&quot;:10,&quot;&quot;duration&quot;&quot;:60,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;fancy&quot;&quot;,&quot;&quot;cost&quot;&quot;:100,&quot;&quot;duration&quot;&quot;:180,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;}],&quot;&quot;regions&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;the first region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:20,&quot;&quot;uncommon&quot;&quot;:0,&quot;&quot;rare&quot;&quot;:0,&quot;&quot;nothing&quot;&quot;:0},&quot;&quot;common&quot;&quot;:[0,1],&quot;&quot;uncommon&quot;&quot;:[2,3],&quot;&quot;rare&quot;&quot;:[4,5]},{&quot;&quot;name&quot;&quot;:&quot;&quot;the second region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:1,&quot;&quot;uncommon&quot;&quot;:1,&quot;&quot;rare&quot;&quot;:1,&quot;&quot;nothing&quot;&quot;:5},&quot;&quot;common&quot;&quot;:[6],&quot;&quot;uncommon&quot;&quot;:[6],&quot;&quot;rare&quot;&quot;:[6]}]}&quot;</param>
                     <param id="1" name="Reference point">0</param>
                     <param id="2" name="Key {n}"></param>
                 </action>
@@ -732,12 +732,12 @@
                     <sub-events>
                         <comment>1 parameter: index of the region (nb)</comment>
                         <comment>returns the name of a region</comment>
-                        <variable constant="0" name="id" sid="247656859086452" static="0" type="number">-1</variable>
+                        <variable constant="0" name="region" sid="247656859086452" static="0" type="number">-1</variable>
                         <event-block sid="343475855951630">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="908113523805476" type="System">
-                                    <param id="0" name="Variable">id</param>
+                                    <param id="0" name="Variable">region</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
                             </actions>
@@ -753,19 +753,19 @@
                                 <event-block sid="592542295432049">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="875085806204793" type="System">
-                                            <param id="0" name="Variable">id</param>
+                                            <param id="0" name="Variable">region</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="967629443682332" type="System">
-                                            <param id="0" name="Variable">id</param>
+                                            <param id="0" name="Variable">region</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Value">Function.Call(&quot;regions .count&quot;)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="888177516570585" type="Function">
-                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;regions&quot;, id, &quot;name&quot;)</param>
+                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;regions&quot;, region, &quot;name&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -776,7 +776,7 @@
                                     <actions>
                                         <action id="14" name="Log" sid="538252811913990" type="Browser">
                                             <param id="0" name="Type">1</param>
-                                            <param id="1" name="Message">&quot;Error from regions.name: Trying to access out of range: &quot; &amp; id</param>
+                                            <param id="1" name="Message">&quot;Error from regions.name: Trying to access out of range: &quot; &amp; region</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -804,7 +804,7 @@
                     <actions />
                     <sub-events>
                         <comment>2 parameters: &#x0D;&#x0A;1) index of the region (nb)&#x0D;&#x0A;2) name of the rarity (string)</comment>
-                        <comment>returns the probability of a rarety tier for a given region</comment>
+                        <comment>returns the probability of a rarity tier for a given region</comment>
                         <variable constant="0" name="region" sid="299658765002896" static="0" type="number">-1</variable>
                         <variable constant="0" name="rarity" sid="401538420373391" static="0" type="text"></variable>
                         <event-block sid="205413680151007">
@@ -904,6 +904,153 @@
                             </conditions>
                             <actions>
                                 <action id="14" name="Log" sid="409425295335495" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from regions.getProbability: Trying to access the JSON which is not yet loaded.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="485332826844784">
+                    <conditions>
+                        <condition id="0" name="On function" sid="171131801761209" type="Function">
+                            <param id="0" name="Name">&quot;regions .monValue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>3 parameters: &#x0D;&#x0A;1) index of the region (nb)&#x0D;&#x0A;2) name of the rarity (string)&#x0D;&#x0A;3) index of the mon to pick (nb)</comment>
+                        <comment>returns the id of a mon(nb). The i-th in the list of rarity for the given rarity and region.</comment>
+                        <variable constant="0" name="region" sid="738823280094395" static="0" type="number">-1</variable>
+                        <variable constant="0" name="rarity" sid="534671658545450" static="0" type="text"></variable>
+                        <variable constant="0" name="i" sid="821510131468656" static="0" type="number">0</variable>
+                        <event-block sid="911023473165421">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="605238101981646" type="System">
+                                    <param id="0" name="Variable">region</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="410656003737333" type="System">
+                                    <param id="0" name="Variable">rarity</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="657979985535607" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="459917243830060">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="441438080645107" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>confirm region is legit</comment>
+                                <event-block sid="963992165911679">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="638489854443683" type="System">
+                                            <param id="0" name="Variable">region</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="909183259911947" type="System">
+                                            <param id="0" name="Variable">region</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Function.Call(&quot;regions .count&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>confirm rarity is legit</comment>
+                                        <event-block any="1" sid="785351196051549">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="139193703066855" type="System">
+                                                    <param id="0" name="First value">rarity</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;common&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="576985962910782" type="System">
+                                                    <param id="0" name="First value">rarity</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;uncommon&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="377787917010803" type="System">
+                                                    <param id="0" name="First value">rarity</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;rare&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>confirm i is legit, and returns the damn value!</comment>
+                                                <event-block sid="472965299111382">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="854406632593230" type="System">
+                                                            <param id="0" name="Variable">i</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="367551561205577" type="System">
+                                                            <param id="0" name="Variable">i</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">Function.Call(&quot;regions .countForRarity&quot;, region, rarity)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="491766662665740" type="Function">
+                                                            <param id="0" name="Value">3monsJSON.Value(0, &quot;regions&quot;, region, rarity, i)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="752763745744947">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="636607348851667" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="14" name="Log" sid="717261020692507" type="Browser">
+                                                            <param id="0" name="Type">1</param>
+                                                            <param id="1" name="Message">&quot;Error from regions.getProbability: Trying to access out of range of rarity: &quot; &amp; i</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="410273468281418">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="951119302995398" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="14" name="Log" sid="542267910275296" type="Browser">
+                                                    <param id="0" name="Type">1</param>
+                                                    <param id="1" name="Message">&quot;Error from regions.getProbability: The given rarity is not common, uncommon or rare : &quot; &amp; rarity</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="206087045822124">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="853446049093814" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="229807588135619" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from regions.getProbability: Trying to access out of range of region: &quot; &amp; region</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="877299468930214">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="686638752762721" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="415832195031505" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Error from regions.getProbability: Trying to access the JSON which is not yet loaded.&quot;</param>
                                 </action>
@@ -1030,9 +1177,10 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <comment>Input: the index of the region to pick from (number)</comment>
+                        <comment>1 parameter: the index of the region to pick from (number)</comment>
                         <comment>Returns a string of a rarity (common, uncommon, rare or nothing) randomly selected</comment>
                         <variable constant="0" name="region" sid="310052331902264" static="0" type="number">-1</variable>
+                        <comment>TODO: Add security here if trying to access a region not in the list</comment>
                         <event-block sid="173434786276282">
                             <conditions />
                             <actions>
@@ -1081,6 +1229,112 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="433327524866643">
+                    <conditions>
+                        <condition id="0" name="On function" sid="462195090030900" type="Function">
+                            <param id="0" name="Name">&quot;regions .chooseCreature&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>1 parameter: the index of the region to pick from</comment>
+                        <comment>Returns the index (number) of a mon picked from that region based on the rarity</comment>
+                        <variable constant="0" name="region" sid="710208435094227" static="0" type="number">-1</variable>
+                        <event-block sid="340813902902345">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="442168515659128" type="System">
+                                    <param id="0" name="Variable">region</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="rarity" sid="923231596385772" static="0" type="text"></variable>
+                        <variable constant="0" name="i" sid="709436462423746" static="0" type="number">0</variable>
+                        <event-block sid="748946348377882">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="377850458426236" type="3monsJSON">
+                                    <param id="0" name="Instance variable">fullyLoaded</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="112503864202779">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="676901831747634" type="System">
+                                            <param id="0" name="Variable">region</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="779271880221463" type="System">
+                                            <param id="0" name="Variable">region</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Function.Call(&quot;regions .count&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="905554353862708" type="System">
+                                            <param id="0" name="Variable">rarity</param>
+                                            <param id="1" name="Value">Function.Call(&quot;regions .chooseRarity&quot;, region)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="408018077249404">
+                                            <conditions>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="394276791663298" type="System">
+                                                    <param id="0" name="Variable">rarity</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;nothing&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="559046871612571" type="System">
+                                                    <param id="0" name="Variable">i</param>
+                                                    <param id="1" name="Value">floor(random(0, Function.Call(&quot;regions .countForRarity&quot;, region, rarity)))</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="977262885537738" type="Function">
+                                                    <param id="0" name="Value">Function.Call(&quot;regions .monValue&quot;, region, rarity, i)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="711703242768367">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="867330695483831" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="933000116529957" type="Function">
+                                                    <param id="0" name="Value">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="536821251802421">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="356154178757341" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="598941700570065" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Error from regions.chooseCreature: Trying to access out of range: &quot; &amp; region</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="676015544866021">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="455232702007370" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="342830679182150" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Error from regions.chooseCreature: Trying to access the JSON which is not yet loaded.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="745819940776691" title="debug (mons.json)">
@@ -1093,12 +1347,12 @@
                     <sub-events>
                         <event-block sid="729570135923569">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="199670017431012" type="System">
+                                <condition disabled="1" id="-6" name="Every X seconds" sid="199670017431012" type="System">
                                     <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
-                                <condition disabled="1" id="-4" name="Trigger once while true" sid="960545008298217" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="960545008298217" type="System" />
                                 <condition id="-12" name="Repeat" sid="343977407035701" type="System">
-                                    <param id="0" name="Count">20</param>
+                                    <param id="0" name="Count">100</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1150,13 +1404,21 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.countForRarity(1,rare):&quot; &amp; Function.Call(&quot;regions .countForRarity&quot;, 1, &quot;rare&quot;)</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="970672967542271" type="Browser">
+                                <action id="14" name="Log" sid="970672967542271" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;regions .chooseRarity(0):&quot; &amp; Function.Call(&quot;regions .chooseRarity&quot;, 0)</param>
                                 </action>
-                                <action id="14" name="Log" sid="874560045398918" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="874560045398918" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;regions .chooseRarity(1):&quot; &amp; Function.Call(&quot;regions .chooseRarity&quot;, 1)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="283344924342909" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;regions .monValue:&quot; &amp; Function.Call(&quot;regions .monValue&quot;, 10, &quot;nothing&quot;, 0)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="796015957726258" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;regions .chooseCreature:&quot; &amp; Function.Call(&quot;regions .chooseCreature&quot;, 0)</param>
                                 </action>
                             </actions>
                         </event-block>
