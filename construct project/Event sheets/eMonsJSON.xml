@@ -4,6 +4,7 @@
     <name>eMonsJSON</name>
     <events>
         <include>eDexJSON</include>
+        <include>eWeightedRNG</include>
         <event-block sid="829660197311430">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="191946209392694" type="System" />
@@ -1021,71 +1022,141 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="476974670316459">
+                    <conditions>
+                        <condition id="0" name="On function" sid="594528275610446" type="Function">
+                            <param id="0" name="Name">&quot;regions .chooseRarity&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Input: the index of the region to pick from (number)</comment>
+                        <comment>Returns a string of a rarity (common, uncommon, rare or nothing) randomly selected</comment>
+                        <variable constant="0" name="region" sid="310052331902264" static="0" type="number">-1</variable>
+                        <event-block sid="173434786276282">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="855967559771876" type="System">
+                                    <param id="0" name="Variable">region</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="common" sid="523905067006588" static="0" type="number">-1</variable>
+                        <variable constant="0" name="uncommon" sid="628483014987848" static="0" type="number">-1</variable>
+                        <variable constant="0" name="rare" sid="935391545866497" static="0" type="number">-1</variable>
+                        <variable constant="0" name="nothing" sid="844246265180187" static="0" type="number">-1</variable>
+                        <event-block sid="604340082729337">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="255550705875012" type="System">
+                                    <param id="0" name="Variable">common</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;common&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="451094672575352" type="System">
+                                    <param id="0" name="Variable">uncommon</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;uncommon&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="939507672983865" type="System">
+                                    <param id="0" name="Variable">rare</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;rare&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="923877300547896" type="System">
+                                    <param id="0" name="Variable">nothing</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;nothing&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="521117003887768">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="603442844207145" type="Function">
+                                    <param id="0" name="Name">&quot;global .weightedRNG&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;common,&quot;&amp;common&amp;&quot;,uncommon,&quot;&amp;uncommon&amp;&quot;,rare,&quot;&amp;rare&amp;&quot;,nothing,&quot;&amp;nothing</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="201965866673013" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="745819940776691" title="debug (mons.json)">
             <sub-events>
-                <event-block disabled="1" sid="830324351519742">
+                <event-block sid="830324351519742">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="626982103027155" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="729570135923569">
+                        <event-block sid="729570135923569">
                             <conditions>
-                                <condition disabled="1" id="-6" name="Every X seconds" sid="199670017431012" type="System">
+                                <condition id="-6" name="Every X seconds" sid="199670017431012" type="System">
                                     <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="960545008298217" type="System" />
+                                <condition disabled="1" id="-4" name="Trigger once while true" sid="960545008298217" type="System" />
+                                <condition id="-12" name="Repeat" sid="343977407035701" type="System">
+                                    <param id="0" name="Count">20</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="579306133422179" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="579306133422179" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.count:&quot; &amp; Function.Call(&quot;regions .count&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="944068225064940" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="944068225064940" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getName(0):&quot; &amp; Function.Call(&quot;regions .getName&quot;, 0)</param>
                                 </action>
-                                <action id="14" name="Log" sid="180833050781141" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="180833050781141" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getName(1):&quot; &amp; Function.Call(&quot;regions .getName&quot;, 1)</param>
                                 </action>
-                                <action id="14" name="Log" sid="938150027785084" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="938150027785084" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getName(2):&quot; &amp; Function.Call(&quot;regions .getName&quot;, 2)</param>
                                 </action>
-                                <action id="14" name="Log" sid="786251878329395" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="786251878329395" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getProbability(0, nothing):&quot; &amp; Function.Call(&quot;regions .getProbability&quot;, 0, &quot;nothing&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="271240221873187" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="271240221873187" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getProbability(0, rare):&quot; &amp; Function.Call(&quot;regions .getProbability&quot;, 0, &quot;rare&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="301056009751731" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="301056009751731" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getProbability(1, nothing):&quot; &amp; Function.Call(&quot;regions .getProbability&quot;, 1, &quot;nothing&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="620119707659741" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="620119707659741" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.getProbability(1, rare):&quot; &amp; Function.Call(&quot;regions .getProbability&quot;, 1, &quot;rare&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="541610730101910" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="541610730101910" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.countForRarity(0,nothing):&quot; &amp; Function.Call(&quot;regions .countForRarity&quot;, 0, &quot;nothing&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="713476311992256" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="713476311992256" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.countForRarity(0, rare):&quot; &amp; Function.Call(&quot;regions .countForRarity&quot;, 0, &quot;rare&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="582920656618325" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="582920656618325" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.countForRarity(1,nothing):&quot; &amp; Function.Call(&quot;regions .countForRarity&quot;, 1, &quot;nothing&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="932071022719549" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="932071022719549" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.countForRarity(1,rare):&quot; &amp; Function.Call(&quot;regions .countForRarity&quot;, 1, &quot;rare&quot;)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="970672967542271" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;regions .chooseRarity(0):&quot; &amp; Function.Call(&quot;regions .chooseRarity&quot;, 0)</param>
+                                </action>
+                                <action id="14" name="Log" sid="874560045398918" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;regions .chooseRarity(1):&quot; &amp; Function.Call(&quot;regions .chooseRarity&quot;, 1)</param>
                                 </action>
                             </actions>
                         </event-block>
