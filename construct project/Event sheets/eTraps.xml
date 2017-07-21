@@ -9,7 +9,6 @@
         <include>eMonsJSON</include>
         <include>eGlobal</include>
         <include>eGameplay stuff</include>
-        <include>eWeightedRNG</include>
         <event-block sid="649720904779646">
             <conditions>
                 <condition id="0" name="On function" sid="665948647074020" type="Function">
@@ -147,6 +146,7 @@
                     </conditions>
                     <actions />
                 </event-block>
+                <variable constant="0" name="currentRegion" sid="285913368495436" static="0" type="number">1</variable>
                 <event-block sid="831543791617884">
                     <conditions>
                         <condition id="0" name="On function" sid="573794856571839" type="Function">
@@ -163,7 +163,7 @@
                         <comment>Calculate if a new mon is captured.</comment>
                         <comment>Returns the id of the mon captured, or -1 if no mon were captured.</comment>
                         <variable constant="0" name="monsterId" sid="752794100873998" static="0" type="number">0</variable>
-                        <event-block sid="668507621416032">
+                        <event-block disabled="1" sid="668507621416032">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="120950431300435" type="System">
                                     <param id="0" name="First value">random(5)</param>
@@ -181,13 +181,25 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="597898491845430">
+                        <event-block disabled="1" sid="597898491845430">
                             <conditions>
                                 <condition id="-22" name="Else" sid="798498993501664" type="System" />
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="314618062184816" type="Function">
                                     <param id="0" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="217741104794769">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="919342178632148" type="Function">
+                                    <param id="0" name="Name">&quot;regions .chooseCreature&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="376172118148030" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;regions .chooseCreature&quot;, currentRegion)</param>
                                 </action>
                             </actions>
                         </event-block>
