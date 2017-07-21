@@ -11,7 +11,7 @@
             </conditions>
             <actions>
                 <action id="60" name="LoadJSON" sid="511571762087564" type="3monsJSON">
-                    <param id="0" name="JSON">&quot;{&quot;&quot;mons&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;Pikachu&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:10,&quot;&quot;nb&quot;&quot;:1,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5},{&quot;&quot;name&quot;&quot;:&quot;&quot;Togepi&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:1,&quot;&quot;nb&quot;&quot;:2,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Squirtle&quot;&quot;,&quot;&quot;duration&quot;&quot;:1,&quot;&quot;gift&quot;&quot;:100,&quot;&quot;nb&quot;&quot;:3,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Miho&quot;&quot;,&quot;&quot;duration&quot;&quot;:2,&quot;&quot;gift&quot;&quot;:50,&quot;&quot;nb&quot;&quot;:4,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Slime&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:5,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.9},{&quot;&quot;name&quot;&quot;:&quot;&quot;Rarimon&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:6,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Gros Tas&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:7,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5}],&quot;&quot;bait&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;free&quot;&quot;,&quot;&quot;cost&quot;&quot;:0,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;cheap&quot;&quot;,&quot;&quot;cost&quot;&quot;:1,&quot;&quot;duration&quot;&quot;:30,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;normal&quot;&quot;,&quot;&quot;cost&quot;&quot;:10,&quot;&quot;duration&quot;&quot;:60,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;fancy&quot;&quot;,&quot;&quot;cost&quot;&quot;:100,&quot;&quot;duration&quot;&quot;:180,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;}],&quot;&quot;regions&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;the first region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:20,&quot;&quot;uncommon&quot;&quot;:0,&quot;&quot;rare&quot;&quot;:0,&quot;&quot;nothing&quot;&quot;:0},&quot;&quot;common&quot;&quot;:[0,1],&quot;&quot;uncommon&quot;&quot;:[2,3],&quot;&quot;rare&quot;&quot;:[4,5]},{&quot;&quot;name&quot;&quot;:&quot;&quot;the second region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:1,&quot;&quot;uncommon&quot;&quot;:1,&quot;&quot;rare&quot;&quot;:1,&quot;&quot;nothing&quot;&quot;:5},&quot;&quot;common&quot;&quot;:[6],&quot;&quot;uncommon&quot;&quot;:[6],&quot;&quot;rare&quot;&quot;:[6]}]}&quot;</param>
+                    <param id="0" name="JSON">&quot;{&quot;&quot;mons&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;Pikachu&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:10,&quot;&quot;nb&quot;&quot;:1,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5},{&quot;&quot;name&quot;&quot;:&quot;&quot;Togepi&quot;&quot;,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;gift&quot;&quot;:1,&quot;&quot;nb&quot;&quot;:2,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Squirtle&quot;&quot;,&quot;&quot;duration&quot;&quot;:1,&quot;&quot;gift&quot;&quot;:100,&quot;&quot;nb&quot;&quot;:3,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.2},{&quot;&quot;name&quot;&quot;:&quot;&quot;Miho&quot;&quot;,&quot;&quot;duration&quot;&quot;:2,&quot;&quot;gift&quot;&quot;:50,&quot;&quot;nb&quot;&quot;:4,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Slime&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:5,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.9},{&quot;&quot;name&quot;&quot;:&quot;&quot;Rarimon&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:6,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.1},{&quot;&quot;name&quot;&quot;:&quot;&quot;Gros Tas&quot;&quot;,&quot;&quot;duration&quot;&quot;:100,&quot;&quot;gift&quot;&quot;:2,&quot;&quot;nb&quot;&quot;:7,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;,&quot;&quot;description&quot;&quot;:&quot;&quot;bla bla&quot;&quot;,&quot;&quot;captureProbability&quot;&quot;:0.5}],&quot;&quot;bait&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;free&quot;&quot;,&quot;&quot;cost&quot;&quot;:0,&quot;&quot;duration&quot;&quot;:15,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;cheap&quot;&quot;,&quot;&quot;cost&quot;&quot;:1,&quot;&quot;duration&quot;&quot;:30,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;normal&quot;&quot;,&quot;&quot;cost&quot;&quot;:10,&quot;&quot;duration&quot;&quot;:60,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;},{&quot;&quot;name&quot;&quot;:&quot;&quot;fancy&quot;&quot;,&quot;&quot;cost&quot;&quot;:100,&quot;&quot;duration&quot;&quot;:180,&quot;&quot;visual&quot;&quot;:&quot;&quot;?&quot;&quot;}],&quot;&quot;regions&quot;&quot;:[{&quot;&quot;name&quot;&quot;:&quot;&quot;the first region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:20,&quot;&quot;uncommon&quot;&quot;:10,&quot;&quot;rare&quot;&quot;:2,&quot;&quot;nothing&quot;&quot;:20},&quot;&quot;common&quot;&quot;:[0,1],&quot;&quot;uncommon&quot;&quot;:[2,3],&quot;&quot;rare&quot;&quot;:[4,5]},{&quot;&quot;name&quot;&quot;:&quot;&quot;the second region&quot;&quot;,&quot;&quot;probability&quot;&quot;:{&quot;&quot;common&quot;&quot;:1,&quot;&quot;uncommon&quot;&quot;:1,&quot;&quot;rare&quot;&quot;:1,&quot;&quot;nothing&quot;&quot;:10},&quot;&quot;common&quot;&quot;:[6],&quot;&quot;uncommon&quot;&quot;:[6],&quot;&quot;rare&quot;&quot;:[6]}]}&quot;</param>
                     <param id="1" name="Reference point">0</param>
                     <param id="2" name="Key {n}"></param>
                 </action>
@@ -1199,24 +1199,56 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="255550705875012" type="System">
                                     <param id="0" name="Variable">common</param>
-                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;common&quot;)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, region, &quot;common&quot;)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="451094672575352" type="System">
                                     <param id="0" name="Variable">uncommon</param>
-                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;uncommon&quot;)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, region, &quot;uncommon&quot;)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="939507672983865" type="System">
                                     <param id="0" name="Variable">rare</param>
-                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;rare&quot;)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, region, &quot;rare&quot;)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="923877300547896" type="System">
                                     <param id="0" name="Variable">nothing</param>
-                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, 1, &quot;nothing&quot;)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;regions .getProbability&quot;, region, &quot;nothing&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="521117003887768">
-                            <conditions />
+                        <event-block sid="165775514357724">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="721073498577409" type="System">
+                                    <param id="0" name="Variable">common</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="520173444306735" type="System">
+                                    <param id="0" name="Variable">uncommon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="239627333129786" type="System">
+                                    <param id="0" name="Variable">rare</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="982081981147283" type="System">
+                                    <param id="0" name="Variable">nothing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="832594758383402" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;In regions.chooseRarity, all weight are set to zero, and therefore the picked rarity was &apos;0&apos;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="359490101073064">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="218998649334250" type="System" />
+                            </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="603442844207145" type="Function">
                                     <param id="0" name="Name">&quot;global .weightedRNG&quot;</param>
@@ -1404,7 +1436,7 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;region.countForRarity(1,rare):&quot; &amp; Function.Call(&quot;regions .countForRarity&quot;, 1, &quot;rare&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="970672967542271" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="970672967542271" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;regions .chooseRarity(0):&quot; &amp; Function.Call(&quot;regions .chooseRarity&quot;, 0)</param>
                                 </action>
@@ -1416,7 +1448,7 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;regions .monValue:&quot; &amp; Function.Call(&quot;regions .monValue&quot;, 10, &quot;nothing&quot;, 0)</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="796015957726258" type="Browser">
+                                <action id="14" name="Log" sid="796015957726258" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;regions .chooseCreature:&quot; &amp; Function.Call(&quot;regions .chooseCreature&quot;, 0)</param>
                                 </action>
