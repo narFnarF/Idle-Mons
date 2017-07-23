@@ -1369,15 +1369,15 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="745819940776691" title="debug (mons.json)">
+        <event-group description="" disabled="1" sid="745819940776691" title="debug (mons.json)">
             <sub-events>
-                <event-block sid="830324351519742">
+                <event-block disabled="1" sid="830324351519742">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="626982103027155" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="729570135923569">
+                        <event-block disabled="1" sid="729570135923569">
                             <conditions>
                                 <condition disabled="1" id="-6" name="Every X seconds" sid="199670017431012" type="System">
                                     <param id="0" name="Interval (seconds)">1</param>
